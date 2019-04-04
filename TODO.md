@@ -1,0 +1,1 @@
+* add a sitemap (XML)

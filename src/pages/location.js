@@ -2,13 +2,14 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
+import GoogleMap from '../components/google-map'
 
 export default () => (
   <Layout>
     {/*<SEO title="Page two" />*/}
     <h1>Location</h1>
     <p>Greystone Place is a fully restored Apartment building at 512 Mohawk Road East, centrally located on the Hamilton Mountain.</p>
-	 <p><em>Map here. Right aligned.</em></p>
+    <GoogleMap />
 	 <ul>
 	 	<li>Close proximity to churches, hospitals, and shopping</li>
 		<li>Located in the same block as the Limeridge Mall</li>
