@@ -1,6 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import { TypographyStyle, GoogleFont } from 'react-typography'
+import typography from './utils/typography'
+
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
@@ -27,6 +30,7 @@ export default function HTML(props) {
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAspXD0uq-mwbzPGLPfLN-I1Xe34ryUCxY"
         />}
         {props.postBodyComponents}
+        <TypographyStyle typography={typography} />
       </body>
     </html>
   )
