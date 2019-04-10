@@ -8,8 +8,9 @@ import '../styles/layout.scss'
 export default () => (
   <Layout>
     {/*<SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />*/}
-    <h1>Designer Upgrade Packages - Feather Your Nest</h1>
+    <h1>Designer Upgrade Packages</h1>
 	 <p>Meticulously maintained and impressively detailed, Greystone Place offers a unique concept of Designer Upgrade Packages</p>
+    <h2>Feather Your Nest</h2>
     <p>&ldquo;Feather Your Nest&rdquo; is a unique concept that enables Residents to personalize their Suites exclusively to their tastes and wishes. Create the living environment you've always wanted, limited only by your imagination. Enhancing your quality of life in this tranquil, worry-free setting is an unprecedented, limited opportunity.</p>
 	 <p>Quite simply, this principle is achieved by pro-rating the approved upgrade over its useful life. Greystone Place assists in the cost of your enrichment for mutual long term satisfaction. Some of the “Designer Upgrade Packages” include:</p>
 	 <ul>
