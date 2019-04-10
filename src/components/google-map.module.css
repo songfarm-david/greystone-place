@@ -1,0 +1,18 @@
+.google-map-container {
+	height: 16em;
+	width: 16em;
+	border: 5px solid black;
+	margin-bottom: 1em;
+}
+
+.google-map-container.left {
+	margin-right: 0px;
+	margin-left: auto;
+	float: left;
+}
+
+.google-map-container.right {
+	margin-right: 0px;
+	margin-left: auto;
+	float: right;
+}

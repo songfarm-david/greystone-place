@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import navStyles from './nav.module.css'
+
 const Nav = () => (
-	<div>
+	<div className="nav">
 		<ul>
 			<li><Link to="/suites" title="Suites">Suites</Link></li>
 			<li><Link to="/design-upgrade-packages" title="Design Upgrade Packages">Feather Your Nest</Link></li>

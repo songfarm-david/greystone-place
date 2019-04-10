@@ -1,5 +1,7 @@
 import React from 'react'
 
+import mapStyles from './google-map.module.css'
+
 export default class GoogleMap extends React.Component {
 
 	initMap = (container) => {
@@ -38,7 +40,8 @@ export default class GoogleMap extends React.Component {
 	}
 
 	render() {
-		return <div className="footer-map map" style={{ height: '400px', width: '400px'}}></div>
+		return <div
+			className={"map " + mapStyles.googleMapContainer + " " + mapStyles[this.props.align]}></div>
 	}
 
 }

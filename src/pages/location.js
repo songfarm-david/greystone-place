@@ -9,7 +9,7 @@ export default () => (
     {/*<SEO title="Page two" />*/}
     <h1>Location</h1>
     <p>Greystone Place is a fully restored Apartment building at 512 Mohawk Road East, centrally located on the Hamilton Mountain.</p>
-    <GoogleMap />
+    <GoogleMap align="left"/>
 	 <ul>
 	 	<li>Close proximity to churches, hospitals, and shopping</li>
 		<li>Located in the same block as the Limeridge Mall</li>

@@ -2,4 +2,13 @@
 	max-width: 80%;
 	margin: 0 auto;
 	border: 1px dotted black;
+	padding: 1em 1em 4em;
+	background-color: #f5f3ee;
+}
+
+@media (max-width: 680px) {
+	.main-container {
+		width: 100%;
+		max-width: none;
+	}
 }
