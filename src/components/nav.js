@@ -1,17 +1,16 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import navStyles from './nav.module.css'
+import navStyles from './nav.module.scss'
 
 const Nav = () => (
-	<div className="nav">
+	<nav id={navStyles.nav}>
 		<ul>
-			<li><Link to="/suites" title="Suites">Suites</Link></li>
-			<li><Link to="/design-upgrade-packages" title="Design Upgrade Packages">Feather Your Nest</Link></li>
-			<li><Link to="/location" title="Design Upgrade Packages">Location</Link></li>
-			<li><Link to="/contact" contact="Contact">Contact</Link></li>
+			<li><Link to="/apartments" title="Apartments">Apts.</Link></li>
+			<li><Link to="/apartment-upgrade-packages" title="Apartment Upgrade Packages">Upgrades</Link></li>
+			<li><Link to="/contact" contact="Contact">Inquiries</Link></li>
 		</ul>
-	</div>
+	</nav>
 )
 
 export default Nav
