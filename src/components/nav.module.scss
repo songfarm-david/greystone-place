@@ -1,22 +1,42 @@
 #nav {
 
+	p.phone-number {
+		margin: 0;
+		text-align: right;
+	}
+
 	ul {
 		list-style: none;
 		padding: 0;
 		margin: 0;
 		display: flex;
 
-		@media (max-width: 680px) {
-			flex-wrap: wrap;
-		}
-
 		li {
-			margin: 1em;
+			margin: 0.5em 1em 1em;
 			flex-basis: 0px;
 			display: inline;
 		}
 	}
 
+	a#mobMenu {
+		display: block;
+	}
 
+	@media (max-width: 680px) {
+		ul {
+			flex-wrap: wrap;
+			display: none;
+		}
+
+	}
+
+	@media (min-width: 681px) {
+		ul {
+			display: flex;
+		}
+		a#mobMenu {
+			display: none;
+		}
+	}
 
 }

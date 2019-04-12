@@ -1,0 +1,25 @@
+@import '../styles/typography';
+
+.footer-container {
+	border: 5px solid black;
+	h2, h3 {
+		margin-top: 0;
+	}
+
+	.google-maps-container {
+		border: 2px solid red;
+		overflow: hidden;
+		height: auto;
+		width: 33%;
+	}
+	// .site-links {
+
+	// }
+}
+
+.legal-footer {
+	clear: both;
+	text-align: center;
+	background: #333;
+	color: #ccc;
+}

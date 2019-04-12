@@ -4,6 +4,8 @@ import Img from "gatsby-image"
 
 import Layout from '../components/layout'
 import ImageBox from '../components/image-box'
+
+import { rhythm } from '../utils/typography'
 import '../styles/layout.scss'
 import '../styles/index.scss'
 
@@ -14,12 +16,17 @@ export default (props) => (
   <Layout>
     {/*<SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />*/}
 
-    <div id="video-section" className="section">
+    <div id="video-section" className="section" style={{
+      marginBottom: rhythm(1.5),
+      paddingLeft: rhythm(0.5),
+      paddingRight: rhythm(0.5),
+
+      }}>
       <p><em>Video Here</em></p>
     </div>
 
     <div id="lobby-section" className="section">
-       <p><strong>Soft Soothing Music </strong>, emulates throughout the Lobby and Hallways. Warm earth tone colors lend to the serenity of the interior.</p>
+       <p><strong>Soft Soothing Music</strong>, emulates throughout the Lobby and Hallways. Warm earth tone colors lend to the serenity of the interior.</p>
        <ImageBox>
           <Img className="image-box-img" fluid={props.data.lobby.childImageSharp.fluid} />
           <Img className="image-box-img" fluid={props.data.lobbyTwo.childImageSharp.fluid} />

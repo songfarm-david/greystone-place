@@ -10,6 +10,7 @@ const Nav = () => (
 			<li><Link to="/apartment-upgrade-packages" title="Apartment Upgrade Packages">Upgrades</Link></li>
 			<li><Link to="/contact" contact="Contact">Inquiries</Link></li>
 		</ul>
+		<a href="javascript:void(0)" id={navStyles.mobMenu}>X</a>
 	</nav>
 )
 

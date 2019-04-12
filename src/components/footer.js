@@ -2,14 +2,16 @@ import React from 'react'
 import { Link } from 'gatsby'
 import GoogleMap from './google-map'
 
-import footerStyles from './footer.module.css'
+import footerStyles from './footer.module.scss'
+import { rhythm } from '../utils/typography'
 
 const Footer = ({ siteTitle }) => (
-	<div className={footerStyles.footerContainer}>
-		<div className="google-maps-container">
+	<div className={footerStyles.footerContainer} style={{ padding: rhythm(1) }}>
+		<div className={footerStyles.googleMapsContainer}>
+			<h3>Location</h3>
 			<GoogleMap align="right"/>
 		</div>
-		<div className="site-links">
+		<div className={footerStyles.siteLinks}>
 			<h3>Site Links</h3>
 			<ul>
 				<li><Link to="/suites" title="Suites">Suites</Link></li>

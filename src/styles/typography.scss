@@ -1,0 +1,34 @@
+$background-color-why: #333;
+
+// define base-size font here
+$root-font-size: 100% !default;
+
+// turns the root-font-size into a multiply-friendly number
+$root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
+
+// mixin for modular scale
+@mixin modScale($value, $increment, $ratio, $props){
+
+	@if $ratio == unison {
+		$ratio: 1;
+	}
+	@else {
+		$ratio: $ratio;
+	}
+
+	@if $increment > 0 {
+		@for $i from 1 through $increment {
+			$value: ($value * $ratio);
+		}
+	}
+	@if $increment < 0 {
+		$increment: abs($increment);
+		@for $i from 1 through $increment {
+			$value: ($value / $ratio);
+		}
+	}
+
+  $prop: $value * $root-font-multiplier * 16px;
+  $prop: $value * 1rem;
+
+}
