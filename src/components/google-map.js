@@ -22,21 +22,18 @@ export default class GoogleMap extends React.Component {
 		let containers = document.querySelectorAll('.map');
 		const google = window.google
 
-		// custom forEach function
+		// custom forEach function (link?)
 		var forEach = function (array, callback, scope) {
 			for (var i = 0; i < array.length; i++) {
 				callback.call(scope, i, array[i]); // passes back stuff we need
 			}
 		};
 
+		// for multiple maps on a page
 		forEach(containers, function (index, value) {
 			// console.log(index, value); // passes index + value back!
 			that.initMap(value)
 		});
-		// [].forEach.call(containers, function(container) {
-		//   // do whatever
-		//   that.initMap(container)
-		// });
 	}
 
 	render() {

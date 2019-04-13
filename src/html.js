@@ -1,8 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
+import withPrefix from 'gatsby'
 
 import { TypographyStyle, GoogleFont } from 'react-typography'
 import typography from './utils/typography'
+
 
 export default function HTML(props) {
   return (
