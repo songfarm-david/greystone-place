@@ -8,7 +8,7 @@ import Nav from './nav'
 
 const Header = ({ siteTitle, description }) => (
   <div id={headerStyles.header}>
-    <p className={headerStyles.contactPhone}><a tel="905-574-2626" title="Call Greystone Place">905-574-2626</a></p>
+    <p className={headerStyles.contactPhone}><a href="tel:905-574-2626" title="Call Greystone Place">905-574-2626</a></p>
     <div id={headerStyles.headerContainer}>
       <h1>
         <Link to="/">

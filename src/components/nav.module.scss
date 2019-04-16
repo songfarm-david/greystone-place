@@ -18,6 +18,14 @@
 		}
 	}
 
+	ul.drawer-open {
+		display: block;
+		height: 100%;
+		width: 80%;
+		position: fixed;
+		z-index: 10;
+	}
+
 	#mobMenu {
 		display: block;
 	}

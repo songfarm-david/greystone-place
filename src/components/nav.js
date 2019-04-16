@@ -8,26 +8,26 @@ export default class Nav extends React.Component {
 
 	constructor(props) {
 		super(props)
-		this.state = {drawerOpen: false}
-		// this.toggleNav = this.toggleNav.bind(this)
+		this.state = {drawerOpen: true}
+		this.toggleNav = this.toggleNav.bind(this)
 	}
 
 	toggleNav() {
-		console.log('hello, world');
-		this.setState(state => {
-			// drawerOpen: !state.drawerOpen
-		})
+		this.setState(state => ({
+			drawerOpen: !state.drawerOpen
+		}))
+		console.log(this.state.drawerOpen);
 	}
 
 	render() {
 		return (
 			<nav id={navStyles.nav}>
-				<ul>
+				<ul className={this.state.drawerOpen ? "drawer-open" : ""}>
 					<li><Link to="/apartments" title="Apartments">Apts.</Link></li>
 					<li><Link to="/apartment-upgrade-packages" title="Apartment Upgrade Packages">Upgrades</Link></li>
 					<li><Link to="/contact" contact="Contact">Inquiries</Link></li>
 				</ul>
-				<button id={navStyles.mobMenu} onClick={this.toggleNav}>{this.drawerOpen ? 'Yes' : 'no'}</button>
+				<button id={navStyles.mobMenu} onClick={this.toggleNav}>X</button>
 			</nav>
 		)
 	}
