@@ -1,8 +1,7 @@
 .google-map-container {
 	height: 16em;
-	width: 16em;
-	border: 5px solid black;
-	margin-bottom: 1em;
+	width: 100%;
+	margin: 0;
 }
 
 .google-map-container.left {

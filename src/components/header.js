@@ -4,14 +4,6 @@ import { Link } from 'gatsby'
 import headerStyles from './header.module.scss'
 import Nav from './nav'
 
-// TODO: Add social share icons to the header
-// let menuState = true;
-// function onClick() {
-//    menuState = !menuState
-//    console.log(menuState)
-//    return menuState
-// }
-
 export default class Header extends React.Component {
 
    constructor(props) {
@@ -21,12 +13,13 @@ export default class Header extends React.Component {
    }
 
    toggleMenu() {
-      console.log('toggleMenu clicked', this.state.menuOpen);
+      let scrim = document.getElementById('scrim');
+
 		this.setState(state => ({
 			menuOpen: !state.menuOpen
 		}))
-      console.log(document.body);
-      let scrim = document.getElementById('scrim');
+
+      // toggle scrim active class
       if (scrim.classList.contains('active-scrim')) {
          scrim.classList.remove('active-scrim')
       } else {

@@ -1,25 +1,88 @@
 @import '../styles/typography';
 
-.footer-container {
+$footerComponentPadding: 0.5em 0;
+
+#footer {
 	border: 5px solid black;
+	padding: $footerComponentPadding;
+	padding-bottom: 0;
 	h2, h3 {
 		margin-top: 0;
+	}
+
+	#footerInner {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+
+	}
+
+	.google-maps-container,
+	#siteLinks {
+		padding: $footerComponentPadding;
+		margin-bottom: 0.5em;
 	}
 
 	.google-maps-container {
 		border: 2px solid red;
 		overflow: hidden;
 		height: auto;
-		width: 33%;
+		h2, h3 {
+			margin-bottom: 0.5em;
+		}
 	}
-	// .site-links {
 
-	// }
-}
+	#siteLinks {
+		border: 2px solid orange;
+		h2, h3 {
+			margin-bottom: 0.5em;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+	}
 
-.legal-footer {
-	clear: both;
-	text-align: center;
-	background: #333;
-	color: #ccc;
+	#legalFooter {
+		clear: both;
+		text-align: center;
+		background: #333;
+		color: #ccc;
+		padding: 0.5em 0;
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	@media (min-width: 681px) {
+		background: orange;
+		padding: 0;
+
+		#footerInner {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 80%;
+			margin: 0 auto;
+			padding: 0.5em 0;
+		}
+
+		.google-maps-container,
+		#siteLinks {
+			padding-bottom: 0;
+		}
+
+		.google-maps-container {
+			flex: 2 1 auto;
+		}
+		#siteLinks {
+			border: 2px dotted black;
+			flex: 1 1 auto;
+			margin-left: 0.5em;
+		}
+
+		#legalFooter {
+			flex-basis: 100%;
+		}
+	}
+
 }

@@ -42,6 +42,7 @@
 		padding-bottom: 0;
 		display: block;
 
+
 		#headerPhone {
 			flex: 1 1 100%;
 			align-self: flex-end;
@@ -54,7 +55,15 @@
 		#byline {
 			white-space: nowrap;
 		}
-		
+
+	}
+
+	@media (min-width: 800px) {
+		padding-left: 10%;
+		padding-right: 10%;
+		#byline {
+			white-space: normal;
+		}
 	}
 
 
