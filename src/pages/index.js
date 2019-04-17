@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from '../components/layout'
@@ -8,9 +8,6 @@ import ImageBox from '../components/image-box'
 import { rhythm } from '../utils/typography'
 import '../styles/layout.scss'
 import '../styles/index.scss'
-
-// import Image from '../components/image'
-// import SEO from '../components/seo'
 
 export default (props) => (
   <Layout>
@@ -44,12 +41,24 @@ export default (props) => (
     </div>
 
     <div className="section">
-      <p><strong>Bright and Spacious</strong> One and Two Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. Parking and most utilities are included.</p>
+      <p><strong>Bright and Spacious</strong> One and Two Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. Parking and most utilities are included.<br />
+      <Link to="/apartments">See more</Link>
+      </p>
       <ImageBox>
          <Img className="img-float-right" fluid={props.data.roomOne.childImageSharp.fluid} />
          <Img className="img-float-right" fluid={props.data.roomTwo.childImageSharp.fluid} />
       </ImageBox>
       {/*<p><em>Shot of escarpment.</em></p>*/}
+
+    </div>
+    <div className="section">
+      <p>The "Leisure Room” is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax.</p>
+      <p>Enjoy the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
+       <ImageBox>
+         <Img className="image-box-img" fluid={props.data.leisureRoomOne.childImageSharp.fluid} />
+         <Img className="image-box-img" fluid={props.data.leisureRoomTwo.childImageSharp.fluid} />
+         <Img className="image-box-img" fluid={props.data.leisureRoomThree.childImageSharp.fluid} />
+       </ImageBox>
     </div>
   </Layout>
 )
@@ -85,6 +94,15 @@ export const pageQuery = graphql`
          ...fluidImage
       }
       roomTwo: file(relativePath: { eq: "Image-24.jpg" }) {
+         ...fluidImage
+      }
+      leisureRoomOne: file(relativePath: { eq: "Image-29.jpg" }) {
+         ...fluidImage
+      }
+      leisureRoomTwo: file(relativePath: { eq: "Image-30.jpg" }) {
+         ...fluidImage
+      }
+      leisureRoomThree: file(relativePath: { eq: "Image-31.jpg" }) {
          ...fluidImage
       }
    }

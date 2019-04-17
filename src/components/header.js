@@ -31,7 +31,7 @@ export default class Header extends React.Component {
       const { siteTitle, description } = this.props
       return (
          <div id={headerStyles.header}>
-           <p id={headerStyles.headerPhone}><a tel="905-574-2626" title="Call Greystone Place">905-574-2626</a></p>
+           <p id={headerStyles.headerPhone}><a href="tel:+19055742626" title="Call Greystone Place">905-574-2626</a></p>
            <button id={headerStyles.mobMenu} onClick={this.toggleMenu}>X</button>
            <div id={headerStyles.marqueeContainer}>
              <h1 id={headerStyles.headline}>
