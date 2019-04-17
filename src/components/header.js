@@ -21,25 +21,32 @@ export default class Header extends React.Component {
    }
 
    toggleMenu() {
+      console.log('toggleMenu clicked', this.state.menuOpen);
 		this.setState(state => ({
 			menuOpen: !state.menuOpen
 		}))
-		console.log(this.state.menuOpen);
+      console.log(document.body);
+      let scrim = document.getElementById('scrim');
+      if (scrim.classList.contains('active-scrim')) {
+         scrim.classList.remove('active-scrim')
+      } else {
+         scrim.classList.add('active-scrim')
+      }
 	}
 
    render() {
       const { siteTitle, description } = this.props
       return (
          <div id={headerStyles.header}>
-           <p className={headerStyles.contactPhone}><a tel="905-574-2626" title="Call Greystone Place">905-574-2626</a></p>
-           <button id="mobMenu" onClick={this.toggleMenu}>X</button>
-           <div id={headerStyles.marquee}>
-             <h1>
+           <p id={headerStyles.headerPhone}><a tel="905-574-2626" title="Call Greystone Place">905-574-2626</a></p>
+           <button id={headerStyles.mobMenu} onClick={this.toggleMenu}>X</button>
+           <div id={headerStyles.marqueeContainer}>
+             <h1 id={headerStyles.headline}>
                <Link to="/">
                  {siteTitle}
                </Link>
              </h1>
-             <p name="description">{description}</p>
+             <p id={headerStyles.byline}>{description}</p>
            </div>
            <Nav menuOpen={this.state.menuOpen} />
          </div>

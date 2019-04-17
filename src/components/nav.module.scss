@@ -1,38 +1,25 @@
 #nav {
 
-	p.phone-number {
-		margin: 0;
-		text-align: right;
-	}
+	// p.phone-number {
+	// 	margin: 0;
+	// 	text-align: right;
+	// }
+
+	position: relative;
 
 	ul {
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		display: flex;
+		display: none;
 
 		li {
 			margin: 0.5em 1em 1em;
 			flex-basis: 0px;
 			display: inline;
 		}
-	}
 
-	a#mobMenu {
-		display: block;
-	}
-
-	@media (max-width: 680px) {
-
-		position: relative;
-
-		[name="mobileNavTrigger"] {
-			position: absolute;
-			z-index: 10;
-		}
-
-		// mobile nav menu
-		.drawer-open {
+		&.menu-open {
 			display: block;
 			height: 100%;
 			position: fixed;
@@ -42,13 +29,39 @@
 			left: 0;
 			background-color: white;
 			border-right: 2px solid #333;
-
 			li {
 				display: block;
 			}
 		}
 
 	}
+
+	// @media (max-width: 680px) {
+	//
+	//
+	// 	[name="mobileNavTrigger"] {
+	// 		position: absolute;
+	// 		z-index: 10;
+	// 	}
+	//
+	// 	// mobile nav menu
+	// 	.drawer-open {
+	// 		display: block;
+	// 		height: 100%;
+	// 		position: fixed;
+	// 		width: 80%;
+	// 		z-index: 10;
+	// 		top: 0;
+	// 		left: 0;
+	// 		background-color: white;
+	// 		border-right: 2px solid #333;
+	//
+	// 		li {
+	// 			display: block;
+	// 		}
+	// 	}
+	//
+	// }
 
 	@media (min-width: 681px) {
 		ul {

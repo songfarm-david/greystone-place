@@ -23,6 +23,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+        <div id="scrim"></div>
         <Header siteTitle={data.site.siteMetadata.title} description={data.site.siteMetadata.description}/>
         <div id="main-container">
           {children}
