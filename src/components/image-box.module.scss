@@ -4,9 +4,13 @@
 	height: auto;
 	width: 50%;
 	overflow: hidden;
+	
 	&:not(:last-of-type) {
 		margin-bottom: 1em;
 	}
 
+	&.right {
+		float: right;
+	}
 
 }

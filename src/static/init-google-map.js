@@ -9,5 +9,4 @@ export default function initMap() {
 		{zoom: 4, center: GS}
 	);
 	return map;
-	// var marker = new google.maps.Marker({position: GS, map: map});
 }
