@@ -6,60 +6,67 @@ import {initCarousel, startSlide } from './../functions/carousel.js'
 
 export default class ImageBox extends React.Component {
 
-	initCarousel() {
+	// NOTE: slide UI ideas
+	// - the slide goes once through all the way to the end then present a reply button
+	// - the slide goes forwards then backwards once
 
-		console.log('inside initCarousel now', this.carousel);
-		var images = Array.from(this.carousel.children)
+	initCarousel() {
+		let carouselEl = this.carousel,
+		images = Array.from(carouselEl.children)
 		// add carousel classes to img children of ImageBox
-		// the first child item in the array gets the active class
-		images.forEach((currVal, index, arr) => {
-			if (index == 0) {
-				currVal.classList.add('slide-active')
-			}
+		images.forEach((currVal, index) => {
+			// the first child item in the array gets the active class
+			if (index == 0) currVal.classList.add('slide-active')
+			// all slides get 'slide' class
 			currVal.classList.add('slide')
 		})
-		return {
-			// imageBoxNode,
-			images
-		}
-	}
+		return { carouselEl, images }
+   }
 
 	nextSlide() {
-
-		// let imageBox = ReactDOM.findDOMNode(this)
 		var slides = Array.from(this.carousel.children)
+
+		if (this.state.currSlide == slides.length-1) {
+			clearInterval(this.slideInterval)
+			this.triggerOverlay()
+			// trigger overlay and button
+			return
+		}
 
 		slides[this.state.currSlide].classList.remove('slide-active')
 
-		this.state.currSlide = (this.state.currSlide+1)
-		if (this.state.currSlide >= slides.length) {
-			this.state.currSlide = 0;
-		}
-
+		this.setState({currSlide: (this.state.currSlide+1)})
 		slides[this.state.currSlide].classList.add('slide-active')
+   }
+
+	triggerOverlay() {
+		// this.overlay = document.createElement('div')
+		this.carousel.classList.add('overlay')
+		// NOTE: add some ARIA attrs here
+		// do something here to make fade in work, maybe appendChild returns something
+		// this.carousel.appendChild(this.overlay)
 	}
 
 	constructor(props) {
 		super(props)
-		this.carousel = {}
+		// this.carousel = {}
 		this.nextSlide = this.nextSlide.bind(this)
 		this.state = {
-			currSlide: 0
+			currSlide: 0,
+			slideInterval: this.slideInterval
 		}
 	}
 
 	componentDidMount() {
-
 		// if this is a carousel ImageBox
 		if (this.props.carousel) {
+			// get the DOM node
 			this.carousel = ReactDOM.findDOMNode(this)
-
 			if (this.initCarousel()) {
 				//wait 2000 milliseconds and start slide
-				var slideInterval = setInterval(this.nextSlide, 2500)
+				this.slideInterval = setInterval(this.nextSlide, 2500)
 			}
 		}
-
 	}
 
 	render() {

@@ -2,11 +2,11 @@ import Typography from "typography"
 
 const typography = new Typography({
 	baseFontSize: '16px',
-	baseLineHeight: '1.5',
+	baseLineHeight: '1.33',
 	headerFontFamily: ['Crimson Text', 'serif'],
 	headerWeight: 600,
-	bodyFontFamily: ['Source Sans Pro'],
-	bodyWeight: 400,
+	bodyFontFamily: ['Lora'],
+	bodyWeight: 300,
 	scaleRatio: 2.5,
 	googleFonts: [
 		{
@@ -16,9 +16,9 @@ const typography = new Typography({
 			]
 		},
 		{
-			name: 'Source Sans Pro',
+			name: 'Lora',
 			styles: [
-				'400'
+				'300', '400'
 			]
 		}
 	]
