@@ -1,13 +1,15 @@
 // Layout component
 // @includes Header, Footer components
+
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+
 // Components
 import Header from './header'
 import Footer from './footer'
+
 // Styles
 import '../styles/layout.scss'
-import '../styles/reset.css'
 
 const Layout = ({ children }) => (
   <StaticQuery

@@ -51,6 +51,7 @@ export default (props) => (
       {/*<p><em>Shot of escarpment.</em></p>*/}
 
     </div>
+
     <div className="section">
       <p>The "Leisure Room” is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax.</p>
       <p>Enjoy the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
@@ -59,6 +60,10 @@ export default (props) => (
          <Img className="image-box-img" fluid={props.data.leisureRoomTwo.childImageSharp.fluid} />
          <Img className="image-box-img" fluid={props.data.leisureRoomThree.childImageSharp.fluid} />
        </ImageBox>
+    </div>
+
+    <div className={}>
+      Contact Kim, our Friendly ... and maybe add a little element where they can submit an application.
     </div>
   </Layout>
 )
