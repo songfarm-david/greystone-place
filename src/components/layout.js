@@ -27,9 +27,9 @@ const Layout = ({ children }) => (
       <>
         <div id="scrim"></div>
         <Header siteTitle={data.site.siteMetadata.title} description={data.site.siteMetadata.description}/>
-        <div id="main-container">
+        <main role="main" id="main-container">
           {children}
-        </div>
+        </main>
         <Footer siteTitle={data.site.siteMetadata.title} />
       </>
     )}

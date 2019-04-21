@@ -1,9 +1,12 @@
-// @import './reset.css';
-// @import './vars.scss';
+@import './reset.css';
+@import './vars.scss';
 
+html {
+	font-size: calc(var(--text-base-size) + 1vw);
+}
 body {
 
-	background-color: #f5f3ee;
+	background-color: var(--background-color);
 	position: relative;
 
 	#scrim {
@@ -21,15 +24,27 @@ body {
 		}
 	}
 
+	header {
+		& * :not(.byline) {
+  			font-family: var(--secondary-font);
+  		}
+	}
+
+
+
 	#main-container {
 		width: 100%;
 		max-width: none;
-		padding: 1em 0.5em 4em;
+		padding: 0 0.5em 4em;
+
+		& * + * {
+			margin-top: var(--vertical-rhythm)
+		}
 	}
 
 	@media (min-width: 681px) {
 		#main-container {
-			max-width: 80%;
+			max-width: 70%;
 			margin: 0 auto;
 			border: 1px dotted black;
 			padding-left: 0em;

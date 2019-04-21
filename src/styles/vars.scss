@@ -1,7 +1,40 @@
 :root {
-	--primary-font: ; //body
-	--secondary-font: ; //headers
+	--primary-font: 'Nanum Gothic', sans-serif; //body
+	--secondary-font: 'Cinzel', serif; //headers
 
-	--text-base-size: 1em;
+	--text-base-size: 0.8em;
 	--text-scale-ratio: 1.33;
+
+	--background-color: #fdfdfd;
+
+	--line-height: calc(var(--text-base-size) * var(--text-scale-ratio));
+	--vertical-rhythm: var(--line-height);
+
+	/* type scale */
+    --scale-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+    --scale-sm: calc(1em / var(--text-scale-ratio));
+    --scale-md: calc(1em * var(--text-scale-ratio));
+    --scale-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --scale-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --scale-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --scale-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+
+}
+
+body {
+	font-family: var(--primary-font);
+	font-weight: 400;
+	line-height: 1.33;
+}
+
+h1, h2, h3 {
+	font-family: var(--secondary-font);
+	margin-top: var(--vertical-rhythm);
+	margin-bottom: var(--scale-sm);
+}
+
+h4, .h4 {
+	font-family: var(--primary-font);
+	font-weight: 800;
+	margin-bottom: var(--scale-xs);
 }

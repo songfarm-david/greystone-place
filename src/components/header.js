@@ -30,7 +30,7 @@ export default class Header extends React.Component {
    render() {
       const { siteTitle, description } = this.props
       return (
-         <div id={headerStyles.header}>
+         <header id={headerStyles.header}>
            <p id={headerStyles.headerPhone}><a href="tel:+19055742626" title="Call Greystone Place">905-574-2626</a></p>
            <button id={headerStyles.mobMenu} onClick={this.toggleMenu}>X</button>
            <div id={headerStyles.marqueeContainer}>
@@ -39,10 +39,10 @@ export default class Header extends React.Component {
                  {siteTitle}
                </Link>
              </h1>
-             <p id={headerStyles.byline}>{description}</p>
+             <p id={headerStyles.byline} className="byline">{description}</p>
            </div>
            <Nav menuOpen={this.state.menuOpen} />
-         </div>
+         </header>
       )
    }
 

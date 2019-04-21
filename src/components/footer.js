@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import GoogleMap from './google-map'
 
 import footerStyles from './footer.module.scss'
-import { rhythm } from '../utils/typography'
+// import { rhythm } from '../utils/typography'
 
 const Footer = ({ siteTitle }) => (
 	<div id={footerStyles.footer}>

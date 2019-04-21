@@ -29,10 +29,18 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-         pathToConfigModule: `src/utils/typography`,
-      }
+        fonts: [
+          {
+            family: `Cinzel`
+          },
+          {
+             family: 'Nanum Gothic',
+             variants: ['400', '800']
+          }
+        ],
+      },
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline

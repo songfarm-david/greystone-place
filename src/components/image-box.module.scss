@@ -4,7 +4,8 @@
 	height: auto;
 	width: 50%;
 	overflow: hidden;
-	
+	margin-top: 0 !important;
+
 	&:not(:last-of-type) {
 		margin-bottom: 1em;
 	}

@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import Layout from '../components/layout'
 import ImageBox from '../components/image-box'
 
-import { rhythm } from '../utils/typography'
+// import { rhythm } from '../utils/typography'
 import '../styles/layout.scss'
 import '../styles/index.scss'
 
@@ -13,12 +13,7 @@ export default (props) => (
   <Layout>
     {/*<SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />*/}
 
-    <div id="video-section" className="section" style={{
-      marginBottom: rhythm(1.5),
-      paddingLeft: rhythm(0.5),
-      paddingRight: rhythm(0.5),
-
-      }}>
+    <div id="video-section" className="section">
       <p><em>Video Here</em></p>
     </div>
 
@@ -62,8 +57,8 @@ export default (props) => (
        </ImageBox>
     </div>
 
-    <div className={}>
-      Contact Kim, our Friendly ... and maybe add a little element where they can submit an application.
+    <div>
+      <p>Contact Kim, our Friendly ... and maybe add a little element where they can submit an application.</p>
     </div>
   </Layout>
 )

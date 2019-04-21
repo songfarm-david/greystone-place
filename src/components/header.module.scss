@@ -2,12 +2,17 @@
 #header {
 
 	position: relative;
-	background-color: #ccc;
+	background-color: #333;
 	padding: 0.5em;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	border-bottom: 3px solid #444;
+	color: white;
+
+	a {
+		color: inherit;
+	}
 
 	#headerPhone {
 		margin: 0;
@@ -26,12 +31,15 @@
 
 	#marqueeContainer {
 		flex-basis: 100%;
+		color: #ccc;
 		h1, p { margin: 0; }
 		p { margin-bottom: 0.33em; /* TODO: use scale here */
 		}
 		p {
 			text-transform: capitalize;
 			font-style: oblique;
+			// font-weight: 800;
+			color: inherit;
 		}
 	}
 

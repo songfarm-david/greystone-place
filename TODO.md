@@ -9,3 +9,4 @@
 * image carousel
     * good tut: https://www.sitepoint.com/make-a-simple-javascript-slideshow-without-jquery/
 	 * carousel is accessible
+* delete 'typography.js' from 'utils/'
