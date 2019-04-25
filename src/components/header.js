@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import headerStyles from './header.module.scss'
+import '../styles/header.scss'
 import Nav from './nav'
 
 export default class Header extends React.Component {
@@ -30,16 +30,16 @@ export default class Header extends React.Component {
    render() {
       const { siteTitle, description } = this.props
       return (
-         <header id={headerStyles.header}>
-           <p id={headerStyles.headerPhone}><a href="tel:+19055742626" title="Call Greystone Place">905-574-2626</a></p>
-           <button id={headerStyles.mobMenu} onClick={this.toggleMenu}>X</button>
-           <div id={headerStyles.marqueeContainer}>
-             <h1 id={headerStyles.headline}>
+         <header id="header">
+           <p id="headerPhone"><a href="tel:+19055742626" title="Call Greystone Place">905-574-2626</a></p>
+           <button id="mobMenu" onClick={this.toggleMenu}>X</button>
+           <div id="marqueeContainer">
+             <h1 id="headline">
                <Link to="/">
                  {siteTitle}
                </Link>
              </h1>
-             <p id={headerStyles.byline} className="byline">{description}</p>
+             <p id="byline" className="byline">{description}</p>
            </div>
            <Nav menuOpen={this.state.menuOpen} />
          </header>

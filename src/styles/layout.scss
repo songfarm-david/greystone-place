@@ -1,12 +1,10 @@
 @import './reset.css';
 @import './vars.scss';
+@import './typography.scss';
+@import './globals.scss';
 
-html {
-	font-size: calc(var(--text-base-size) + 1vw);
-}
 body {
-
-	background-color: var(--background-color);
+	background-color: var(--light-color);
 	position: relative;
 
 	#scrim {
@@ -24,31 +22,36 @@ body {
 		}
 	}
 
-	header {
-		& * :not(.byline) {
-  			font-family: var(--secondary-font);
-  		}
-	}
-
-
-
 	#main-container {
+
 		width: 100%;
 		max-width: none;
-		padding: 0 0.5em 4em;
+		padding: var(--vertical-rhythm) var(--padding-half) var(--padding-three);
+		font-size: var(--scale-sm);
 
-		& * + * {
-			margin-top: var(--vertical-rhythm)
+		* + * {
+			margin-top: var(--vertical-rhythm);
+		}
+
+		.image-box, .gatsby-image-wrapper,
+		img, img + img
+	 	{
+			margin-top: 0;
+		}
+
+		p {
+			// font-size: var(--scale-sm);
+			line-height: var(--line-height);
+			font-weight: 300;
 		}
 	}
 
 	@media (min-width: 681px) {
 		#main-container {
-			max-width: 70%;
+			max-width: none; // TODO: add a max-width in EMS
 			margin: 0 auto;
-			border: 1px dotted black;
-			padding-left: 0em;
-			padding-right: 0em;
+			padding-left: var(--padding-two-plus);
+			padding-right: var(--padding-two-plus);
 			clear: both;
 		}
 	}

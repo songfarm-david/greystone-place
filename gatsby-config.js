@@ -33,11 +33,12 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Cinzel`
+            family: `Cinzel`,
+            variants: ['400','800']
           },
           {
-             family: 'Nanum Gothic',
-             variants: ['400', '800']
+             family: 'Poppins',
+             variants: ['300', '400', '400i']
           }
         ],
       },

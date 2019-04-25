@@ -5,9 +5,7 @@ import Img from "gatsby-image"
 import Layout from '../components/layout'
 import ImageBox from '../components/image-box'
 
-// import { rhythm } from '../utils/typography'
 import '../styles/layout.scss'
-import '../styles/index.scss'
 
 export default (props) => (
   <Layout>
@@ -19,7 +17,7 @@ export default (props) => (
 
     <div id="lobby-section" className="section">
        <p><strong>Soft Soothing Music</strong>, emulates throughout the Lobby and Hallways. Warm earth tone colors lend to the serenity of the interior.</p>
-       <ImageBox>
+       <ImageBox carousel="true">
           <Img className="image-box-img" fluid={props.data.lobby.childImageSharp.fluid} />
           <Img className="image-box-img" fluid={props.data.lobbyTwo.childImageSharp.fluid} />
           {/*<Img className="image-box-img" fluid={props.data.hallway.childImageSharp.fluid} />*/}
@@ -29,7 +27,7 @@ export default (props) => (
     <div id="exterior-section" className="section">
        <p><strong>Lush Landscaping</strong> and natural settings enhance the exterior while <em>video surveillance</em>, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
        {/*<p><em>Exterior shot here</em></p>*/}
-       <ImageBox>
+       <ImageBox carousel="true">
           <Img className="image-box-img" fluid={props.data.exteriorOne.childImageSharp.fluid} />
           <Img className="image-box-img" fluid={props.data.exteriorHall.childImageSharp.fluid} />
        </ImageBox>
@@ -39,9 +37,9 @@ export default (props) => (
       <p><strong>Bright and Spacious</strong> One and Two Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. Parking and most utilities are included.<br />
       <Link to="/apartments">See more</Link>
       </p>
-      <ImageBox>
-         <Img className="img-float-right" fluid={props.data.roomOne.childImageSharp.fluid} />
-         <Img className="img-float-right" fluid={props.data.roomTwo.childImageSharp.fluid} />
+      <ImageBox carousel="true">
+         <Img className="image-box-img" fluid={props.data.roomOne.childImageSharp.fluid} />
+         <Img className="image-box-img" fluid={props.data.roomTwo.childImageSharp.fluid} />
       </ImageBox>
       {/*<p><em>Shot of escarpment.</em></p>*/}
 
@@ -50,14 +48,14 @@ export default (props) => (
     <div className="section">
       <p>The "Leisure Room” is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax.</p>
       <p>Enjoy the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
-       <ImageBox>
+       <ImageBox carousel="true">
          <Img className="image-box-img" fluid={props.data.leisureRoomOne.childImageSharp.fluid} />
          <Img className="image-box-img" fluid={props.data.leisureRoomTwo.childImageSharp.fluid} />
          <Img className="image-box-img" fluid={props.data.leisureRoomThree.childImageSharp.fluid} />
        </ImageBox>
     </div>
 
-    <div>
+    <div className="section">
       <p>Contact Kim, our Friendly ... and maybe add a little element where they can submit an application.</p>
     </div>
   </Layout>

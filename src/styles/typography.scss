@@ -1,34 +1,45 @@
-$background-color-why: #333;
+:root {
+	--primary-font: 'Poppins', sans-serif; //body
+	--secondary-font: 'Cinzel', serif; //headers
 
-// define base-size font here
-$root-font-size: 100% !default;
+	--base-size: 16;
+	--text-base-size: 16px; // NOTE: Is this proper?
+	--text-scale-ratio: 1.33;
 
-// turns the root-font-size into a multiply-friendly number
-$root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
 
-// mixin for modular scale
-@mixin modScale($value, $increment, $ratio, $props){
+	--line-height: var(--text-scale-ratio);
+	--vertical-rhythm: calc(var(--text-base-size) * var(--text-scale-ratio));
 
-	@if $ratio == unison {
-		$ratio: 1;
+	/* type scale */
+    --scale-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+    --scale-sm: calc(1em / var(--text-scale-ratio));
+    --scale-md: calc(1em * var(--text-scale-ratio));
+    --scale-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --scale-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --scale-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --scale-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+}
+
+body {
+	font-family: var(--primary-font);
+	font-weight: 400;
+	line-height: 1.33;
+}
+
+h1, h2, h3 {
+	font-family: var(--secondary-font);
+	margin-top: var(--scale-md);
+	margin-bottom: var(--scale-sm);
+}
+
+h4, .h4 {
+	font-family: var(--primary-font);
+	font-weight: 800;
+	margin-bottom: var(--scale-xs);
+}
+
+header {
+	& * :not(.byline) {
+		font-family: var(--secondary-font);
 	}
-	@else {
-		$ratio: $ratio;
-	}
-
-	@if $increment > 0 {
-		@for $i from 1 through $increment {
-			$value: ($value * $ratio);
-		}
-	}
-	@if $increment < 0 {
-		$increment: abs($increment);
-		@for $i from 1 through $increment {
-			$value: ($value / $ratio);
-		}
-	}
-
-  $prop: $value * $root-font-multiplier * 16px;
-  $prop: $value * 1rem;
-
 }

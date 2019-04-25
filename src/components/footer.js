@@ -2,17 +2,16 @@ import React from 'react'
 import { Link } from 'gatsby'
 import GoogleMap from './google-map'
 
-import footerStyles from './footer.module.scss'
-// import { rhythm } from '../utils/typography'
+import '../styles/footer.scss'
 
 const Footer = ({ siteTitle }) => (
-	<div id={footerStyles.footer}>
-		<div id={footerStyles.footerInner}>
-			<div className={footerStyles.googleMapsContainer}>
+	<div id="footer">
+		<div id="footerInner">
+			<div className="google-maps-container">
 				<h3>Location</h3>
 				<GoogleMap />
 			</div>
-			<div id={footerStyles.siteLinks}>
+			<div id="siteLinks">
 				<h3>Site Links</h3>
 				<ul>
 					<li><Link to="/apartments" title="Apartments">Apartment Suites</Link></li>
@@ -21,7 +20,7 @@ const Footer = ({ siteTitle }) => (
 				</ul>
 			</div>
 		</div>
-		<div id={footerStyles.legalFooter}>
+		<div id="legalFooter">
 			<p>© {new Date().getFullYear()}, {siteTitle}</p>
 			<p>Website by <a href="https://peakwebsites.ca" target="_blank">Peak Websites</a></p>
 		</div>

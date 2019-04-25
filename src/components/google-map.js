@@ -10,6 +10,10 @@ export default class GoogleMap extends React.Component {
 			lat: 43.2214553,
 			lng: -79.8559704
 		};
+		// if (!new window.google.maps.Map()) {
+		// 	return;
+		// }
+		// TODO: put a fallback in place when internet connection is not available, otherwise the website breaks
 		var map = new window.google.maps.Map(
 			container,
 			{zoom: 16, center: GS}

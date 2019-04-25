@@ -1,40 +1,18 @@
+@import './typography.scss';
+@import './colors.scss';
+
 :root {
-	--primary-font: 'Nanum Gothic', sans-serif; //body
-	--secondary-font: 'Cinzel', serif; //headers
 
-	--text-base-size: 0.8em;
-	--text-scale-ratio: 1.33;
+	/* padding vars */
+	--padding-small: var(--scale-xs);
+	--padding-half: var(--scale-sm);
+	--padding-one: var(--scale-md);
+	--padding-one-plus: var(--scale-lg);
+	--padding-two: var(--scale-xl);
+	--padding-two-plus: var(--scale-xxl);
+	--padding-three: var(--scale-xxxl);
 
-	--background-color: #fdfdfd;
-
-	--line-height: calc(var(--text-base-size) * var(--text-scale-ratio));
-	--vertical-rhythm: var(--line-height);
-
-	/* type scale */
-    --scale-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
-    --scale-sm: calc(1em / var(--text-scale-ratio));
-    --scale-md: calc(1em * var(--text-scale-ratio));
-    --scale-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --scale-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --scale-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --scale-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-
-}
-
-body {
-	font-family: var(--primary-font);
-	font-weight: 400;
-	line-height: 1.33;
-}
-
-h1, h2, h3 {
-	font-family: var(--secondary-font);
-	margin-top: var(--vertical-rhythm);
-	margin-bottom: var(--scale-sm);
-}
-
-h4, .h4 {
-	font-family: var(--primary-font);
-	font-weight: 800;
-	margin-bottom: var(--scale-xs);
+	/* breakpoints */
+	// --container-mid:
+	--mobile-menu-min: calc(300px / var(--text-base-size))
 }
