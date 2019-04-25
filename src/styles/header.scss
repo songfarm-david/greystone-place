@@ -6,7 +6,7 @@
 	position: relative;
 	background-color: var(--dark-color);
 	color: var(--pale-taupe);
-	padding: var(--padding-one) var(--padding-half);
+	padding: var(--padding-one) var(--padding-sm);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -19,26 +19,28 @@
 	#headerPhone {
 		margin: 0;
 		margin-left: auto;
-		font-size: var(--scale-sm);
+		font-size: var(--scale-md);
 		margin-bottom: 0;
 		align-self: center;
+		border-right: 1px solid var(--fire-brick);
 		a {
 			// margin: 0;
-			padding: var(--padding-small) var(--padding-small);
+			padding: var(--padding-xs) var(--padding-xs);
 			color: var(--pale-taupe);
 			font-style: oblique;
 		}
+
 	}
 
 	#mobMenu {
-		margin-left: var(--padding-half);
+		margin-left: var(--padding-sm);
 		border: none;
 		z-index: 1;
 	}
 
 	#marqueeContainer {
 		flex-basis: 100%;
-		margin-top: var(--padding-small);
+		margin-top: var(--padding-xs);
 		#headline {
 			font-weight: 400;
 			color: var(--pale-taupe);
@@ -51,7 +53,7 @@
 			// font-style: oblique;
 			font-size: var(--scale-sm);
 			color: inherit;
-			margin-bottom: var(--padding-half); /* TODO: use scale here */
+			margin-bottom: var(--padding-sm); /* TODO: use scale here */
 			// color: var(--pale-taupe);
 
 		}

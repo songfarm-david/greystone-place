@@ -12,7 +12,7 @@
 	--padding-two-plus: var(--scale-xxl);
 	--padding-three: var(--scale-xxxl);
 
-	--padding-xs: calc(1em / (var(--second-scale) * var(--second-scale)));
+	--padding-xs: calc(1em / ( var(--second-scale) * var(--second-scale) ) );
 	--padding-sm: calc(1em / var(--second-scale));
 	--padding-md: calc(1em * var(--second-scale));
 	--padding-lg: calc(1em * var(--second-scale) * var(--second-scale));
@@ -21,7 +21,7 @@
 	--padding-xxxl: calc(1em * var(--second-scale) * var(--second-scale) * var(--second-scale) * var(--second-scale) * var(--second-scale));
 
 	/* breakpoints */
-	--container-mid: 43em;
+	--container-mid: 34em;
 	// minimum size of mobile nav drawer
 	--mobile-menu-min: calc(300px / var(--text-base-size));
 

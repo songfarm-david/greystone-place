@@ -59,3 +59,10 @@ blockquote {
 	border: 2px solid var(--dark-color);
 	color: var(--light-color);
 }
+
+ul {
+	list-style-type: circle;
+}
+ul li {
+	margin-bottom: var(--scale-xs);
+}

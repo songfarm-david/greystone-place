@@ -9,11 +9,11 @@ import '../styles/footer.scss'
 const Footer = ({ siteTitle }) => (
 	<div id="footer">
 		<div id="footerInner">
-			<div className="google-maps-container">
-				<h3>Location</h3>
-				<Address />
-				<GoogleMap />
-			</div>
+			<article className="download">
+				<h3>Download</h3>
+				<p>Download an <a href="#" title="Download an application form to apply for tenancy">application form</a></p>
+			</article>
+
 			<div id="siteLinks">
 				<h3>Site Links</h3>
 				<ul>
@@ -22,6 +22,13 @@ const Footer = ({ siteTitle }) => (
 					<li><Link to="/contact" contact="Contact">Inquiries</Link></li>
 				</ul>
 			</div>
+
+			<article className="google-maps-container">
+				<h3>Location</h3>
+				<Address />
+				<GoogleMap />
+			</article>
+
 		</div>
 		<div id="legalFooter">
 			<p>© {new Date().getFullYear()}, {siteTitle}</p>

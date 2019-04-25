@@ -4,6 +4,13 @@
 	margin: 0;
 }
 
+@media (min-width: 681px) {
+	.google-map-container {
+		width: 70%;
+		height: 10em;
+	}
+}
+
 .google-map-container.left {
 	margin-right: 0px;
 	margin-left: auto;

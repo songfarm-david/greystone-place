@@ -28,7 +28,7 @@ export default (props) => (
     <p>Parking for 1 vehicle is included as is heat and hot water. The resident manager lives on site and the clean, modern laundry facility is well equipped with new Maytag washers and dryers.</p>
 
     {/*<p>The leisure room is a shared social facility with bingo, bridge, and movie night. Equipped with an efficient kitchen, this unique facility can be reserved for family functions or small private parties.</p>*/}
-    <hr className="clear"/>
+    {/*<hr className="clear"/>*/}
     <div className="floating-list">
       <h3 className="h3">Apartment Suites Include:</h3>
        <ul>
@@ -41,7 +41,7 @@ export default (props) => (
     </div>
     <p>Greystone Place issues high-security keys and controlled access is video monitored. The lobby entrance monitor can be viewed through your TV.</p>
     <p>This excellent mountain location is within close proximity to churches, hospitals, and shopping. Located in the same block as Limeridge Mall, and just steps to public transit. Also, only a short ride to the GO Train and the Lincoln Alexander Expressway.</p>
-      <p>Viewing or further inquiries may be directed to courteous onsite staff at <a href="tel:+19055742626">(905) 574-2626</a>.</p>
+    <p>Viewing or further inquiries may be directed to courteous onsite staff at <a href="tel:+19055742626">(905) 574-2626</a>.</p>
     {/*<Link to="/">Go back to the homepage</Link>*/}
   </Layout>
 )

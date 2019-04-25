@@ -6,6 +6,9 @@
 		margin: 0;
 		font-weight: lighter;
 		line-height: var(--second-scale);
+		&.name {
+			font-weight: normal;
+		}
 		&:last-child {
 			margin-bottom: var(--scale-sm);
 		}

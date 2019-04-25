@@ -6,18 +6,22 @@
 	height: auto;
 	width: auto;
 	overflow: hidden;
-	margin-bottom: var(--scale-lg);
+	// margin-bottom: var(--padding-lg);
+	border: 4px ridge var(--pale-taupe);
+	padding: var(--padding-sm);
+	margin: var(--vertical-rhythm) 0;
 
 	&.right {
 		float: right;
-		margin-left: var(--scale-sm);
-		margin-top: var(--vertical-rhythm);
+		width: 56%;
+		margin-left: var(--padding-sm);
 	}
 
 	&.left {
 		float: left;
-		margin-right: var(--scale-sm);
-		margin-top: var(--vertical-rhythm);
+		width: 56%;
+		margin-right: var(--padding-sm);
+		// margin-top: var(--vertical-rhythm);
 	}
 
 	&:not(:last-of-type) {
@@ -25,15 +29,15 @@
 	}
 
 	&.half-width {
-		width: 56%;
+		// width: 56%;
 	}
 
 	&.three-qrt {
-		width: 66%;
+		// width: 66%;
 	}
 
 	&.full-width {
-		width: 100%;
+		// width: 100%;
 	}
 
 	.slide {
