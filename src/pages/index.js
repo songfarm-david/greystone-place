@@ -12,7 +12,7 @@ export default (props) => (
     {/*<SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />*/}
 
     <section id="video-section" className="section">
-      <p><em>Video Here</em></p>
+      <p className="video">Video Here</p>
       <p className="clear">Greystone Place by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults. Sorry, no dogs allowed.</p>
     </section>
 
@@ -26,7 +26,7 @@ export default (props) => (
     </section>
 
     <section id="exterior-section" className="section">
-       <p><strong>Lush Landscaping</strong> and natural settings enhance the exterior while <em>video surveillance</em>, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
+       <p><strong>Lush Landscaping</strong> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
        {/*<p><em>Exterior shot here</em></p>*/}
        <ImageBox>
           <Img className="image-box-img" fluid={props.data.exteriorOne.childImageSharp.fluid} />
@@ -47,7 +47,7 @@ export default (props) => (
     </section>
 
     <section className="section">
-      <p>The "Leisure Room” is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax.</p>
+      <p>The <strong>"Leisure Room”</strong> is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax.</p>
       <p>Enjoy the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
        <ImageBox>
          <Img className="image-box-img" fluid={props.data.leisureRoomOne.childImageSharp.fluid} />

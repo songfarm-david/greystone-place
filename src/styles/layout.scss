@@ -30,6 +30,14 @@
 		font-weight: 300;
 	}
 
+	#video-section {
+		// border: 1px dotted var(--dark-color);
+		p.video {
+			margin: var(--scale-md);
+			height: 6em;
+			border: 1px solid var(--dark-color);
+		}
+	}
 	/* sections */
 
 	.section {
@@ -61,7 +69,6 @@
 
 	}
 
-
 	ul.list {
 		width: auto;
 		border-top: 1px ridge var(--footer-grey);
@@ -86,6 +93,13 @@
 		&.no-border {
 			border-top-width: 0px;
 		}
+	}
+
+	p > strong {
+		font-family: var(--secondary-font);
+		font-size: var(--padding-md);
+		font-style: italic;
+		text-transform: lowercase;
 	}
 
 }
