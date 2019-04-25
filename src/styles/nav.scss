@@ -49,9 +49,12 @@
 
 		ul {
 			// transition: none;
+			width: 70%;
+
 			&.drawer-open {
 				left: 0;
 				transition: left 0.5s ease-in-out;
+				min-width: var(--mobile-menu-min);
 			}
 			&.drawer-closed {
 				left: -100%;
