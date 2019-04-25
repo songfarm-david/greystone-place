@@ -3,23 +3,37 @@
 .image-box {
 
 	position: relative;
-	// border: 4px solid #667cfe;
 	height: auto;
-	width: 50%;
+	width: auto;
 	overflow: hidden;
+	margin-bottom: var(--scale-lg);
 
 	&.right {
 		float: right;
-		margin-left: 0.5em;
+		margin-left: var(--scale-sm);
+		margin-top: var(--vertical-rhythm);
 	}
 
 	&.left {
 		float: left;
-		margin-right: 0.5em;
+		margin-right: var(--scale-sm);
+		margin-top: var(--vertical-rhythm);
 	}
 
 	&:not(:last-of-type) {
 		margin-bottom: 1em;
+	}
+
+	&.half-width {
+		width: 56%;
+	}
+
+	&.three-qrt {
+		width: 66%;
+	}
+
+	&.full-width {
+		width: 100%;
 	}
 
 	.slide {
@@ -59,7 +73,7 @@
 			cursor: pointer;
 		}
 	}
-	
+
 	&.overlay::after {
 		position: absolute;
 		top: 0;

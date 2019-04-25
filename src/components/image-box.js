@@ -1,13 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import imageBoxStyles from './image-box.module.scss'
+
 import '../styles/image-box.scss'
 import {initCarousel, startSlide } from './../functions/carousel.js'
 
 export default class ImageBox extends React.Component {
 
 	// NOTE: slide UI ideas
-	// - the slide goes once through all the way to the end then present a reply button
+	// - the slide goes once through all the way to the end then present a replay button
 	// - the slide goes forwards then backwards once
 
 	initCarousel() {
@@ -34,7 +34,6 @@ export default class ImageBox extends React.Component {
 		}
 
 		slides[this.state.currSlide].classList.remove('slide-active')
-
 		this.setState({currSlide: (this.state.currSlide+1)})
 		slides[this.state.currSlide].classList.add('slide-active')
    }
@@ -55,6 +54,7 @@ export default class ImageBox extends React.Component {
 			currSlide: 0,
 			slideInterval: this.slideInterval
 		}
+		this.width = this.props.width;
 	}
 
 	componentDidMount() {
@@ -64,7 +64,7 @@ export default class ImageBox extends React.Component {
 			this.carousel = ReactDOM.findDOMNode(this)
 			if (this.initCarousel()) {
 				//wait 2000 milliseconds and start slide
-				this.slideInterval = setInterval(this.nextSlide, 2500)
+				this.slideInterval = setInterval(this.nextSlide, 3500)
 			}
 		}
 	}
@@ -74,7 +74,8 @@ export default class ImageBox extends React.Component {
 			// console.log('this.props', this.props)
 			<article className={
 				"image-box " +
-				(this.props.align ? this.props.align:"no-align")
+				(this.props.align ? this.props.align : "no-align") + " " +
+				(this.props.width ? this.props.width : "half-width")
 			}>
 				{this.props.children}
 				</article>

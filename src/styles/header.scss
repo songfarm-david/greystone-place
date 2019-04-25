@@ -2,6 +2,7 @@
 #header {
 
 	font-family: var(--secondary-font);
+	text-transform: lowercase;
 	position: relative;
 	background-color: var(--dark-color);
 	color: var(--pale-taupe);
@@ -18,9 +19,12 @@
 	#headerPhone {
 		margin: 0;
 		margin-left: auto;
+		font-size: var(--scale-sm);
+		margin-bottom: 0;
+		align-self: center;
 		a {
-			margin: 0;
-			padding: var(--padding-small) var(--padding-half);
+			// margin: 0;
+			padding: var(--padding-small) var(--padding-small);
 			color: var(--pale-taupe);
 			font-style: oblique;
 		}
@@ -38,10 +42,12 @@
 		#headline {
 			font-weight: 400;
 			color: var(--pale-taupe);
-		}
-		h1, #byline { margin: 0; }
-		#byline {
 			text-transform: capitalize;
+		}
+		h1, #byline {
+			margin: 0; }
+		#byline {
+			text-transform: lowercase;
 			// font-style: oblique;
 			font-size: var(--scale-sm);
 			color: inherit;
@@ -77,8 +83,10 @@
 	}
 
 	@media (min-width: 800px) {
-		padding-left: var(--padding-two-plus);
-		padding-right: var(--padding-two-plus);
+		padding-left: var(--padding-three);
+		padding-right: var(--padding-three);
+		padding-left: var(--padding-xxxl);
+		padding-right: var(--padding-xxxl);
 		#marqueeContainer {
 			flex: 1 1 60%;
 		}

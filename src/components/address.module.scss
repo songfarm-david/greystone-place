@@ -1,0 +1,13 @@
+@import '../styles/typography.scss';
+
+#address {
+	span {
+		display: block;
+		margin: 0;
+		font-weight: lighter;
+		line-height: var(--second-scale);
+		&:last-child {
+			margin-bottom: var(--scale-sm);
+		}
+	}
+}

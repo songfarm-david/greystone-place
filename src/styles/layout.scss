@@ -3,57 +3,96 @@
 @import './typography.scss';
 @import './globals.scss';
 
-body {
-	background-color: var(--light-color);
-	position: relative;
+#main-container {
 
-	#scrim {
-		opacity: 0;
-		background: black;
-		height: 100%;
-		width: 100%;
-		position: fixed;
-		z-index: -1;
-		transition: opacity 0.5s ease-in;
-		&.active-scrim {
-			background-color: black;
-			opacity: 0.5;
-			z-index: 1;
-		}
+	width: 100%;
+	max-width: none;
+	padding: var(--vertical-rhythm) var(--padding-half) var(--padding-three);
+	overflow: hidden;
+
+	& * + * {
+		// margin-top: var(--vertical-rhythm);
 	}
 
-	#main-container {
+	.gatsby-image-wrapper,
+	img, img + img
+ 	{
+		margin-top: 0;
+	}
 
-		width: 100%;
-		max-width: none;
-		padding: var(--vertical-rhythm) var(--padding-half) var(--padding-three);
+	p, ul, ol, span {
 		font-size: var(--scale-sm);
+	}
 
-		* + * {
-			margin-top: var(--vertical-rhythm);
+	p {
+		line-height: var(--line-height);
+		font-weight: 300;
+	}
+
+	/* sections */
+
+	.section {
+
+		padding: 0;
+		overflow: hidden;
+
+		&.flex-section {
+			display: flex;
+			flex-wrap: wrap;
+			& > .flex-child {
+				margin-right: var(--scale-sm);
+				flex: 1 1 auto;
+			}
+			& > .flex-child:last-child {
+				margin-right: 0;
+				flex: 1 1 0px;
+
+			}
+			h1, h2, h3 {
+				flex-basis: 100%;
+			}
+
 		}
 
-		.image-box, .gatsby-image-wrapper,
-		img, img + img
-	 	{
+		&.overflow-visible {
+			overflow: visible;
+		}
+
+	}
+
+	.floating-list {
+		float: left;
+		width: calc(50% / var(--text-scale-ratio));
+		margin-right: var(--scale-sm);
+		margin-top: 0;
+		> h2, h3 {
 			margin-top: 0;
 		}
+		&.right {
+			float: right;
+			margin-left: var(--scale-sm);
 
-		p {
-			// font-size: var(--scale-sm);
-			line-height: var(--line-height);
-			font-weight: 300;
 		}
 	}
 
-	@media (min-width: 681px) {
-		#main-container {
-			max-width: none; // TODO: add a max-width in EMS
-			margin: 0 auto;
-			padding-left: var(--padding-two-plus);
-			padding-right: var(--padding-two-plus);
-			clear: both;
+}
+
+@media (min-width: 681px) {
+	#main-container {
+
+		margin: 0 auto;
+		// padding-left: var(--padding-two-plus);
+		// padding-right: var(--padding-two-plus);
+		width: var(--container-mid);
+		clear: both;
+
+		.section.flex-section {
+			.flex-child {
+				flex: 2 1 66%;
+			}
+			.flex-child:last-of-type {
+				flex: 1 2 0px;
+			}
 		}
 	}
-
 }

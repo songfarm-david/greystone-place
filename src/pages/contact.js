@@ -2,11 +2,20 @@ import React from 'react'
 // import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
+import Address from '../components/address'
+import GoogleMap from '../components/google-map'
 
 export default () => (
   <Layout>
     {/*<SEO title="Page two" />*/}
-    <h2>Contact</h2>
-	 <p><em>Something contact.</em></p>
+    <section className="section flex-section">
+       <h2>Contact</h2>
+   	 <p className="flex-child">If you're interested in renting, please complete an <a href="#">Application Form</a> or Call Kim at <a href="tel:+19055742626">905-574-2626</a>.</p>
+       <div className="google-maps-container flex-child">
+         <Address />
+         <GoogleMap />
+       </div>
+    </section>
+
   </Layout>
 )

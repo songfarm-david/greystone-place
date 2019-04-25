@@ -6,16 +6,15 @@
 
 	a {
 		color: inherit;
-		transition: color 0.25s ease-in;
+		transition: var(--link-transition);
 		&:hover {
 			color: var(--fire-brick);
-			transition: color 0.25s ease-in;
+			transition: var(--link-transition);
 		}
 	}
 
 	h2, h3 {
-
-		color: var(--pale-taupe);
+		color: var(--fire-brick);
 	}
 
 	#footerInner {
@@ -37,20 +36,26 @@
 	// 	}
 	// }
 
+	#siteLinks,
+	.google-maps-container {
+		font-size: var(--scale-sm);
+	}
+
 	#siteLinks {
 		ul {
 			list-style: none;
 			padding: 0;
 			margin: 0;
-			font-size: var(--scale-sm);
+			// font-size: var(--scale-sm);
+			font-weight: lighter;
 		}
 	}
 
 	#legalFooter {
 		clear: both;
 		text-align: center;
-		background: var(--dark-color);
-		color: var(--light-color);
+		background: var(--pale-taupe);
+		color: var(--footer-grey);
 		padding: var(--padding-small) 0;
 		font-size: var(--scale-xs);
 		p {
@@ -58,7 +63,12 @@
 		}
 		a {
 			// TODO: Theme color here:
-			color: var(--pale-taupe);
+			color: var(--footer-grey);
+			transition: color 0.25s ease-in;
+			&:hover {
+				color: var(--fire-brick);
+				transition: color 0.25s ease-in;
+			}
 		}
 	}
 
@@ -93,8 +103,8 @@
 
 	@media (min-width: 800px) {
 		#footerInner {
-			padding-left: var(--padding-two-plus);
-			padding-right: var(--padding-two-plus);
+			padding-left: var(--padding-xxxl);
+			padding-right: var(--padding-xxxl);
 		}
 	}
 

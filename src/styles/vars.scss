@@ -12,7 +12,19 @@
 	--padding-two-plus: var(--scale-xxl);
 	--padding-three: var(--scale-xxxl);
 
+	--padding-xs: calc(1em / (var(--second-scale) * var(--second-scale)));
+	--padding-sm: calc(1em / var(--second-scale));
+	--padding-md: calc(1em * var(--second-scale));
+	--padding-lg: calc(1em * var(--second-scale) * var(--second-scale));
+	--padding-xl: calc(1em * var(--second-scale) * var(--second-scale) * var(--second-scale));
+	--padding-xxl: calc(1em * var(--second-scale) * var(--second-scale) * var(--second-scale) * var(--second-scale));
+	--padding-xxxl: calc(1em * var(--second-scale) * var(--second-scale) * var(--second-scale) * var(--second-scale) * var(--second-scale));
+
 	/* breakpoints */
-	// --container-mid:
-	--mobile-menu-min: calc(300px / var(--text-base-size))
+	--container-mid: 43em;
+	// minimum size of mobile nav drawer
+	--mobile-menu-min: calc(300px / var(--text-base-size));
+
+	/* transition */
+	--link-transition: color 0.25s ease-in;
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
+
 import GoogleMap from './google-map'
+import Address from './address'
 
 import '../styles/footer.scss'
 
@@ -9,6 +11,7 @@ const Footer = ({ siteTitle }) => (
 		<div id="footerInner">
 			<div className="google-maps-container">
 				<h3>Location</h3>
+				<Address />
 				<GoogleMap />
 			</div>
 			<div id="siteLinks">
