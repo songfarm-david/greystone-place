@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
 import '../styles/header.scss'
 import Nav from './nav'
 
@@ -10,6 +13,7 @@ export default class Header extends React.Component {
       super(props)
       this.state = {menuOpen: false}
       this.toggleMenu = this.toggleMenu.bind(this)
+      this.bars = <FontAwesomeIcon icon={faBars} />
    }
 
    toggleMenu() {
@@ -29,10 +33,11 @@ export default class Header extends React.Component {
 
    render() {
       const { siteTitle, description } = this.props
+      const bars = "Bars"
       return (
          <header id="header">
            <p id="headerPhone"><a href="tel:+19055742626" title="Call Greystone Place">905-574-2626</a><span>|</span></p>
-           <button id="mobMenu" onClick={this.toggleMenu}>X</button>
+           <button id="mobMenu" onClick={this.toggleMenu}>{this.bars}</button>
            <div id="marqueeContainer">
              <h1 id="headline">
                <Link to="/">

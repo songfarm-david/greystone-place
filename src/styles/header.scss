@@ -40,6 +40,13 @@
 		margin-left: var(--padding-sm);
 		border: none;
 		z-index: 1;
+		background-color: inherit;
+		color: var(--pale-taupe);
+		// border: 1px dotted var(--light-color);
+		padding: 2px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	#marqueeContainer {
