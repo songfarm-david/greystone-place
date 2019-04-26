@@ -22,12 +22,16 @@
 		font-size: var(--padding-sm);
 		margin-bottom: 0;
 		align-self: center;
-		border-right: 1px solid var(--fire-brick);
+		// border-right: 1px solid var(--fire-brick);
 		a {
 			// margin: 0;
 			padding: var(--padding-xs) var(--padding-xs);
 			color: var(--pale-taupe);
 			font-style: oblique;
+			+ span {
+				color: var(--fire-brick);
+				vertical-align: top;
+			}
 		}
 
 	}

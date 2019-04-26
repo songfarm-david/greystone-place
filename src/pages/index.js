@@ -17,7 +17,7 @@ export default (props) => (
     </section>
 
     <section id="lobby-section" className="section">
-       <p><strong>Soft Soothing Music</strong>, emulates throughout the Lobby and Hallways. Warm earth tone colors lend to the serenity of the interior.</p>
+       <p><span className="drop-caps"><strong>Soft Soothing Music</strong></span>, emulates throughout the Lobby and Hallways. Warm earth tone colors lend to the serenity of the interior.</p>
        <ImageBox>
           <Img className="image-box-img" fluid={props.data.lobby.childImageSharp.fluid} />
           <Img className="image-box-img" fluid={props.data.lobbyTwo.childImageSharp.fluid} />
@@ -26,7 +26,7 @@ export default (props) => (
     </section>
 
     <section id="exterior-section" className="section">
-       <p><strong>Lush Landscaping</strong> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
+       <p><span className="drop-caps"><strong>Lush Landscaping</strong></span> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
        {/*<p><em>Exterior shot here</em></p>*/}
        <ImageBox>
           <Img className="image-box-img" fluid={props.data.exteriorOne.childImageSharp.fluid} />
@@ -35,7 +35,7 @@ export default (props) => (
     </section>
 
     <section className="section">
-      <p><strong>Bright and Spacious</strong> One and Two Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. Parking and most utilities are included.<br />
+      <p><span className="drop-caps"><strong>Bright and Spacious</strong></span> One and Two Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. Parking and most utilities are included.<br />
       <Link to="/apartments">See more</Link>
       </p>
       <ImageBox>
@@ -47,9 +47,9 @@ export default (props) => (
     </section>
 
     <section className="section">
-      <p>The <strong>"Leisure Room”</strong> is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax.</p>
+      <p><span className="drop-caps"><strong>The "Leisure Room”</strong></span> is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax.</p>
       <p>Enjoy the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
-       <ImageBox>
+       <ImageBox carousel="true">
          <Img className="image-box-img" fluid={props.data.leisureRoomOne.childImageSharp.fluid} />
          <Img className="image-box-img" fluid={props.data.leisureRoomTwo.childImageSharp.fluid} />
          <Img className="image-box-img" fluid={props.data.leisureRoomThree.childImageSharp.fluid} />

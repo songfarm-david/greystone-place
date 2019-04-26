@@ -15,19 +15,13 @@
 		// border: 1px solid black;
 	}
 
-	// .gatsby-image-wrapper,
-	// img, img + img
- 	// {
-	// 	margin-top: 0;
-	// }
-
 	p, ul, ol, span {
 		font-size: var(--scale-sm);
 	}
 
 	p {
 		line-height: var(--line-height);
-		font-weight: 300;
+		font-weight: 400;
 	}
 
 	#video-section {
@@ -95,11 +89,13 @@
 		}
 	}
 
-	p > strong {
+	p > span.drop-caps {
 		font-family: var(--secondary-font);
 		font-size: var(--padding-md);
 		font-style: italic;
 		text-transform: lowercase;
+		vertical-align: text-bottom;
+		line-height: 1;
 	}
 
 }
