@@ -13,46 +13,11 @@ export default class ImageBox extends React.Component {
 	// - the slide goes once through all the way to the end then present a replay button
 	// - the slide goes forwards then backwards once
 
-	initCarousel() {
-		let carouselEl = this.carousel,
-		images = Array.from(carouselEl.children)
-		// add carousel classes to img children of ImageBox
-		images.forEach((currVal, index) => {
-			// the first child item in the array gets the active class
-			if (index == 0) currVal.classList.add('slide-active')
-			// all slides get 'slide' class
-			currVal.classList.add('slide')
-		})
-		return { carouselEl, images }
-   }
-
-	nextSlide() {
-		var slides = Array.from(this.carousel.children)
-
-		if (this.state.currSlide == slides.length-1) {
-			clearInterval(this.slideInterval)
-			this.triggerOverlay()
-			// trigger overlay and button
-			return
-		}
-
-		slides[this.state.currSlide].classList.remove('slide-active')
-		this.setState({currSlide: (this.state.currSlide+1)})
-		slides[this.state.currSlide].classList.add('slide-active')
-   }
-
-	triggerOverlay() {
-		// this.overlay = document.createElement('div')
-		this.carousel.classList.add('overlay')
-		// NOTE: add some ARIA attrs here
-		// do something here to make fade in work, maybe appendChild returns something
-		// this.carousel.appendChild(this.overlay)
-	}
-
 	constructor(props) {
 		super(props)
 		// this.carousel = {}
 		this.nextSlide = this.nextSlide.bind(this)
+		this.playSlide = this.playSlide.bind(this)
 		this.state = {
 			currSlide: 0,
 			slideInterval: this.slideInterval
@@ -75,7 +40,7 @@ export default class ImageBox extends React.Component {
 	render() {
 		return (
 			// console.log('this.props', this.props)
-			<article className={
+			<article onClick={this.playSlide} className={
 				"image-box " +
 				(this.props.align ? this.props.align : "no-align") + " " +
 				(this.props.width ? this.props.width : "half-width")
@@ -84,6 +49,52 @@ export default class ImageBox extends React.Component {
 				</article>
 		)
 	}
+
+	initCarousel() {
+		let carouselEl = this.carousel,
+		images = Array.from(carouselEl.children)
+		// add carousel classes to img children of ImageBox
+		images.forEach((currVal, index) => {
+			// the first child item in the array gets the active class
+			if (index == 0) currVal.classList.add('slide-active')
+			// all slides get 'slide' class
+			currVal.classList.add('slide')
+		})
+		return { carouselEl, images }
+   }
+
+	nextSlide() {
+		console.log('this.nextSlide called');
+		var slides = Array.from(this.carousel.children)
+
+		if (this.state.currSlide == slides.length-1) {
+			clearInterval(this.slideInterval)
+			this.triggerOverlay()
+			// trigger overlay and button
+			return
+		}
+
+		slides[this.state.currSlide].classList.remove('slide-active')
+		this.setState({currSlide: (this.state.currSlide+1)})
+		slides[this.state.currSlide].classList.add('slide-active')
+   }
+
+	triggerOverlay() {
+		// this.overlay = document.createElement('div')
+		this.carousel.classList.add('overlay')
+		// this.carousel.
+		// NOTE: add some ARIA attrs here
+		// do something here to make fade in work, maybe appendChild returns something
+		// this.carousel.appendChild(this.overlay)
+	}
+
+	playSlide() {
+		// alert('click')
+		this.carousel.classList.remove('overlay')
+		this.slideInterval = setInterval(this.nextSlide, 3500)
+		// this.nextSlide();
+	}
+
 }
 
 // const ImageBox = (props) =>

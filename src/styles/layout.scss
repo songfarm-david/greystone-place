@@ -7,7 +7,7 @@
 
 	width: 100%;
 	max-width: none;
-	padding: var(--vertical-rhythm) var(--padding-md) var(--padding-xxxl);
+	padding: var(--vertical-rhythm) var(--padding-xs) var(--padding-xxxl);
 	overflow: hidden;
 
 	& section + section {
@@ -104,10 +104,9 @@
 	#main-container {
 
 		margin: 0 auto;
-		// padding-left: var(--padding-two-plus);
-		// padding-right: var(--padding-two-plus);
+		padding-left: 0;
+		padding-right: 0;
 		width: var(--container-mid);
-
 		clear: both;
 
 		.section.flex-section {

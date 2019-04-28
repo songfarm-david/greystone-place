@@ -10,8 +10,8 @@ const Footer = ({ siteTitle }) => (
 	<div id="footer">
 		<div id="footerInner">
 			<article className="download">
-				<h3>Download</h3>
-				<p>Download an <a href="#" title="Download an application form to apply for tenancy">application form</a></p>
+				<h3>Apply</h3>
+				<p>Submit an <a href="#" title="Download an application form to apply for tenancy">application form</a></p>
 			</article>
 
 			<div id="siteLinks">

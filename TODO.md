@@ -1,4 +1,4 @@
-* complete contact page
+* address 'TypeError: cannot read property 'maps' of undefined' google maps class not instantiated
 * add a sitemap (XML)
 * explore this plugin: https://www.gatsbyjs.org/packages/gatsby-plugin-page-transitions/
 * add titles to images
