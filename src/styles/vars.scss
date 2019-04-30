@@ -1,16 +1,25 @@
 @import './typography.scss';
 @import './colors.scss';
 
+$tablet-breakpoint: 42.5em;
+$desktop-breakpoint: 50em;
+
 :root {
 
-	/* padding vars */
-	--padding-small: var(--scale-xs);
-	--padding-half: var(--scale-sm);
-	--padding-one: var(--scale-md);
-	--padding-one-plus: var(--scale-lg);
-	--padding-two: var(--scale-xl);
-	--padding-two-plus: var(--scale-xxl);
-	--padding-three: var(--scale-xxxl);
+	--base-size: 18;
+
+	--text-scale-ratio: 1.25;
+	--second-scale: 1.33;
+
+	/* type scale */
+    --scale-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+    --scale-sm: calc(1em / var(--text-scale-ratio));
+	 --scale-reg: 1em;
+    --scale-md: calc(1em * var(--text-scale-ratio));
+    --scale-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --scale-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --scale-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --scale-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 
 	--padding-xs: calc(1em / ( var(--second-scale) * var(--second-scale) ) );
 	--padding-sm: calc(1em / var(--second-scale));
@@ -27,4 +36,12 @@
 
 	/* transition */
 	--link-transition: color 0.25s ease-in;
+
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+    :root {
+        /* mobile vars */
+
+    }
 }

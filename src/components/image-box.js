@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { redo } from '@fortawesome/free-solid-svg-icons'
+import { faPlay } from '@fortawesome/free-solid-svg-icons'
 
 import '../styles/image-box.scss'
 import {initCarousel, startSlide } from './../functions/carousel.js'
@@ -15,14 +15,17 @@ export default class ImageBox extends React.Component {
 
 	constructor(props) {
 		super(props)
-		// this.carousel = {}
-		this.nextSlide = this.nextSlide.bind(this)
-		this.playSlide = this.playSlide.bind(this)
 		this.state = {
 			currSlide: 0,
 			slideInterval: this.slideInterval
 		}
-		this.width = this.props.width;
+		// refs
+		this.overlay = React.createRef();
+
+		this.playBtn = <FontAwesomeIcon icon={faPlay} />
+		// functions
+		this.nextSlide = this.nextSlide.bind(this)
+		this.playSlide = this.playSlide.bind(this)
 	}
 
 	componentDidMount() {
@@ -39,60 +42,67 @@ export default class ImageBox extends React.Component {
 
 	render() {
 		return (
-			// console.log('this.props', this.props)
-			<article onClick={this.playSlide} className={
-				"image-box " +
-				(this.props.align ? this.props.align : "no-align") + " " +
-				(this.props.width ? this.props.width : "half-width")
-			}>
+			<article
+				className={
+					"image-box "
+					+ (this.props.align ? this.props.align : "no-align")
+				}>
 				{this.props.children}
-				</article>
+				<div id="overlay" ref={this.overlay} onClick={this.playSlide}>
+					<span>{this.playBtn}</span>
+				</div>
+			</article>
 		)
 	}
 
 	initCarousel() {
 		let carouselEl = this.carousel,
-		images = Array.from(carouselEl.children)
+			images = Array.from(carouselEl.children)
+
 		// add carousel classes to img children of ImageBox
 		images.forEach((currVal, index) => {
+
+			if (currVal.getAttribute('id') !== 'overlay') {
+				// all slides get 'slide' class
+				currVal.classList.add('slide')
+			}
+
 			// the first child item in the array gets the active class
 			if (index == 0) currVal.classList.add('slide-active')
-			// all slides get 'slide' class
-			currVal.classList.add('slide')
+
 		})
+
 		return { carouselEl, images }
    }
 
-	nextSlide() {
-		console.log('this.nextSlide called');
-		var slides = Array.from(this.carousel.children)
+	filterChildren(child, index, arr) {
+		if (!child.hasAttribute('id') || child.getAttribute('id') != 'overlay') {
+			return child
+		}
+	}
 
-		if (this.state.currSlide == slides.length-1) {
+	nextSlide() {
+		var slides = Array.from(this.carousel.children)
+		var newSlides = slides.filter(this.filterChildren)
+		if (this.state.currSlide == newSlides.length-1) {
 			clearInterval(this.slideInterval)
 			this.triggerOverlay()
-			// trigger overlay and button
 			return
 		}
-
-		slides[this.state.currSlide].classList.remove('slide-active')
+		newSlides[this.state.currSlide].classList.remove('slide-active')
 		this.setState({currSlide: (this.state.currSlide+1)})
-		slides[this.state.currSlide].classList.add('slide-active')
+		newSlides[this.state.currSlide].classList.add('slide-active')
    }
 
 	triggerOverlay() {
-		// this.overlay = document.createElement('div')
-		this.carousel.classList.add('overlay')
-		// this.carousel.
-		// NOTE: add some ARIA attrs here
-		// do something here to make fade in work, maybe appendChild returns something
-		// this.carousel.appendChild(this.overlay)
+		this.overlay.current.classList.add('active');
 	}
 
 	playSlide() {
-		// alert('click')
-		this.carousel.classList.remove('overlay')
-		this.slideInterval = setInterval(this.nextSlide, 3500)
-		// this.nextSlide();
+		this.overlay.current.classList.remove('active')
+		this.setState({
+			slideInterval: setInterval(this.nextSlide, 3500)
+		})
 	}
 
 }

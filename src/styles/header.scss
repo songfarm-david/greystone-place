@@ -1,3 +1,6 @@
+@import './reset.css';
+@import './vars.scss';
+
 // mobile styles
 #header {
 
@@ -6,7 +9,7 @@
 	position: relative;
 	background-color: var(--dark-color);
 	color: var(--pale-taupe);
-	padding: var(--padding-one) var(--padding-sm);
+	padding: var(--padding-md) var(--padding-sm);
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -16,24 +19,33 @@
 		color: inherit;
 	}
 
-	#headerPhone {
-		margin: 0;
-		margin-left: auto;
-		font-size: var(--padding-sm);
-		margin-bottom: 0;
-		align-self: center;
-		// border-right: 1px solid var(--fire-brick);
-		a {
-			// margin: 0;
-			padding: var(--padding-xs) var(--padding-xs);
-			color: var(--pale-taupe);
-			font-style: oblique;
-			+ span {
-				color: var(--fire-brick);
-				vertical-align: top;
-			}
-		}
+	#topBar {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		flex-basis: 100%;
+		font-size: var(--scale-reg);
+		color: var(--khaki-pale);
 
+		#headerPhone {
+			margin: 0;
+			margin-left: auto;
+			font-size: var(--scale-reg);
+			margin-bottom: 0;
+			align-self: center;
+			// border-right: 1px solid var(--fire-brick);
+			a {
+				// margin: 0;
+				padding: var(--padding-xs) var(--padding-xs);
+				color: var(--pale-taupe);
+				font-style: oblique;
+				+ span {
+					color: var(--fire-brick);
+					vertical-align: top;
+				}
+			}
+
+		}
 	}
 
 	#mobMenu {
@@ -41,9 +53,8 @@
 		border: none;
 		z-index: 1;
 		background-color: inherit;
-		color: var(--pale-taupe);
-		// border: 1px dotted var(--light-color);
-		padding: 2px;
+		color: inherit;
+		padding: var(--padding-xs);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -61,51 +72,51 @@
 			margin: 0; }
 		#byline {
 			text-transform: lowercase;
-			// font-style: oblique;
 			font-size: var(--scale-sm);
-			color: inherit;
+			font-style: italic;
+			color: var(--khaki-pale);
 			margin-bottom: var(--padding-sm); /* TODO: use scale here */
-			// color: var(--pale-taupe);
-
 		}
 	}
 
 	// desktop styles
-	@media (min-width: 681px) {
+	@media (min-width: $tablet-breakpoint) {
 
 		//padding: var(--padding-one) 0 0; // NOTE: increase padding on desktop
 		display: flex;
 
-		#headerPhone {
-			flex: 1 1 100%;
-			align-self: flex-end;
-			text-align: right;
+		#topBar {
+			#headerPhone {
+				flex: 1 1 100%;
+				align-self: flex-end;
+				text-align: right;
+			}
+			#mobMenu {
+				display: none;
+			}
 		}
-		#mobMenu {
-			display: none;
-		}
+
 
 		#marqueeContainer {
 			flex-basis: 100%;
-		}
-
-		#byline {
-			// white-space: nowrap;
+			#byline {
+				// white-space: nowrap;
+			}
 		}
 
 	}
 
-	@media (min-width: 800px) {
-		padding-left: var(--padding-three);
-		padding-right: var(--padding-three);
+	@media (min-width: $desktop-breakpoint) {
 		padding-left: var(--padding-xxxl);
 		padding-right: var(--padding-xxxl);
+
 		#marqueeContainer {
 			flex: 1 1 60%;
+			#byline {
+				white-space: normal;
+			}
 		}
-		#byline {
-			white-space: normal;
-		}
+
 	}
 
 

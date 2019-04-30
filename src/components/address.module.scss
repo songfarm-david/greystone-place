@@ -5,9 +5,12 @@
 		display: block;
 		margin: 0;
 		font-weight: lighter;
+		font-style: italic;
 		line-height: var(--second-scale);
 		&.name {
 			font-weight: normal;
+		}
+		&.address, &.cityPostal {
 		}
 		&:last-child {
 			margin-bottom: var(--scale-sm);

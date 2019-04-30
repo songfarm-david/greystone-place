@@ -7,16 +7,15 @@
 
 	width: 100%;
 	max-width: none;
-	padding: var(--vertical-rhythm) var(--padding-xs) var(--padding-xxxl);
+	padding: var(--vertical-rhythm) var(--padding-xs) var(--padding-xxl);
 	overflow: hidden;
 
 	& section + section {
 		margin-top: var(--vertical-rhythm);
-		// border: 1px solid black;
 	}
 
 	p, ul, ol, span {
-		font-size: var(--scale-sm);
+		font-size: var(--padding-sm);
 	}
 
 	p {
@@ -100,13 +99,13 @@
 
 }
 
-@media (min-width: 681px) {
+@media (min-width: $tablet-breakpoint) {
 	#main-container {
-
+		border: var(--special-border);
 		margin: 0 auto;
-		padding-left: 0;
-		padding-right: 0;
-		width: var(--container-mid);
+		// padding-left: 0;
+		// padding-right: 0;
+		max-width: var(--container-mid);
 		clear: both;
 
 		.section.flex-section {

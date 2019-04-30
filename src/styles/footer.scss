@@ -27,14 +27,12 @@
 	.google-maps-container,
 	.download {
 		padding: var(--scale-md);
+		padding-bottom: 0;
 	}
 
 	#siteLinks {
 		ul {
 			list-style-type: disc;
-			// padding: var(--scale-sm);
-			margin: 0;
-			// font-size: var(--scale-sm);
 			font-weight: lighter;
 			li a {
 				color: inherit;
@@ -45,7 +43,7 @@
 	#legalFooter {
 		clear: both;
 		text-align: center;
-		background: var(--footer-grey);
+		background: var(--cosmic-latte);
 		color: var(--dark-color);
 		padding: var(--padding-xs) 0;
 		font-size: var(--scale-xs);

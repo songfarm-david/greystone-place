@@ -1,23 +1,12 @@
 :root {
+
 	--primary-font: 'Quicksand', sans-serif; //body
 	--secondary-font: 'Cinzel', serif; //headers
 
-	--base-size: 18;
 	--text-base-size: 18px; // NOTE: Is this proper?
-	--text-scale-ratio: 1.25;
-	--second-scale: 1.33;
 
 	--line-height: var(--second-scale);
 	--vertical-rhythm: calc(var(--text-base-size) * var(--text-scale-ratio));
-
-	/* type scale */
-    --scale-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
-    --scale-sm: calc(1em / var(--text-scale-ratio));
-    --scale-md: calc(1em * var(--text-scale-ratio));
-    --scale-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --scale-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --scale-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --scale-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 }
 
 body {

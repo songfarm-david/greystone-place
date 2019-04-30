@@ -30,6 +30,7 @@ blockquote {
 	font-family: var(--secondary-font);
 	font-style: italic;
 	border-top: 4px solid var(--khaki-pale);
+	margin-top: var(--vertical-rhythm);
 	padding: var(--scale-md) 0 0 var(--scale-sm);
 }
 
@@ -51,7 +52,6 @@ blockquote {
 
 .clear {
 	clear: both;
-	margin-top: var(--scale-lg);
 }
 
 .sidebar-dark {
@@ -62,7 +62,10 @@ blockquote {
 
 ul {
 	list-style-type: circle;
-}
-ul li {
-	margin-bottom: var(--scale-xs);
+	padding: 0;
+	margin: var(--vertical-rhythm) 0;
+	margin-left: var(--padding-lg);
+	li {
+		margin-bottom: var(--padding-xs);
+	}
 }
