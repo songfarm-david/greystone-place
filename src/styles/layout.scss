@@ -38,6 +38,11 @@
 		padding: 0;
 		overflow: hidden;
 
+		a.cta {
+			display: inline-block;
+			margin: var(--vertical-rhythm) 0;
+		}
+
 		&.flex-section {
 			display: flex;
 			flex-wrap: wrap;
@@ -62,6 +67,9 @@
 
 	}
 
+	.section .column-parent {
+		columns: 2 12em;
+	}
 	ul.list {
 		width: auto;
 		border-top: 1px ridge var(--footer-grey);
@@ -100,6 +108,7 @@
 }
 
 @media (min-width: $tablet-breakpoint) {
+
 	#main-container {
 		border: var(--special-border);
 		margin: 0 auto;
@@ -116,5 +125,6 @@
 				flex: 1 2 0px;
 			}
 		}
+
 	}
 }

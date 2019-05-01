@@ -17,17 +17,18 @@ export default (props) => (
        <ImageBox carousel="true" align="left">
          <Img fluid={props.data.designOne.childImageSharp.fluid} />
          <Img fluid={props.data.designTwo.childImageSharp.fluid} />
-         {/*<Img fluid={props.data.designThree.childImageSharp.fluid} />
+         <Img fluid={props.data.designThree.childImageSharp.fluid} />
          <Img fluid={props.data.designFour.childImageSharp.fluid} />
          <Img fluid={props.data.designKitchen.childImageSharp.fluid} />
          <Img fluid={props.data.designKitchenTwo.childImageSharp.fluid} />
          <Img fluid={props.data.designBed.childImageSharp.fluid} />
-         <Img fluid={props.data.designBath.childImageSharp.fluid} />*/}
+         <Img fluid={props.data.designBath.childImageSharp.fluid} />
        </ImageBox>
        <h3>Feather Your Nest</h3>
        <p>&ldquo;Feather Your Nest&rdquo; is a unique concept that enables Residents to personalize their Suites exclusively to their tastes and wishes. Create the living environment you've always wanted, limited only by your imagination.</p>
        <p>Quite simply, this principle is achieved by pro-rating the approved upgrade over its useful life. Greystone Place assists in the cost of your enrichment for mutual long term satisfaction.</p>
        <p>Rest easy, we have Professional Interior Decorators and Consultants available to make your dreams come true.</p>
+       <blockquote className="clear">Personalize your new Apartment Home to create the environment of your dreams with this exclusive concept, appropriately named <b>"Feather Your Nest"</b>.</blockquote>
     </section>
 
    <section className="section">
@@ -40,10 +41,6 @@ export default (props) => (
          <li>Muted paint color schemes, faux finishes and textures to highlight your furnishings</li>
          <li>Elegant light fixtures and custom window treatments</li>
       </ul>
-      {/*<ImageBox>*/}
-
-      {/*</ImageBox>*/}
-      <blockquote className="clear">Enhancing your quality of life in this tranquil, worry-free setting is an unprecedented, limited opportunity.</blockquote>
       <p><a href="#">Submit an application</a> form or call Kim today at <a href="tel:+19055742626" title="Call Kim at Greystone Place"><em>905-574-2626</em></a>.</p>
    </section>
 

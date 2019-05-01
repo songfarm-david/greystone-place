@@ -52,7 +52,7 @@
 
 	@media (min-width: $tablet-breakpoint) {
 		margin-top: var(--vertical-rhythm);
-		border: var(--special-border);
+		// border: var(--special-border);
 		&.left,
 		&.right {
 			width: 56%;

@@ -30,7 +30,7 @@ blockquote {
 	font-family: var(--secondary-font);
 	font-style: italic;
 	border-top: 4px solid var(--khaki-pale);
-	margin-top: var(--vertical-rhythm);
+	margin: var(--scale-lg) 0;
 	padding: var(--scale-md) 0 0 var(--scale-sm);
 }
 
