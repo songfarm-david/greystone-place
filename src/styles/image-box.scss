@@ -7,8 +7,9 @@
 	height: auto;
 	width: auto;
 	overflow: hidden;
-	border: 4px ridge var(--pale-taupe);
+	border: var(--hero-border);
 	padding: var(--padding-sm);
+	margin-top: var(--vertical-rhythm);
 	margin-bottom: var(--vertical-rhythm);
 
 	#overlay {
@@ -51,7 +52,6 @@
 	}
 
 	@media (min-width: $tablet-breakpoint) {
-		margin-top: var(--vertical-rhythm);
 		// border: var(--special-border);
 		&.left,
 		&.right {

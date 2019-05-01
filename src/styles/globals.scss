@@ -34,6 +34,10 @@ blockquote {
 	padding: var(--scale-md) 0 0 var(--scale-sm);
 }
 
+hr {
+	color: var(--khaki-pale);
+	margin: var(--vertical-rhythm) 0;
+}
 /* scrim for nav */
 #scrim {
 	opacity: 0;

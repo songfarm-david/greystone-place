@@ -3,7 +3,9 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from '../components/layout'
+import greyStoneVideo from '../images/greystone_place.mp4'
 import ImageBox from '../components/image-box'
+import fluidImage from '../utils/fluidImage'
 
 import '../styles/layout.scss'
 
@@ -12,11 +14,15 @@ export default (props) => (
     {/*<SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />*/}
 
     <section id="video-section" className="section">
-      <p className="video">Video Here</p>
-      <p className="clear">Greystone Place by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults. Sorry, no dogs allowed.</p>
+      <video height="auto" width="100%" controls>
+         <source src={greyStoneVideo} type="video/mp4"></source>
+         <p>Your browser doesn't support web video. Here is a <a href={greyStoneVideo}>link to the video</a> instead.</p>
+      </video>
     </section>
 
     <section id="lobby-section" className="section">
+    <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults. Sorry, no dogs allowed.</p>
+    <hr />
       <div className="column-parent">
          <p><span className="drop-caps"><strong>Soft Soothing Music</strong></span>, emulates throughout the Lobby and Hallways. Warm earth tone colors lend to the serenity of the interior.</p>
          <p><span className="drop-caps"><strong>Lush Landscaping</strong></span> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
@@ -57,16 +63,6 @@ export default (props) => (
     </section>
   </Layout>
 )
-
-export const fluidImage = graphql`
-   fragment fluidImage on File {
-     childImageSharp {
-       fluid(maxWidth: 1000) {
-         ...GatsbyImageSharpFluid
-       }
-     }
-   }
-`
 
 export const pageQuery = graphql`
    query {

@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
+import fluidImage from '../utils/fluidImage'
 import Layout from '../components/layout'
 import ImageBox from '../components/image-box'
-import fluidImage from './index'
 
 export default (props) => (
   <Layout>

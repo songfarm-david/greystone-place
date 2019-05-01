@@ -14,6 +14,12 @@
 		margin-top: var(--vertical-rhythm);
 	}
 
+	section video {
+		margin-top: var(--vertical-rhythm);
+		// border-top: var(--hero-border);
+		padding-top: var(--scale-md);
+	}
+
 	p, ul, ol, span {
 		font-size: var(--padding-sm);
 	}

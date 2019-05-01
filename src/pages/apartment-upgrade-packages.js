@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import fluidImage from './index'
+import fluidImage from '../utils/fluidImage'
 import Layout from '../components/layout'
 import ImageBox from '../components/image-box'
 
