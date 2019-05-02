@@ -7,17 +7,12 @@
 
 	width: 100%;
 	max-width: none;
-	padding: var(--vertical-rhythm) var(--padding-xs) var(--padding-xxl);
+	padding: var(--padding-md) var(--padding-xs) var(--padding-xxl);
 	overflow: hidden;
 
-	& section + section {
+	section * + *,
+	section + section {
 		margin-top: var(--vertical-rhythm);
-	}
-
-	section video {
-		margin-top: var(--vertical-rhythm);
-		// border-top: var(--hero-border);
-		padding-top: var(--scale-md);
 	}
 
 	p, ul, ol, span {
@@ -28,25 +23,14 @@
 		line-height: var(--line-height);
 		font-weight: 400;
 	}
-
-	#video-section {
-		// border: 1px dotted var(--dark-color);
-		p.video {
-			margin: var(--scale-md);
-			height: 6em;
-			border: 1px solid var(--dark-color);
-		}
-	}
 	/* sections */
 
 	.section {
 
-		padding: 0;
 		overflow: hidden;
 
 		a.cta {
 			display: inline-block;
-			margin: var(--vertical-rhythm) 0;
 		}
 
 		&.flex-section {
@@ -74,31 +58,57 @@
 	}
 
 	.section .column-parent {
-		columns: 2 12em;
-	}
-	ul.list {
-		width: auto;
-		border-top: 1px ridge var(--footer-grey);
-		&.floating-list {
-
-			width: calc(50% / var(--text-scale-ratio));
-			margin: 0 var(--scale-sm);
-			padding: var(--padding-sm);
-
-			> h2, h3 {
+		// columns: 2 12em;
+		display: flex;
+		flex-wrap: wrap;
+		@media (min-width: $tablet-breakpoint) {
+			flex-wrap: nowrap;
+			> * + * {
 				margin-top: 0;
 			}
-			&.right {
-				float: right;
+			>:not(:first-child) {
 				margin-left: var(--scale-sm);
 			}
+		}
+	}
+
+	.list {
+		width: auto;
+		&.floating-list {
+
+			width: 100%;
+
+			&.right {
+				float: none;
+				margin-left: 0;
+			}
 			&.left {
-				float: left;
-				margin-right: var(--scale-sm);
+				float: none;
+				margin-right: 0;
 			}
 		}
-		&.no-border {
-			border-top-width: 0px;
+		// &.no-border {
+		// 	border-top-width: 0px;
+		// }
+
+		@media (min-width: $tablet-breakpoint) {
+			&.floating-list {
+
+				width: calc(50% * var(--text-scale-ratio));
+				// > h2, h3 {
+				// 	margin-top: 0;
+				// }
+				&.right {
+					float: right;
+					margin-left: var(--scale-sm);
+					margin-bottom: var(--vertical-rhythm);
+				}
+				&.left {
+					float: left;
+					margin-right: var(--scale-sm);
+					margin-bottom: var(--vertical-rhythm);
+				}
+			}
 		}
 	}
 

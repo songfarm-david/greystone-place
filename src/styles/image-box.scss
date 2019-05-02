@@ -9,8 +9,11 @@
 	overflow: hidden;
 	border: var(--hero-border);
 	padding: var(--padding-sm);
-	margin-top: var(--vertical-rhythm);
-	margin-bottom: var(--vertical-rhythm);
+	// margin-top: var(--vertical-rhythm);
+	// margin-bottom: var(--vertical-rhythm);
+	& * + * {
+		margin-top: 0 !important;
+	}
 
 	#overlay {
 		position: absolute;
@@ -37,13 +40,13 @@
 	}
 
 	&.right {
-		float: right;
-		margin-left: var(--padding-sm);
+		float: none;
+		margin-left: 0;
 	}
 
 	&.left {
-		float: left;
-		margin-right: var(--padding-sm);
+		float: none;
+		margin-right: 0;
 	}
 
 	&.left,
@@ -56,6 +59,14 @@
 		&.left,
 		&.right {
 			width: 56%;
+		}
+		&.right {
+			float: right;
+			margin-left: var(--padding-sm);
+		}
+		&.left {
+			float: left;
+			margin-right: var(--padding-sm);
 		}
 	}
 

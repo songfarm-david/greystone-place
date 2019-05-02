@@ -30,13 +30,16 @@ blockquote {
 	font-family: var(--secondary-font);
 	font-style: italic;
 	border-top: 4px solid var(--khaki-pale);
-	margin: var(--scale-lg) 0;
-	padding: var(--scale-md) 0 0 var(--scale-sm);
+	margin: 0;
+	margin-left: var(--vertical-rhythm);
+	margin-top: var(--scale-lg) !important;
+	padding: var(--scale-sm) 0 0 var(--scale-sm);
+	overflow: hidden;
 }
 
 hr {
 	color: var(--khaki-pale);
-	margin: var(--vertical-rhythm) 0;
+	// margin: var(--vertical-rhythm) 0;
 }
 /* scrim for nav */
 #scrim {
@@ -66,10 +69,10 @@ hr {
 
 ul {
 	list-style-type: circle;
-	padding: 0;
-	margin: var(--vertical-rhythm) 0;
-	margin-left: var(--padding-lg);
+	// padding: 0;
+	// margin: var(--vertical-rhythm) 0;
+	margin-left: var(--padding-md);
 	li {
-		margin-bottom: var(--padding-xs);
+		// margin-bottom: var(--padding-xs);
 	}
 }

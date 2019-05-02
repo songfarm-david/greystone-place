@@ -37,7 +37,7 @@ export default class Header extends React.Component {
       return (
          <header id="header">
             <div id="topBar">
-               <p id="headerPhone"><a href="tel:+19055742626" title="Call Greystone Place">905-574-2626</a><span>|</span></p>
+               <p id="headerPhone"><a href="tel:+19055742626" title="Call Greystone Place">905-574-2626</a></p>
                <button id="mobMenu" onClick={this.toggleMenu}>{this.bars}</button>
             </div>
            <div id="marqueeContainer">

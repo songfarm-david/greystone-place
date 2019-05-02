@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from '../components/layout'
-import greyStoneVideo from '../images/greystone_place.mp4'
+import greystoneVideo_Mp4 from '../video/greystone_place.mp4'
 import ImageBox from '../components/image-box'
 import fluidImage from '../utils/fluidImage'
 
@@ -14,15 +14,16 @@ export default (props) => (
     {/*<SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />*/}
 
     <section id="video-section" className="section">
-      <video height="auto" width="100%" controls>
-         <source src={greyStoneVideo} type="video/mp4"></source>
-         <p>Your browser doesn't support web video. Here is a <a href={greyStoneVideo}>link to the video</a> instead.</p>
-      </video>
+       <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults. Sorry, no dogs allowed.</p>
+       <video height="auto" width="100%" controls>
+         <source src={greystoneVideo_Mp4} type="video/mp4"></source>
+         <p>Your browser doesn't support web video. Here is a <a href={greystoneVideo_Mp4}>link to the video</a> instead.</p>
+       </video>
+       <hr />
     </section>
 
     <section id="lobby-section" className="section">
-    <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults. Sorry, no dogs allowed.</p>
-    <hr />
+
       <div className="column-parent">
          <p><span className="drop-caps"><strong>Soft Soothing Music</strong></span>, emulates throughout the Lobby and Hallways. Warm earth tone colors lend to the serenity of the interior.</p>
          <p><span className="drop-caps"><strong>Lush Landscaping</strong></span> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
@@ -39,7 +40,6 @@ export default (props) => (
     <section className="section">
       <div className="column-parent">
          <p><span className="drop-caps"><strong>Bright and Spacious</strong></span> one and two bedroom suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. Parking and most utilities are included.
-         <br />
          <Link to="/apartments" className="cta">See Apartments</Link>
          </p>
          <p><span className="drop-caps"><strong>The "Leisure Room”</strong></span> is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax. Enjoy the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>

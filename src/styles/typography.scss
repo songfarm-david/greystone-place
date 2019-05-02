@@ -3,10 +3,13 @@
 	--primary-font: 'Quicksand', sans-serif; //body
 	--secondary-font: 'Cinzel', serif; //headers
 
+	--text-scale-ratio: 1.25;
+	--second-scale: 1.33;
 	--text-base-size: 18px; // NOTE: Is this proper?
 
 	--line-height: var(--second-scale);
 	--vertical-rhythm: calc(var(--text-base-size) * var(--text-scale-ratio));
+	--alt-vertical-rhythm: calc(var(--text-base-size) * var(--second-scale));
 }
 
 body {
@@ -31,14 +34,15 @@ h3,
 }
 
 p {
-	// font-size: var(--scale-md);
+	font-size: var(--scale-sm);
 }
 
 h1, h2, h3 {
 	font-family: var(--secondary-font);
-	margin-top: var(--scale-md);
-	margin-bottom: var(--scale-sm);
-	// text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-bottom: 0;
 }
 
 h4, .h4 {
