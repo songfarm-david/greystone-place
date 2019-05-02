@@ -9,20 +9,17 @@ import {initCarousel, startSlide } from './../functions/carousel.js'
 
 export default class ImageBox extends React.Component {
 
-	// NOTE: slide UI ideas
-	// - the slide goes once through all the way to the end then present a replay button
-	// - the slide goes forwards then backwards once
-
 	constructor(props) {
 		super(props)
 		this.state = {
 			currSlide: 0,
 			slideInterval: this.slideInterval
 		}
+		this.playBtn = <FontAwesomeIcon icon={faPlay} />
+
 		// refs
 		this.overlay = React.createRef();
 
-		this.playBtn = <FontAwesomeIcon icon={faPlay} />
 		// functions
 		this.nextSlide = this.nextSlide.bind(this)
 		this.playSlide = this.playSlide.bind(this)
@@ -61,12 +58,10 @@ export default class ImageBox extends React.Component {
 
 		// add carousel classes to img children of ImageBox
 		images.forEach((currVal, index) => {
-
 			if (currVal.getAttribute('id') !== 'overlay') {
 				// all slides get 'slide' class
 				currVal.classList.add('slide')
 			}
-
 			// the first child item in the array gets the active class
 			if (index == 0) currVal.classList.add('slide-active')
 

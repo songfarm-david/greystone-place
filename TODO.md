@@ -1,13 +1,11 @@
 * address 'TypeError: cannot read property 'maps' of undefined' google maps class not instantiated
-* use variables to breakpoints
 * add a sitemap (XML)
 * explore this plugin: https://www.gatsbyjs.org/packages/gatsby-plugin-page-transitions/
+* make site service worker friendly
 * add titles to images
-* incorporate modular system to measurements
 * include manifest images
 * greystone logo
 * nav is accessible
-* image carousel
-    * good tut: https://www.sitepoint.com/make-a-simple-javascript-slideshow-without-jquery/
-	 * carousel is accessible
-* delete 'typography.js' from 'utils/'
+* make image carousel accessible
+* do SEO of pages
+* make site accessible: https://www.gatsbyjs.org/docs/making-your-site-accessible/

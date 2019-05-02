@@ -5,7 +5,8 @@ import mapStyles from './google-map.module.css'
 export default class GoogleMap extends React.Component {
 
 	initMap = (container) => {
-		const google = window.google
+		console.log('initMap called');
+		// const google = window.google
 		var GS = {
 			lat: 43.2214553,
 			lng: -79.8559704
@@ -14,17 +15,22 @@ export default class GoogleMap extends React.Component {
 		// 	return;
 		// }
 		// TODO: put a fallback in place when internet connection is not available, otherwise the website breaks
-		var map = new window.google.maps.Map(
+		var map = new this.google.maps.Map(
 			container,
 			{zoom: 16, center: GS}
 		);
-		var marker = new google.maps.Marker({position: GS, map: map});
+		var marker = new this.google.maps.Marker({position: GS, map: map});
+	}
+
+	constructor(props) {
+		super(props)
+		this.google = window.google
 	}
 
 	componentDidMount() {
 		let that = this
 		let containers = document.querySelectorAll('.map');
-		const google = window.google
+		// const google = window.google
 
 		// custom forEach function (link?)
 		var forEach = function (array, callback, scope) {
