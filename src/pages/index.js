@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from '../components/layout'
-// import greystoneVideo_Mp4 from '../video/greystone_place.mp4'
+// import greystoneVideo_Mp4 from 'd1ly7esvudt5ap.cloudfront.net/Greystone+Place+-+512+Mohawk+Rd+E+Hamilton.mp4'
 import ImageBox from '../components/image-box'
 import fluidImage from '../utils/fluidImage'
 
@@ -16,8 +16,8 @@ export default (props) => (
     <section id="video-section" className="section">
        <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults. Sorry, no dogs allowed.</p>
        <video height="auto" width="100%" controls>
-         <source src="" type="video/mp4"></source>
-         <p>Your browser doesn't support web video. Here is a <a href="">link to the video</a> instead.</p>
+         <source src='' type="video/mp4"></source>
+         <p>Your browser doesn't support web video. Here is a <a href=''>link to the video</a> instead.</p>
        </video>
        <hr />
     </section>
@@ -32,7 +32,7 @@ export default (props) => (
           <Img className="image-box-img" fluid={props.data.lobby.childImageSharp.fluid} />
           <Img className="image-box-img" fluid={props.data.lobbyTwo.childImageSharp.fluid} />
           <Img className="image-box-img" fluid={props.data.exteriorOne.childImageSharp.fluid} />
-          <Img className="image-box-img" fluid={props.data.exteriorHall.childImageSharp.fluid} />
+          {/*<Img className="image-box-img" fluid={props.data.exteriorHall.childImageSharp.fluid} />*/}
           {/*<Img className="image-box-img" fluid={props.data.hallway.childImageSharp.fluid} />*/}
        </ImageBox>
     </section>

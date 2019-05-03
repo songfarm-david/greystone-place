@@ -1,41 +1,49 @@
 #footer {
 
 	background-color: var(--dark-color);
-	padding: 0;
 	color: var(--footer-grey);
-	font-size: var(--scale-sm);
 	font-weight: lighter;
-	a {
-		// color: inherit;
-		transition: var(--link-transition);
-		&:hover {
-			color: var(--fire-brick);
-			transition: var(--link-transition);
-		}
-	}
-
-	h2, h3 {
-		color: var(--light-color);
-		font-weight: bold;
-	}
+	padding: 0;
 
 	#footerInner {
-		padding: var(--scale-md) var(--scale-md) var(--padding-xxxl);
-	}
+		padding: var(--scale-md) var(--scale-sm) var(--padding-lg);
 
-	#siteLinks,
-	.google-maps-container,
-	.download {
-		padding: var(--scale-md);
-		padding-bottom: 0;
+		a {
+			// color: inherit;
+			transition: var(--link-transition);
+			&:hover {
+				color: var(--fire-brick);
+				transition: var(--link-transition);
+			}
+		}
+
+		h2, h3 {
+			color: var(--light-color);
+			font-weight: bold;
+		}
+
+		.footer-module {
+			font-size: var(--scale-xs);
+			margin-bottom: var(--vertical-rhythm); 
+			* + * {
+				margin-top: var(--vertical-rhythm);
+			}
+			p {
+				font-size: inherit;
+			}
+		}
+
 	}
 
 	#siteLinks {
 		ul {
 			list-style-type: disc;
 			font-weight: lighter;
-			li a {
-				color: inherit;
+			li {
+				margin-top: var(--padding-xs);
+				a {
+					color: inherit;
+				}
 			}
 		}
 	}
@@ -66,17 +74,16 @@
 		#footerInner {
 			display: flex;
 			flex-wrap: wrap;
-			// max-width: 80%; // TODO: put something in EMs here
-			// margin: 0 auto;
-			// padding: 0.5em 0;
-
+			justify-content: space-between;
+			.footer-module:not(:last-child) {
+				margin-right: var(--padding-sm);
+				flex: 1 1 auto;
+			}
 		}
 
-		.google-maps-container,
-		#siteLinks {
-			padding-bottom: 0;
-		}
-
+		// .footer-module {
+		// 	padding-bottom: 0;
+		// }
 		.google-maps-container {
 			flex: 2 1 auto;
 		}
@@ -91,9 +98,13 @@
 	}
 
 	@media (min-width: 800px) {
+		// padding: var(--scale-md) var(--padding-xxxl) 0;
+		// padding-left: var(--padding-xxxl);
+		// padding-right: var(--padding-xxxl);
+
 		#footerInner {
-			padding-left: var(--padding-xxxl);
-			padding-right: var(--padding-xxxl);
+			padding: var(--scale-xxl) var(--padding-xxxl) var(--padding-xxxl);
+
 		}
 	}
 
