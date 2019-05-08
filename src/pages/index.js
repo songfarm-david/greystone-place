@@ -20,12 +20,12 @@ import '../styles/layout.scss'
 
 export default (props) => (
   <Layout>
-    {<SEO title="Home" keywords={[`hamilton mountain`, `apartment rentals`]} />}
-    {console.log(props.data)}
+    <SEO title="Home" keywords={[`hamilton mountain`, `apartment rentals`]} />
+    {console.log(props.data.video.edges[0].node.publicURL)}
     <section id="video-section" className="section">
        <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults. Sorry, no dogs allowed.</p>
        <video height="auto" width="100%" controls>
-         <source src={props.data.allFile.edges[0].node.publicURL} type="video/mp4"></source>
+         <source src={props.data.video.edges[0].node.publicURL} type="video/mp4"></source>
          <p>Your browser doesn't support web video. Here is a <a href=''>link to the video</a> instead.</p>
        </video>
        <hr />
@@ -105,7 +105,7 @@ export const pageQuery = graphql`
       leisureRoomThree: file(relativePath: { eq: "Image-31.jpg" }) {
          ...fluidImage
       }
-      allFile(filter: { extension: {eq: "mp4"}}) {
+      video: allFile(filter: { extension: {eq: "mp4"}}) {
        edges {
          node {
            id

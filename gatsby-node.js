@@ -15,8 +15,7 @@ exports.sourceNodes = ({
 }) => {
    let fileNode
    const { createNode } = actions
-   // if (node.path == '/') {
-   //    console.log('parentNode', node.id);
+   return new Promise((resolve, reject) => {
       fileNode = createRemoteFileNode({
          url: "http://d1ly7esvudt5ap.cloudfront.net/Greystone+Place+-+512+Mohawk+Rd+E+Hamilton.mp4",
          parentNodeId: null,
@@ -25,9 +24,14 @@ exports.sourceNodes = ({
          createNode,
          createNodeId
       })
-   // }
-   // if (fileNode) {
-   //    node.localFile___NODE = fileNode.id
-   //  }
-   // console.log('hello world', node);
+      resolve(fileNode)
+   }).then(node => {
+      console.log('then node', node)
+      
+      // resolve(fileNode)
+      return node
+   }).catch(e => {
+      reject('error', e);
+   })
+
 }
