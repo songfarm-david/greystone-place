@@ -5,7 +5,8 @@
 * add titles to images
 * include manifest images
 * greystone logo
-* nav is accessible
-* make image carousel accessible
 * do SEO of pages
-* make site accessible: https://www.gatsbyjs.org/docs/making-your-site-accessible/
+* accessibility
+    * nav is accessible
+    * make image carousel accessible
+    * make site accessible: https://www.gatsbyjs.org/docs/making-your-site-accessible/

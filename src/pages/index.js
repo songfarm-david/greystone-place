@@ -3,20 +3,29 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from '../components/layout'
-// import greystoneVideo_Mp4 from 'd1ly7esvudt5ap.cloudfront.net/Greystone+Place+-+512+Mohawk+Rd+E+Hamilton.mp4'
+
+import SEO from '../components/seo'
 import ImageBox from '../components/image-box'
 import fluidImage from '../utils/fluidImage'
 
 import '../styles/layout.scss'
 
+// import {greystoneVideo_Mp4} from 'http://d1ly7esvudt5ap.cloudfront.net/Greystone+Place+-+512+Mohawk+Rd+E+Hamilton.mp4'
+// Video guide: https://aws.amazon.com/cloudfront/streaming/
+// Getting started with cloudfront: https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html
+// Getting started with MediaConvert: https://docs.aws.amazon.com/mediaconvert/latest/ug/getting-started.html
+// Video on Demand guide: https://aws.amazon.com/solutions/video-on-demand-on-aws/
+// Amazon Forum: https://forums.aws.amazon.com/index.jspa
+// https://www.gatsbyjs.org/docs/importing-assets-into-files/ -- this page does not include anything about importing CDN content
+
 export default (props) => (
   <Layout>
-    {/*<SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />*/}
-
+    {<SEO title="Home" keywords={[`hamilton mountain`, `apartment rentals`]} />}
+    {console.log(props.data)}
     <section id="video-section" className="section">
        <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults. Sorry, no dogs allowed.</p>
        <video height="auto" width="100%" controls>
-         <source src='' type="video/mp4"></source>
+         <source src={props.data.allFile.edges[0].node.publicURL} type="video/mp4"></source>
          <p>Your browser doesn't support web video. Here is a <a href=''>link to the video</a> instead.</p>
        </video>
        <hr />
@@ -96,5 +105,20 @@ export const pageQuery = graphql`
       leisureRoomThree: file(relativePath: { eq: "Image-31.jpg" }) {
          ...fluidImage
       }
+      allFile(filter: { extension: {eq: "mp4"}}) {
+       edges {
+         node {
+           id
+           extension
+           absolutePath
+           relativePath
+           name
+           publicURL
+           ext
+           relativeDirectory
+         }
+       }
+     }
    }
+
 `

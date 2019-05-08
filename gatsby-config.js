@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Greystone Place`,
+    titleTemplate: '%s - Gracious Apartment Living',
     description: `Setting new standards of luxury in gracious apartment living`,
+    url: 'https://greystoneplace.ca',
     author: `@peakwebsite`,
   },
   plugins: [
