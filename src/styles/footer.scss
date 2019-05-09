@@ -24,7 +24,7 @@
 
 		.footer-module {
 			font-size: var(--scale-xs);
-			margin-bottom: var(--vertical-rhythm); 
+			margin-bottom: var(--vertical-rhythm);
 			* + * {
 				margin-top: var(--vertical-rhythm);
 			}
@@ -39,7 +39,7 @@
 		ul {
 			list-style-type: disc;
 			font-weight: lighter;
-			li {
+			li:not(:first-child) {
 				margin-top: var(--padding-xs);
 				a {
 					color: inherit;
