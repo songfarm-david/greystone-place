@@ -24,12 +24,12 @@ export default class GoogleMap extends React.Component {
 
 	constructor(props) {
 		super(props)
-		this.google = window.google
 	}
 
 	componentDidMount() {
 		let that = this
 		let containers = document.querySelectorAll('.map');
+		this.google = window.google
 
 		// custom forEach function (link?)
 		var forEach = function (array, callback, scope) {

@@ -33,6 +33,7 @@ export default class ImageBox extends React.Component {
 				this.slideInterval = setInterval(this.nextSlide, 3500)
 			}
 		}
+		console.log('componentDidMount', this.props.children);
 	}
 
 	componentWillUnmount() {
@@ -40,6 +41,10 @@ export default class ImageBox extends React.Component {
 	}
 
 	render() {
+		// const children = React.Children.map(this.props.children, child => {
+		// 	console.log('yo', child)
+		// 	return React.cloneElement(child, { onClick: this.stopSlide })
+		// })
 		return (
 			<article className={
 				"image-box "
