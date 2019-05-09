@@ -37,6 +37,9 @@
 			color: white;
 			font-size: var(--scale-md);
 		}
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	&.right {

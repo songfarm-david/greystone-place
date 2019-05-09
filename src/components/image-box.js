@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
 
 import '../styles/image-box.scss'
-import {initCarousel, startSlide } from './../functions/carousel.js'
 
 export default class ImageBox extends React.Component {
 
@@ -16,13 +15,12 @@ export default class ImageBox extends React.Component {
 			slideInterval: this.slideInterval
 		}
 		this.playBtn = <FontAwesomeIcon icon={faPlay} />
-
 		// refs
 		this.overlay = React.createRef();
-
 		// functions
 		this.nextSlide = this.nextSlide.bind(this)
 		this.playSlide = this.playSlide.bind(this)
+		this.stopSlide = this.stopSlide.bind(this)
 	}
 
 	componentDidMount() {
@@ -37,13 +35,16 @@ export default class ImageBox extends React.Component {
 		}
 	}
 
+	componentWillUnmount() {
+		clearInterval(this.slideInterval);
+	}
+
 	render() {
 		return (
-			<article
-				className={
-					"image-box "
-					+ (this.props.align ? this.props.align : "no-align")
-				}>
+			<article className={
+				"image-box "
+				+ (this.props.align ? this.props.align : "no-align")
+			}>
 				{this.props.children}
 				<div id="overlay" ref={this.overlay} onClick={this.playSlide}>
 					<span>{this.playBtn}</span>
@@ -52,19 +53,20 @@ export default class ImageBox extends React.Component {
 		)
 	}
 
+	stopSlide() {
+		console.log('stopSlide called');
+	}
+
+	// define the carousel and its children (images)
 	initCarousel() {
 		let carouselEl = this.carousel,
-			images = Array.from(carouselEl.children)
+		images = Array.from(carouselEl.children)
 
-		// add carousel classes to img children of ImageBox
+		// add 'slide' class to child images, avoid overlay element
 		images.forEach((currVal, index) => {
-			if (currVal.getAttribute('id') !== 'overlay') {
-				// all slides get 'slide' class
-				currVal.classList.add('slide')
-			}
+			if (currVal.getAttribute('id') !== 'overlay') currVal.className = 'slide'
 			// the first child item in the array gets the active class
 			if (index == 0) currVal.classList.add('slide-active')
-
 		})
 
 		return { carouselEl, images }
@@ -76,12 +78,14 @@ export default class ImageBox extends React.Component {
 		}
 	}
 
+	// get the children
 	nextSlide() {
 		var slides = Array.from(this.carousel.children)
 		var newSlides = slides.filter(this.filterChildren)
 		if (this.state.currSlide == newSlides.length-1) {
 			clearInterval(this.slideInterval)
 			this.triggerOverlay()
+			this.setState({currSlide: 0})
 			return
 		}
 		newSlides[this.state.currSlide].classList.remove('slide-active')
@@ -95,13 +99,8 @@ export default class ImageBox extends React.Component {
 
 	playSlide() {
 		this.overlay.current.classList.remove('active')
-		this.setState({
-			slideInterval: setInterval(this.nextSlide, 3500)
-		})
+		this.initCarousel();
+		this.slideInterval = setInterval(this.nextSlide, 3500)
 	}
 
 }
-
-// const ImageBox = (props) =>
-//
-// export default ImageBox

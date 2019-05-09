@@ -18,11 +18,11 @@ export default (props) => (
          <Img fluid={props.data.designOne.childImageSharp.fluid} />
          <Img fluid={props.data.designTwo.childImageSharp.fluid} />
          <Img fluid={props.data.designThree.childImageSharp.fluid} />
-         <Img fluid={props.data.designFour.childImageSharp.fluid} />
+         {/*<Img fluid={props.data.designFour.childImageSharp.fluid} />
          <Img fluid={props.data.designKitchen.childImageSharp.fluid} />
          <Img fluid={props.data.designKitchenTwo.childImageSharp.fluid} />
          <Img fluid={props.data.designBed.childImageSharp.fluid} />
-         <Img fluid={props.data.designBath.childImageSharp.fluid} />
+         <Img fluid={props.data.designBath.childImageSharp.fluid} />*/}
        </ImageBox>
        <h3>Feather Your Nest</h3>
        <p>&ldquo;Feather Your Nest&rdquo; is a unique concept that enables Residents to personalize their Suites exclusively to their tastes and wishes. Create the living environment you've always wanted, limited only by your imagination.</p>
