@@ -9,7 +9,7 @@ import Header from './header'
 import Footer from './footer'
 
 // Styles
-import '../styles/layout.scss'
+// import '../styles/layout.scss'
 
 const Layout = ({ children }) => (
   <StaticQuery
