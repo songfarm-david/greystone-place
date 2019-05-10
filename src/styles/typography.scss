@@ -1,5 +1,4 @@
 :root {
-
 	--primary-font: 'Quicksand', sans-serif; //body
 	--secondary-font: 'Cinzel', serif; //headers
 
@@ -7,7 +6,7 @@
 	--second-scale: 1.33;
 	--text-base-size: 18px; // NOTE: Is this proper?
 
-	--line-height: var(--second-scale);
+	--line-height: var(--text-scale-ratio);
 	--vertical-rhythm: calc(var(--text-base-size) * var(--text-scale-ratio));
 	--alt-vertical-rhythm: calc(var(--text-base-size) * var(--second-scale));
 }
@@ -31,6 +30,10 @@ h2,
 h3,
 .h3 {
 	font-size: var(--scale-md);
+}
+
+h1, h2, h3 {
+	line-height: var(--line-height);
 }
 
 p {

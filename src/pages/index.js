@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 
 import SEO from '../components/seo'
 import ImageBox from '../components/image-box'
-import fluidImage from '../utils/fluidImage'
+import {fluidImage} from '../utils/fluidImage'
 
 import '../styles/layout.scss'
 
@@ -26,7 +26,7 @@ export default (props) => (
        <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults. Sorry, no dogs allowed.</p>
        <video height="auto" width="100%" controls>
          <source src={props.data.video.edges[0].node.publicURL} type="video/mp4"></source>
-         <p>Your browser doesn't support web video. Here is a <a href=''>link to the video</a> instead.</p>
+         <p>Your browser doesn't support web video. Here is a <a href={props.data.video.edges[0].node.publicURL}>link to the video</a> instead.</p>
        </video>
        <hr />
     </section>
@@ -120,5 +120,4 @@ export const pageQuery = graphql`
        }
      }
    }
-
 `

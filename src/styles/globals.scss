@@ -1,5 +1,8 @@
 /* global styles -- site-wide */
-// @import './typography.scss';
+
+* {
+	box-sizing: border-box;
+}
 
 html {
 	font-size: calc(var(--text-base-size) + 1vw);
@@ -9,9 +12,12 @@ body {
 	background-color: var(--background-color);
 	background-color: var(--light-color);
 	position: relative;
+	margin: 0;
+	padding: 0;
 }
 
 p {
+	margin: 0;
 	margin-bottom: var(--vertical-rhythm);
 }
 
@@ -69,7 +75,7 @@ hr {
 
 ul {
 	list-style-type: circle;
-	// padding: 0;
+	padding: 0;
 	// margin: var(--vertical-rhythm) 0;
 	margin-left: var(--padding-md);
 	li {

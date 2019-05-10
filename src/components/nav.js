@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import '../styles/nav.scss'
+// https://jonsuh.com/hamburgers/
 
 export default class Nav extends React.Component {
 
