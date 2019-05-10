@@ -1,5 +1,6 @@
 #footer {
 
+	font-size: var(--padding-sm);
 	background-color: var(--dark-color);
 	color: var(--footer-grey);
 	font-weight: lighter;
@@ -22,7 +23,7 @@
 		}
 
 		.footer-module {
-			font-size: var(--scale-xs);
+			// font-size: var(--scale-xs);
 			margin-bottom: var(--vertical-rhythm);
 			* + * {
 				margin-top: var(--vertical-rhythm);
@@ -53,7 +54,7 @@
 		background: var(--cosmic-latte);
 		color: var(--dark-color);
 		padding: var(--padding-xs) 0;
-		font-size: var(--scale-xs);
+		font-size: var(--scale-sm);
 		p {
 			margin-bottom: 0;
 		}

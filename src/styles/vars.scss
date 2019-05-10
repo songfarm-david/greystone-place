@@ -1,9 +1,9 @@
 :root {
 
-	--base-size: 18;
+	--base-size: 19;
 
 	/* type scale */
-    --scale-xs: calc(1em / (var(--text-scale-ratio) * var(--text-scale-ratio)));
+    --scale-xs: calc(1em / var(--text-scale-ratio) / var(--text-scale-ratio));
     --scale-sm: calc(1em / var(--text-scale-ratio));
 	 --scale-reg: 1em;
     --scale-md: calc(1em * var(--text-scale-ratio));
@@ -12,7 +12,7 @@
     --scale-xxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
     --scale-xxxl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
 
-	--padding-xs: calc(1em / ( var(--second-scale) * var(--second-scale) ) );
+	--padding-xs: calc(1em /  var(--second-scale) / var(--second-scale)  );
 	--padding-sm: calc(1em / var(--second-scale));
 	--padding-md: calc(1em * var(--second-scale));
 	--padding-lg: calc(1em * var(--second-scale) * var(--second-scale));

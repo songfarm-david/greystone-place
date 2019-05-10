@@ -6,7 +6,7 @@
 	--second-scale: 1.33;
 	--text-base-size: 18px; // NOTE: Is this proper?
 
-	--line-height: var(--text-scale-ratio);
+	--line-height: var(--second-scale);
 	--vertical-rhythm: calc(var(--text-base-size) * var(--text-scale-ratio));
 	--alt-vertical-rhythm: calc(var(--text-base-size) * var(--second-scale));
 }
