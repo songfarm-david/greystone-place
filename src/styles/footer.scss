@@ -41,9 +41,9 @@
 			font-weight: lighter;
 			li:not(:first-child) {
 				margin-top: var(--padding-xs);
-				a {
-					color: inherit;
-				}
+			}
+			a {
+				color: inherit;
 			}
 		}
 	}
