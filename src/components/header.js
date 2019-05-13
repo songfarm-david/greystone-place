@@ -24,7 +24,7 @@ export default class Header extends React.Component {
          <header id="header">
             <div id="topBar">
                <p id="headerPhone"><a href="tel:+19055742626" title="Call Greystone Place">905-574-2626</a></p>
-               {/*<button id="mobMenu" onClick={this.toggleMenu}>{this.bars}</button>*/}
+               {/*https://jonsuh.com/hamburgers*/}
                <button id="mobMenu" onClick={this.toggleMenu} className="hamburger hamburger--spin" type="button">
                  <span className="hamburger-box">
                    <span className="hamburger-inner"></span>

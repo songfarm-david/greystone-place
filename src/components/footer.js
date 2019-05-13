@@ -16,7 +16,8 @@ const Footer = ({ siteTitle }) => (
 			<div id="siteLinks" className="footer-module">
 				<h3>Site Links</h3>
 				<ul>
-					<li><Link to="/apartments" title="Apartments">Apartment Suites</Link></li>
+					<li><Link to="/" title="Home">Home</Link></li>
+					<li><Link to="/suites" title="Suites">Suites</Link></li>
 					<li><Link to="/apartment-upgrade-packages" title="Apartment Upgrade Packages">Designer Upgrades</Link></li>
 					<li><Link to="/contact" title="Contact">Inquiries</Link></li>
 				</ul>

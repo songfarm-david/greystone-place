@@ -23,7 +23,7 @@ export default (props) => (
     <SEO title="Home" keywords={[`hamilton mountain`, `apartment rentals`]} />
     {console.log(props.data.video.edges[0].node.publicURL)}
     <section id="video-section" className="section">
-       <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults. Sorry, no dogs allowed.</p>
+       <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
        <video height="auto" width="100%" controls>
          <source src={props.data.video.edges[0].node.publicURL} type="video/mp4"></source>
          <p>Your browser doesn't support web video. Here is a <a href={props.data.video.edges[0].node.publicURL}>link to the video</a> instead.</p>
@@ -41,8 +41,6 @@ export default (props) => (
           <Img className="image-box-img" fluid={props.data.lobby.childImageSharp.fluid} />
           <Img className="image-box-img" fluid={props.data.lobbyTwo.childImageSharp.fluid} />
           <Img className="image-box-img" fluid={props.data.exteriorOne.childImageSharp.fluid} />
-          {/*<Img className="image-box-img" fluid={props.data.exteriorHall.childImageSharp.fluid} />*/}
-          {/*<Img className="image-box-img" fluid={props.data.hallway.childImageSharp.fluid} />*/}
        </ImageBox>
     </section>
 
