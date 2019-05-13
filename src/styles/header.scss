@@ -1,5 +1,9 @@
 // @import './reset.css';
 // @import './vars.scss';
+
+$hamburger-layer-color: var(--pale-taupe);
+@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+
 @import './breakpoints.scss';
 
 // mobile styles
@@ -27,7 +31,7 @@
 		align-items: center;
 		flex-basis: 100%;
 		font-size: var(--scale-reg);
-		color: var(--khaki-pale);
+		color: inherit;
 
 		#headerPhone {
 			margin: 0;

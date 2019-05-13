@@ -17,7 +17,7 @@ export default class Nav extends React.Component {
 				<ul className={this.props.menuOpen ? "drawer-open" : "drawer-closed"}>
 					<li><Link to="/apartments" title="Apartments">Apts.</Link></li>
 					<li><Link to="/apartment-upgrade-packages" title="Apartment Upgrade Packages">Upgrades</Link></li>
-					<li><Link to="/contact" contact="Contact">Inquiries</Link></li>
+					<li><Link to="/contact" contact="Contact" title="Contact">Inquiries</Link></li>
 				</ul>
 			</nav>
 		)

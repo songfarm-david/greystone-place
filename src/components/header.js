@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faPhone } from '@fortawesome/free-solid-svg-icons'
 
+
 import '../styles/header.scss'
 import Nav from './nav'
 
@@ -16,21 +17,6 @@ export default class Header extends React.Component {
       this.bars = <FontAwesomeIcon icon={faBars} />
    }
 
-   toggleMenu() {
-      let scrim = document.getElementById('scrim');
-
-		this.setState(state => ({
-			menuOpen: !state.menuOpen
-		}))
-
-      // toggle scrim active class
-      if (scrim.classList.contains('active-scrim')) {
-         scrim.classList.remove('active-scrim')
-      } else {
-         scrim.classList.add('active-scrim')
-      }
-	}
-
    render() {
       const { siteTitle, description } = this.props
       const bars = "Bars"
@@ -38,11 +24,16 @@ export default class Header extends React.Component {
          <header id="header">
             <div id="topBar">
                <p id="headerPhone"><a href="tel:+19055742626" title="Call Greystone Place">905-574-2626</a></p>
-               <button id="mobMenu" onClick={this.toggleMenu}>{this.bars}</button>
+               {/*<button id="mobMenu" onClick={this.toggleMenu}>{this.bars}</button>*/}
+               <button id="mobMenu" onClick={this.toggleMenu} className="hamburger hamburger--spin" type="button">
+                 <span className="hamburger-box">
+                   <span className="hamburger-inner"></span>
+                 </span>
+               </button>
             </div>
            <div id="marqueeContainer">
              <h1 id="headline">
-               <Link to="/">
+               <Link to="/" title="Home">
                  {siteTitle}
                </Link>
              </h1>
@@ -52,6 +43,26 @@ export default class Header extends React.Component {
          </header>
       )
    }
+
+   toggleMenu() {
+      let scrim = document.getElementById('scrim');
+      let hamburger = document.getElementById('mobMenu')
+
+		this.setState(state => ({
+			menuOpen: !state.menuOpen
+		}))
+
+      hamburger.classList.toggle("is-active")
+
+      // toggle scrim active class
+      if (scrim.classList.contains('active-scrim')) {
+         scrim.classList.remove('active-scrim')
+      } else {
+         scrim.classList.add('active-scrim')
+      }
+	}
+
+
 
 }
 

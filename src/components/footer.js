@@ -18,7 +18,7 @@ const Footer = ({ siteTitle }) => (
 				<ul>
 					<li><Link to="/apartments" title="Apartments">Apartment Suites</Link></li>
 					<li><Link to="/apartment-upgrade-packages" title="Apartment Upgrade Packages">Designer Upgrades</Link></li>
-					<li><Link to="/contact" contact="Contact">Inquiries</Link></li>
+					<li><Link to="/contact" title="Contact">Inquiries</Link></li>
 				</ul>
 			</div>
 			<article className="google-maps-container footer-module">
@@ -30,7 +30,7 @@ const Footer = ({ siteTitle }) => (
 		</div>
 		<div id="legalFooter">
 			<p>© {new Date().getFullYear()}, {siteTitle}</p>
-			<p>Website by <a href="https://peakwebsites.ca" target="_blank">Peak Websites</a></p>
+			<p>Website by <a href="https://peakwebsites.ca" target="_blank" title="Peak Websites">Peak Websites</a></p>
 		</div>
 	</div>
 )

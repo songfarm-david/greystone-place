@@ -5,7 +5,7 @@ import mapStyles from './google-map.module.css'
 export default class GoogleMap extends React.Component {
 
 	initMap = (container) => {
-		console.log('initMap called');
+		// console.log('initMap called');
 		// const google = window.google
 		var GS = {
 			lat: 43.2214553,
