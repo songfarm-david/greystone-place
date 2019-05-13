@@ -7,10 +7,10 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import ImageBox from '../components/image-box'
 import {fluidImage} from '../utils/fluidImage'
+import posterImg from '../images/Image-38.jpg'
 
 import '../styles/layout.scss'
 
-// import {greystoneVideo_Mp4} from 'http://d1ly7esvudt5ap.cloudfront.net/Greystone+Place+-+512+Mohawk+Rd+E+Hamilton.mp4'
 // Video guide: https://aws.amazon.com/cloudfront/streaming/
 // Getting started with cloudfront: https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.html
 // Getting started with MediaConvert: https://docs.aws.amazon.com/mediaconvert/latest/ug/getting-started.html
@@ -24,7 +24,7 @@ export default (props) => (
     {console.log(props.data.video.edges[0].node.publicURL)}
     <section id="video-section" className="section">
        <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
-       <video height="auto" width="100%" controls>
+       <video height="auto" width="100%" poster={posterImg} controls>
          <source src={props.data.video.edges[0].node.publicURL} type="video/mp4"></source>
          <p>Your browser doesn't support web video. Here is a <a href={props.data.video.edges[0].node.publicURL}>link to the video</a> instead.</p>
        </video>
