@@ -27,7 +27,7 @@ export default (props) => (
     <section id="video-section" className="section">
        <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
        <video height="auto" width="100%" poster={posterImg} controls>
-         <source src={props.data.video.edges[0].node.publicURL} type="application/vnd.apple.mpegurl'"></source>
+         <source src={props.data.video.edges[0].node.publicURL}  type="application/x-mpegurl"></source>{/*type="application/vnd.apple.mpegurl"*/}
          {/*<p>Your browser doesn't support web video. Here is a <a href={props.data.video.edges[0].node.publicURL}>link to the video</a> instead.</p>*/}
        </video>
        <hr />

@@ -1,6 +1,15 @@
+@font-face {
+    font-family: 'shelley_andante_scriptregular';
+    src: url('../fonts/shan-webfont.woff2') format('woff2'),
+         url('../fonts/shan-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 :root {
 	--primary-font: 'Quicksand', sans-serif; //body
-	--secondary-font: 'Cinzel', serif; //headers
+	--secondary-font: 'shelley_andante_scriptregular', serif; //headers
 
 	--text-scale-ratio: 1.25;
 	--second-scale: 1.33;
