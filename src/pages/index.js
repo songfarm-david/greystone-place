@@ -3,11 +3,11 @@ import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from '../components/layout'
-
 import SEO from '../components/seo'
 import ImageBox from '../components/image-box'
-import {fluidImage} from '../utils/fluidImage'
+
 import posterImg from '../images/Image-38.jpg'
+import {fluidImage} from '../utils/fluidImage'
 
 import '../styles/layout.scss'
 
@@ -20,58 +20,81 @@ import '../styles/layout.scss'
 // Amazon Forum: https://forums.aws.amazon.com/index.jspa
 // https://www.gatsbyjs.org/docs/importing-assets-into-files/ -- this page does not include anything about importing CDN content
 
-export default (props) => (
-  <Layout>
-    <SEO title="Home" keywords={[`hamilton mountain`, `apartment rentals`]} />
-    {console.log(props.data.video.edges[0].node.publicURL)}
-    <section id="video-section" className="section">
-       <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
-       <video height="auto" width="100%" poster={posterImg} controls>
-         <source src={props.data.video.edges[0].node.publicURL}  type="application/x-mpegurl"></source>{/*type="application/vnd.apple.mpegurl"*/}
-         {/*<p>Your browser doesn't support web video. Here is a <a href={props.data.video.edges[0].node.publicURL}>link to the video</a> instead.</p>*/}
-       </video>
-       <hr />
-    </section>
+import loadVideo from '../functions/videoLoader.js'
 
-    <section id="lobby-section" className="section">
+export default class IndexPage extends React.Component {
 
-      <div className="column-parent">
-         <p><span className="drop-caps"><strong>Soft Soothing Music</strong></span>, emulates throughout the Lobby and Hallways. Warm earth tone colors lend to the serenity of the interior.</p>
-         <p><span className="drop-caps"><strong>Lush Landscaping</strong></span> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
-      </div>
-       <ImageBox carousel="true">
-          <Img className="image-box-img" fluid={props.data.lobby.childImageSharp.fluid} />
-          <Img className="image-box-img" fluid={props.data.lobbyTwo.childImageSharp.fluid} />
-          <Img className="image-box-img" fluid={props.data.exteriorOne.childImageSharp.fluid} />
-       </ImageBox>
-    </section>
+   componentDidMount() {
+      loadVideo(this.props.data.video.edges[0].node.publicURL)
+   }
 
-    <section className="section">
-      <div className="column-parent">
-         <p><span className="drop-caps"><strong>Bright and Spacious</strong></span> one and two bedroom suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. Parking and most utilities are included.
-         <Link to="/apartments" className="cta">See Apartments</Link>
-         </p>
-         <p><span className="drop-caps"><strong>The "Leisure Room”</strong></span> is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax. Enjoy the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
-      </div>
-      <ImageBox carousel="true">
-         <Img className="image-box-img" fluid={props.data.roomOne.childImageSharp.fluid} />
-         <Img className="image-box-img" fluid={props.data.roomTwo.childImageSharp.fluid} />
-         <Img className="image-box-img" fluid={props.data.leisureRoomOne.childImageSharp.fluid} />
-         <Img className="image-box-img" fluid={props.data.leisureRoomTwo.childImageSharp.fluid} />
-         <Img className="image-box-img" fluid={props.data.leisureRoomThree.childImageSharp.fluid} />
-      </ImageBox>
-      {/*<p><em>Shot of escarpment.</em></p>*/}
+   render() {
+      return (
+         <Layout>
+        <SEO title="Home" keywords={[`hamilton mountain`, `apartment rentals`]} />
+        {console.log(this.props.data.video.edges[0].node.publicURL)}
+        <section id="video-section" className="section">
+           <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
+           <video id="greystoneVideo" height="auto" width="100%" poster={posterImg} controls>
+             <source src={''}  type="application/x-mpegurl"></source>{/*type="application/vnd.apple.mpegurl"*/}
+             {/*<p>Your browser doesn't support web video. Here is a <a href={props.data.video.edges[0].node.publicURL}>link to the video</a> instead.</p>*/}
+           </video>
+           <hr />
+        </section>
 
-    </section>
+        <section id="lobby-section" className="section">
 
-    <section className="section">
-      <div className="column-parent">
-         <p><span className="drop-caps"><strong>Enjoy</strong></span> the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
-         <p><span className="drop-caps"><strong>Plan</strong></span> ahead to <Link to="/apartment-upgrade-packages"><em>Feather Your Nest</em></Link> and stay in a personalized and worry-free setting. Explore your options while being close to friends, family, and familiar surroundings. Viewing or further inquiries may be directed to our courteous on-site staff at <a href="tel:19055742626">905-574-2626</a>.</p>
-      </div>
-    </section>
-  </Layout>
-)
+          <div className="column-parent">
+             <p><span className="drop-caps"><strong>Soft Soothing Music</strong></span>, emulates throughout the Lobby and Hallways. Warm earth tone colors lend to the serenity of the interior.</p>
+             <p><span className="drop-caps"><strong>Lush Landscaping</strong></span> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
+          </div>
+           <ImageBox carousel="true">
+              <Img className="image-box-img" fluid={this.props.data.lobby.childImageSharp.fluid} />
+              <Img className="image-box-img" fluid={this.props.data.lobbyTwo.childImageSharp.fluid} />
+              <Img className="image-box-img" fluid={this.props.data.exteriorOne.childImageSharp.fluid} />
+           </ImageBox>
+        </section>
+
+        <section className="section">
+          <div className="column-parent">
+             <p><span className="drop-caps"><strong>Bright and Spacious</strong></span> one and two bedroom suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. Parking and most utilities are included.
+             <Link to="/apartments" className="cta">See Apartments</Link>
+             </p>
+             <p><span className="drop-caps"><strong>The "Leisure Room”</strong></span> is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax. Enjoy the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
+          </div>
+          <ImageBox carousel="true">
+             <Img className="image-box-img" fluid={this.props.data.roomOne.childImageSharp.fluid} />
+             <Img className="image-box-img" fluid={this.props.data.roomTwo.childImageSharp.fluid} />
+             <Img className="image-box-img" fluid={this.props.data.leisureRoomOne.childImageSharp.fluid} />
+             <Img className="image-box-img" fluid={this.props.data.leisureRoomTwo.childImageSharp.fluid} />
+             <Img className="image-box-img" fluid={this.props.data.leisureRoomThree.childImageSharp.fluid} />
+          </ImageBox>
+          {/*<p><em>Shot of escarpment.</em></p>*/}
+
+        </section>
+
+        <section className="section">
+          <div className="column-parent">
+             <p><span className="drop-caps"><strong>Enjoy</strong></span> the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
+             <p><span className="drop-caps"><strong>Plan</strong></span> ahead to <Link to="/apartment-upgrade-packages"><em>Feather Your Nest</em></Link> and stay in a personalized and worry-free setting. Explore your options while being close to friends, family, and familiar surroundings. Viewing or further inquiries may be directed to our courteous on-site staff at <a href="tel:19055742626">905-574-2626</a>.</p>
+          </div>
+        </section>
+      </Layout>
+   )
+
+   }
+}
+
+// export default (props) => (
+//
+// )
+
+// function loadVideo() {
+// 	var video = document.getElementById('greystoneVideo');
+// 	// alert(video)
+//    console.log(video);
+//    return 'applesauce'
+// }
 
 export const pageQuery = graphql`
    query {

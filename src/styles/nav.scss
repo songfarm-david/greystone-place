@@ -3,9 +3,12 @@
 
 #nav {
 
+	// font-family: var(--secondary-header-font);
 	position: relative;
 	width: 100%;
+	font-size: var(--scale-md);
 	// color: white;
+	text-transform: capitalize;
 	color: var(--pale-taupe);
 	transition: color 0.5s ease-in;
 	a:hover {
@@ -32,13 +35,7 @@
 
 		li {
 			margin: var(--padding-sm) var(--padding-xs);
-			// flex-basis: 0px;
-			// display: block;
-			// transition: width 0.5s;
-
 		}
-
-
 
 	}
 
@@ -68,7 +65,7 @@
 	@media (min-width: $tablet-breakpoint) {
 
 		width: auto;
-
+		text-align: center;
 		ul {
 			display: flex;
 			left: 0;

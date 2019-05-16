@@ -30,7 +30,7 @@ export default class Header extends React.Component {
                  </span>
                </button>
             </div>
-           <div id="marqueeContainer">
+           <div id="marqueeContainer" className="centered">
              <h1 id="headline">
                <Link to="/" title="Home">
                  {siteTitle}

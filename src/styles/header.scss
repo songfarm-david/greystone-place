@@ -10,6 +10,7 @@ $hamburger-layer-color: var(--pale-taupe);
 #header {
 
 	font-family: var(--secondary-font);
+	font-size: var(--padding-md);
 	text-transform: lowercase;
 	background-color: var(--dark-color);
 	color: var(--pale-taupe);
@@ -30,8 +31,9 @@ $hamburger-layer-color: var(--pale-taupe);
 		justify-content: flex-end;
 		align-items: center;
 		flex-basis: 100%;
-		font-size: var(--scale-reg);
+		font-size: var(--scale-sm);
 		color: inherit;
+		font-family: var(--secondary-header-font);
 
 		#headerPhone {
 			margin: 0;
@@ -68,7 +70,7 @@ $hamburger-layer-color: var(--pale-taupe);
 
 	#marqueeContainer {
 		flex-basis: 100%;
-		margin-top: var(--padding-xs);
+		margin-top: var(--scale-xs);
 		color: var(--pale-taupe);
 
 		#headline {
@@ -79,11 +81,11 @@ $hamburger-layer-color: var(--pale-taupe);
 		h1, #byline {
 			margin: 0; }
 		#byline {
-			text-transform: lowercase;
-			font-size: var(--scale-sm);
-			font-style: italic;
+			// text-transform: capitalize;
+			font-family: var(--secondary-header-font);
+			font-size: var(--scale-xs);
 			color: inherit;
-			margin-bottom: var(--padding-sm); /* TODO: use scale here */
+			margin-bottom: var(--scale-sm); /* TODO: use scale here */
 		}
 	}
 
@@ -92,6 +94,7 @@ $hamburger-layer-color: var(--pale-taupe);
 
 		//padding: var(--padding-one) 0 0; // NOTE: increase padding on desktop
 		display: flex;
+		justify-content: center;
 
 		#topBar {
 			#headerPhone {
@@ -104,11 +107,15 @@ $hamburger-layer-color: var(--pale-taupe);
 			}
 		}
 
-
 		#marqueeContainer {
 			flex-basis: 100%;
 			#byline {
 				// white-space: nowrap;
+			}
+			&.centered {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
 			}
 		}
 

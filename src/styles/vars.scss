@@ -5,7 +5,7 @@
 	/* type scale */
     --scale-xs: calc(1em / var(--text-scale-ratio) / var(--text-scale-ratio));
     --scale-sm: calc(1em / var(--text-scale-ratio));
-	 --scale-reg: 1em;
+	 // --scale-reg: 1em;
     --scale-md: calc(1em * var(--text-scale-ratio));
     --scale-lg: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio));
     --scale-xl: calc(1em * var(--text-scale-ratio) * var(--text-scale-ratio) * var(--text-scale-ratio));
@@ -14,6 +14,7 @@
 
 	--padding-xs: calc(1em /  var(--second-scale) / var(--second-scale)  );
 	--padding-sm: calc(1em / var(--second-scale));
+	// --padding-reg: 1em;
 	--padding-md: calc(1em * var(--second-scale));
 	--padding-lg: calc(1em * var(--second-scale) * var(--second-scale));
 	--padding-xl: calc(1em * var(--second-scale) * var(--second-scale) * var(--second-scale));
