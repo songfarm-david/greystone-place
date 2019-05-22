@@ -1,7 +1,8 @@
 import React from 'react'
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
+// eslint-disable-next-line
 import fluidImage from '../utils/fluidImage'
 import Layout from '../components/layout'
 import ImageBox from '../components/image-box'

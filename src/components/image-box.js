@@ -28,7 +28,7 @@ export default class ImageBox extends React.Component {
 		this.nextSlide = this.nextSlide.bind(this)
 		this.playSlide = this.playSlide.bind(this)
 		this.stopSlide = this.stopSlide.bind(this)
-		this.resetSlides = this.resetSlides.bind(this)
+		// this.resetSlides = this.resetSlides.bind(this)
 
 	}
 

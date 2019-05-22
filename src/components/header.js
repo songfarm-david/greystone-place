@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faPhone } from '@fortawesome/free-solid-svg-icons'
+// import { faBars, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 import '../styles/header.scss'
 import Nav from './nav'
@@ -13,7 +13,7 @@ export default class Header extends React.Component {
       super(props)
       this.state = {menuOpen: false}
       this.toggleMenu = this.toggleMenu.bind(this)
-      this.bars = <FontAwesomeIcon icon={faBars} />
+      // this.bars = <FontAwesomeIcon icon={faBars} />
    }
 
    render() {

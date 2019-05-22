@@ -18,7 +18,7 @@ exports.sourceNodes = ({
    return new Promise((resolve, reject) => {
       fileNode = createRemoteFileNode({
          // url: "http://d1ly7esvudt5ap.cloudfront.net/Greystone+Place+-+512+Mohawk+Rd+E+Hamilton.mp4",
-         url: "http://d2f2gzwlxrc309.cloudfront.net/Greystone+Place+-+512+Mohawk+Rd+E+Hamilton.m3u8",
+         url: "http://d2f2gzwlxrc309.cloudfront.net/Greystone+Place+-+512+Mohawk+Rd+E+HamiltonHLS+stream.m3u8",
          parentNodeId: null,
          store,
          cache,

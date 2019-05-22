@@ -4,11 +4,11 @@ export default function loadVideo(src) {
 	if(Hls.isSupported()) {
 		console.log('Hls supported', src);
     var hls = new Hls();
-    // hls.loadSource('https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8');
-	 hls.loadSource(src)
+    hls.loadSource('https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8');
+	 // hls.loadSource(src)
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
-      // video.play();
+      video.play();
 	 });
  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
     // video.src = 'https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8';

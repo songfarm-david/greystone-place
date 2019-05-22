@@ -7,6 +7,7 @@ import SEO from '../components/seo'
 import ImageBox from '../components/image-box'
 
 import posterImg from '../images/Image-38.jpg'
+// eslint-disable-next-line
 import {fluidImage} from '../utils/fluidImage'
 
 import '../styles/layout.scss'
@@ -34,7 +35,7 @@ export default class IndexPage extends React.Component {
         <SEO title="Home" keywords={[`hamilton mountain`, `apartment rentals`]} />
         <section id="video-section" className="section">
            <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
-           <video id="greystoneVideo" height="auto" width="100%" poster={''} controls>
+           <video id="greystoneVideo" height="auto" width="100%" poster={posterImg} controls>
              <source src={''}  type="application/x-mpegurl"></source>{/*type="application/vnd.apple.mpegurl"*/}
              {/*<p>Your browser doesn't support web video. Here is a <a href={props.data.video.edges[0].node.publicURL}>link to the video</a> instead.</p>*/}
            </video>
@@ -83,17 +84,6 @@ export default class IndexPage extends React.Component {
 
    }
 }
-
-// export default (props) => (
-//
-// )
-
-// function loadVideo() {
-// 	var video = document.getElementById('greystoneVideo');
-// 	// alert(video)
-//    console.log(video);
-//    return 'applesauce'
-// }
 
 export const pageQuery = graphql`
    query {
