@@ -23,3 +23,7 @@
    - more threads: https://stackoverflow.com/questions/23388135/how-to-play-html5-video-play-m3u8-on-mobile-and-desktop, https://stackoverflow.com/questions/19782389/playing-m3u8-files-with-html-video-tag?rq=1
 - Player options: flowplayer, jwplayer
 - option: don't stream but instead provide mp4 and webm formats
+
+###Highlights
+- custom fonts
+- streaming video

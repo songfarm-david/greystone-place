@@ -32,10 +32,9 @@ export default class IndexPage extends React.Component {
       return (
          <Layout>
         <SEO title="Home" keywords={[`hamilton mountain`, `apartment rentals`]} />
-        {console.log(this.props.data.video.edges[0].node.publicURL)}
         <section id="video-section" className="section">
            <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
-           <video id="greystoneVideo" height="auto" width="100%" poster={posterImg} controls>
+           <video id="greystoneVideo" height="auto" width="100%" poster={''} controls>
              <source src={''}  type="application/x-mpegurl"></source>{/*type="application/vnd.apple.mpegurl"*/}
              {/*<p>Your browser doesn't support web video. Here is a <a href={props.data.video.edges[0].node.publicURL}>link to the video</a> instead.</p>*/}
            </video>
@@ -58,7 +57,7 @@ export default class IndexPage extends React.Component {
         <section className="section">
           <div className="column-parent">
              <p><span className="drop-caps"><strong>Bright and Spacious</strong></span> one and two bedroom suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. Parking and most utilities are included.
-             <Link to="/apartments" className="cta">See Apartments</Link>
+             <Link to="/suites" className="cta">See Suites</Link>
              </p>
              <p><span className="drop-caps"><strong>The "Leisure Room”</strong></span> is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax. Enjoy the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
           </div>

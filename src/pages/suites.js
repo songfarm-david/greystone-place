@@ -10,7 +10,7 @@ export default (props) => (
   <Layout>
     {/*<SEO title="Page two" />*/}
     <section>
-       <h2>Apartments at Greystone Place</h2>
+       <h2>Suites at Greystone Place</h2>
        <p>Lush landscaping and natural settings grace the exterior while soft, soothing music emanates throughout the lobby and hallways.</p>
        <ImageBox align="right" carousel="true">
         <Img fluid={props.data.suiteThree.childImageSharp.fluid} />

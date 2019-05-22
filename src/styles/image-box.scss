@@ -88,7 +88,7 @@
 		opacity: 0;
 		transition: opacity 0.5s ease-in;
 
-		&.slide-active {
+		&.current-slide {
 			position: relative !important;
 			z-index: 2;
 			opacity: 1;

@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay } from '@fortawesome/free-solid-svg-icons'
+import { faPlay, faRedoAlt } from '@fortawesome/free-solid-svg-icons'
 
 import '../styles/image-box.scss'
 
@@ -10,42 +10,39 @@ export default class ImageBox extends React.Component {
 
 	constructor(props) {
 		super(props)
+
+		this.playBtn = <FontAwesomeIcon icon={faPlay} />
+		this.replayBtn = <FontAwesomeIcon icon={faRedoAlt} />
+
 		this.state = {
 			currSlide: 0,
-			slideInterval: this.slideInterval,
-			slides: []
+			slideInterval: null,
+			slides: [],
+			isComplete: false
 		}
-		this.playBtn = <FontAwesomeIcon icon={faPlay} />
+
 		// refs
 		this.overlay = React.createRef();
+
 		// functions
 		this.nextSlide = this.nextSlide.bind(this)
 		this.playSlide = this.playSlide.bind(this)
 		this.stopSlide = this.stopSlide.bind(this)
 		this.resetSlides = this.resetSlides.bind(this)
+
 	}
 
 	componentDidMount() {
-		// if this is a carousel ImageBox
+		console.log('componentDidMount called');
+
 		if (this.props.carousel) {
-			// get the DOM node
-			this.carousel = ReactDOM.findDOMNode(this)
-			this.slides = this.carousel
-			console.log('this.slides?', this.slides.children);
-			// console.log('componentDidMount. \nThis carousel?', this.carousel.chilren);
-			//
-			// let monkey = Array.from(this.carousel)
-			// this.state.slides: this.props.carousel
-			//
-			// console.log('setting slides:', this.state.slides);
+			this.setState(() => {
+				const children = ReactDOM.findDOMNode(this).children
+				var slides = Array.from(children).filter(this.filterChildren)
+				return {slides:slides}
+			})
 			this.initCarousel()
-
-			// if () {
-			// 	//wait 2000 milliseconds and start slide
-			// 	// this.slideInterval = setInterval(this.nextSlide, 3500)
-			// }
 		}
-
 
 	}
 
@@ -54,14 +51,21 @@ export default class ImageBox extends React.Component {
 	}
 
 	render() {
+		console.log('render called');
 		return (
-			<article className={
+			<article
+				ref="imageBox"
+				className={
 				"image-box "
 				+ (this.props.align ? this.props.align : "no-align")
 			}>
 				{this.props.children}
-				<div id="overlay" ref={this.overlay} onClick={this.playSlide}>
-					<span>{this.playBtn}</span>
+				<div id="overlay"
+				ref={this.overlay}
+				className={this.props.carousel || this.state.isComplete ? 'active' : ''}
+				onClick={this.playSlide}>
+
+					<span>{this.state.isComplete ? this.replayBtn : this.playBtn}</span>
 				</div>
 			</article>
 		)
@@ -72,28 +76,49 @@ export default class ImageBox extends React.Component {
 	}
 
 	// define the carousel and its children (images)
-	initCarousel() {
-		console.log('initCarousel called. \nSlides?', this.state.slides);
-		// let carouselEl = this.carousel,
-		// images = Array.from(carouselEl.children)
-		// console.log('carousel children are', images);
-		// add 'slide' class to child images, avoid overlay element
-		// console.log('slides', this.state.slides);
-		// this.setState({
-		// 	slides: ReactDOM.findDOMNode(this)
-		// })
-		// console.log('slides set', this.state.slides);
-		this.resetSlides()
+	initCarousel(startIndex = 0) {
+		console.log('initCarousel called.');
 
-		// console.log('contains active class', this.overlay, typeof this.overlay)
-		// if (!this.overlay.current.classList.contains('active')) {
-		// 	console.log(this.overlay.classList) // undefined
-		// 	console.log(this.overlay)
-		// } else {
-		// 	console.log('classList?', this.overlay.current.classList);
-		// }
-		this.triggerOverlay()
-		return
+		// get the DOM node
+		let carouselInnerEls = Array.from(this.refs.imageBox.children)
+
+		carouselInnerEls.forEach((currEl, index) => {
+			if (currEl.getAttribute('id') !== 'overlay') {
+				currEl.className = 'slide'
+			}
+		})
+
+		switch (startIndex) {
+			case 0:
+				carouselInnerEls[0].classList.add('current-slide')
+				break;
+		}
+
+   }
+
+	// cycles through slides using the currentSlide as an index
+	nextSlide() {
+		console.log('nextSlide called');
+
+		const {slides} = this.state
+
+		if (this.state.currSlide == slides.length-1) {
+			console.log('reached the end!');
+			clearInterval(this.slideInterval)
+			this.setState(() => {
+				return {
+					currSlide: 0,
+					isComplete: true
+				}
+			})
+			this.activateOverlay()
+			return
+		}
+		slides[this.state.currSlide].classList.remove('current-slide')
+		this.setState((state, props) => {
+			return {currSlide: state.currSlide+1}
+		})
+		slides[this.state.currSlide].classList.add('current-slide')
 
    }
 
@@ -105,51 +130,22 @@ export default class ImageBox extends React.Component {
 		}
 	}
 
-	// cycles through slides using the currentSlide as an index
-	nextSlide() {
-		// var slides = Array.from(this.carousel.children)
-		// var newSlides = slides.filter(this.filterChildren)
-
-		// get only the slides (and not the overlay)
-		// let slides = a constant here
-		// var newSlides = Array.from(this.carousel.children).filter(this.filterChildren)
-		// console.log('nextSlide called. slides array is', newSlides);
-		// if its the last slide in the Slides array
-		if (this.state.currSlide == this.slides.length-1) {
-			clearInterval(this.slideInterval)
-			this.setState({currSlide: 0})
-			return this.triggerOverlay()
+	activateOverlay() {
+		console.log('activateOverlay called')
+		if (!this.overlay.current.classList.contains('active')) {
+			this.overlay.current.classList.add('active')
 		}
-		this.slides[this.state.currSlide].classList.remove('slide-active')
-		this.setState({currSlide: (this.state.currSlide+1)})
-		this.slides[this.state.currSlide].classList.add('slide-active')
-   }
-
-	triggerOverlay() {
-		if (this.overlay.current.classList.contains('active')) {
-			return
-		}
-		this.overlay.current.classList.add('active');
 	}
 
 	playSlide() {
-		console.log('playSlide called. Slides?', this.state.slides);
+		console.log('playSlide called');
+		if (this.state.isComplete) {
+			let endIndex = this.state.slides.length-1
+			this.state.slides[endIndex].classList.remove('current-slide')
+			this.state.slides[0].classList.add('current-slide')
+		}
 		this.overlay.current.classList.remove('active')
-		// this.initCarousel();
-		// reset slide-active class
-		this.resetSlides(this.state.slides)
 		this.slideInterval = setInterval(this.nextSlide, 3500)
-	}
-
-	resetSlides(slides = this.slides.children) {
-		console.log('resetSlides called', this.slides.children, slides);
-		// this.slides.children.forEach((currVal, index) => {
-		// 	console.log('loopy', currVal);
-		// 	// check for elements with the class 'slide'
-		// 	if (currVal.getAttribute('id') !== 'overlay') currVal.className = 'slide'
-		// 	// the first child item in the array gets the active class
-		// 	if (index == 0) currVal.classList.add('slide-active')
-		// })
 	}
 
 }
