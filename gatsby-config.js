@@ -41,6 +41,15 @@ module.exports = {
           {
              family: 'Quicksand',
              variants: ['300', '400', '400i']
+          },
+          {
+             family: 'Alegreya SC'
+          },
+          {
+             family: 'Aleo'
+          },
+          {
+             family: 'Andada' // good body font
           }
         ],
       },

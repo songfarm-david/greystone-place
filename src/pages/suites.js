@@ -10,7 +10,7 @@ import ImageBox from '../components/image-box'
 export default (props) => (
   <Layout>
     {/*<SEO title="Page two" />*/}
-    <section>
+    <section className="section">
        <h2>Suites at Greystone Place</h2>
        <p>Lush landscaping and natural settings grace the exterior while soft, soothing music emanates throughout the lobby and hallways.</p>
        <ImageBox align="right" carousel="true">

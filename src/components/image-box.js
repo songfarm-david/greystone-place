@@ -65,7 +65,7 @@ export default class ImageBox extends React.Component {
 				className={this.props.carousel || this.state.isComplete ? 'active' : ''}
 				onClick={this.playSlide}>
 
-					<span>{this.state.isComplete ? this.replayBtn : this.playBtn}</span>
+					<button title="Click to play slideshow">{this.state.isComplete ? this.replayBtn : this.playBtn}</button>
 				</div>
 			</article>
 		)

@@ -1,3 +1,5 @@
+@import './breakpoints.scss';
+
 #footer {
 
 	font-size: var(--padding-sm);
@@ -35,6 +37,11 @@
 
 	}
 
+	.bordered {
+		padding: 0 var(--scale-reg) var(--scale-reg);
+		border: var(--white-border);
+		align-self: flex-start;
+	}
 	#siteLinks {
 		ul {
 			list-style-type: disc;
@@ -69,12 +76,15 @@
 		}
 	}
 
-	@media (min-width: 681px) {
+	@media (min-width: $tablet-breakpoint) {
 
 		#footerInner {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: space-between;
+			.footer-module {
+				align-items: flex-start;
+			}
 			.footer-module:not(:last-child) {
 				margin-right: var(--padding-sm);
 				flex: 1 1 auto;
@@ -97,7 +107,7 @@
 
 	}
 
-	@media (min-width: 800px) {
+	@media (min-width: $desktop-breakpoint) {
 		// padding: var(--scale-md) var(--padding-xxxl) 0;
 		// padding-left: var(--padding-xxxl);
 		// padding-right: var(--padding-xxxl);

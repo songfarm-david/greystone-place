@@ -14,8 +14,7 @@
 	padding: var(--padding-md) var(--padding-xs) var(--padding-xxl);
 	overflow: hidden;
 
-	section * + *,
-	section + section {
+	section * + * {
 		margin-top: var(--vertical-rhythm);
 	}
 
@@ -32,9 +31,46 @@
 	.section {
 
 		overflow: hidden;
+		width: 100%;
+		padding: 0 calc(var(--viewport-padding) + 1vw);
+
+		&.reverse-layout {
+			padding: var(--scale-lg) calc(var(--viewport-padding-alt) + 1vw);
+			background-color: var(--cosmic-latte);
+			color: var(--dark-color);
+			a { color: inherit; }
+			.cta {
+				color: var(--pale-taupe);
+			}
+		}
+
+		.sidebar.float-right {
+			float: right;
+			width: 40%;
+			margin-left: 1%;
+			padding-left: var(--scale-reg);
+		}
 
 		a.cta {
-			display: block;
+			display: inline-block;
+			font-size: var(--scale-reg);
+			font-weight: bold;
+			font-style: italic;
+			color: var(--pale-taupe);
+			margin-bottom: var(--vertical-rhythm);
+			text-decoration: underline;
+			&:hover {
+				color: var(--fire-brick)
+			}
+			&.float-left {
+				float: left;
+				margin-right: var(--scale-reg);
+			}
+			&.float-right {
+				float: right;
+				margin-right: var(--scale-sm);
+				margin-left: 1em;
+			}
 		}
 
 		&.flex-section {
@@ -116,13 +152,15 @@
 		}
 	}
 
-	p > span.drop-caps {
+	.drop-caps {
 		font-family: var(--secondary-font);
-		font-size: var(--padding-md);
+		font-size: var(--padding-lg);
 		font-style: italic;
-		text-transform: lowercase;
-		vertical-align: text-bottom;
+		font-weight: bold;
+		text-transform: capitalize;
+		vertical-align: baseline;
 		line-height: 1;
+		color: inherit;
 	}
 
 }
@@ -132,9 +170,10 @@
 	#main-container {
 		border: var(--special-border);
 		margin: 0 auto;
+		padding: 0;
 		// padding-left: 0;
 		// padding-right: 0;
-		max-width: var(--container-mid);
+		// max-width: var(--container-mid);
 		clear: both;
 
 		.section.flex-section {
@@ -148,3 +187,5 @@
 
 	}
 }
+
+@import './articles.scss';

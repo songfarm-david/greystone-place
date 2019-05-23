@@ -4,13 +4,13 @@
          url('../fonts/shan-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+    font-size: 125%;
 }
 
 :root {
-	--primary-font: 'Quicksand', sans-serif; //body
+	--primary-font: 'Andada', sans-serif; //body
 	--secondary-font: 'shelley_andante_scriptregular', serif; //headers
-   --secondary-header-font: 'Cinzel', 'Times New Roman', serif;
+   --secondary-header-font: 'Alegreya SC', 'Times New Roman', serif;
 	--text-scale-ratio: 1.25;
 	--second-scale: 1.33;
 	--text-base-size: 18px; // NOTE: Is this proper?

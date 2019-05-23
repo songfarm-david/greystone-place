@@ -19,7 +19,7 @@ $hamburger-layer-color: var(--pale-taupe);
 	justify-content: space-between;
 	position: relative;
 	padding: var(--padding-md) var(--padding-sm);
-	border-bottom: 3px solid var(--pale-taupe);
+	border-bottom: var(--hero-border);
 
 	a {
 		color: inherit;
