@@ -4,12 +4,13 @@ import Img from "gatsby-image"
 
 // eslint-disable-next-line
 import fluidImage from '../utils/fluidImage'
+import SEO from '../components/seo'
 import Layout from '../components/layout'
 import ImageBox from '../components/image-box'
 
 export default (props) => (
   <Layout>
-    {/*<SEO title="Page two" />*/}
+    <SEO title="Suites" description="Offering 1 and 2-Bedroom suites" keywords={['suite rentals', '1 bedroom', '2 bedroom']}/>
     <section className="section">
        <h2>Suites at Greystone Place</h2>
        <p>Clean, bright, spacious 1 and 2 bedroom suites are finished in our “designer” color schemes and have generous closet space. All suites include large balconies - some with panoramic views of the Toronto skyline and the Escarpment.</p>

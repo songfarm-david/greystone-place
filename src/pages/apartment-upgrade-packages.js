@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import fluidImage from '../utils/fluidImage'
+
+import SEO from '../components/seo'
 import Layout from '../components/layout'
 import ImageBox from '../components/image-box'
 
@@ -10,7 +12,7 @@ import '../styles/layout.scss'
 
 export default (props) => (
   <Layout>
-    {/*<SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />*/}
+    <SEO title="Designer Upgrade Packages" keywords={[`suite upgrades`, `designer suites`, `feather your nest`]} description="Feather Your Nest with select designer upgrades."/>
     <section className="section">
       <h2>Designer Upgrade Packages</h2>
       <p>Meticulously maintained and impressively detailed, Greystone Place offers a unique concept of <em><strong>Designer Upgrade Packages</strong></em>:</p>
