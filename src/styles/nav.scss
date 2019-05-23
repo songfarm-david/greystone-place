@@ -3,10 +3,10 @@
 
 #nav {
 
-	// font-family: var(--secondary-header-font);
+	font-family: var(--secondary-header-font);
 	position: relative;
 	width: 100%;
-	font-size: var(--scale-md);
+	font-size: var(--scale-sm);
 	// color: white;
 	text-transform: capitalize;
 	color: var(--pale-taupe);
@@ -64,8 +64,9 @@
 
 	@media (min-width: $tablet-breakpoint) {
 
-		width: auto;
-		text-align: center;
+		display: flex;
+		justify-content: center;
+		
 		ul {
 			display: flex;
 			left: 0;

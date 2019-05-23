@@ -11,7 +11,7 @@
 	font-size: 1em;
 	width: 100%;
 	max-width: none;
-	padding: var(--padding-md) var(--padding-xs) var(--padding-xxl);
+	// padding: var(--padding-md) var(--padding-xs) var(--padding-xxl);
 	overflow: hidden;
 
 	section * + * {
@@ -32,7 +32,7 @@
 
 		overflow: hidden;
 		width: 100%;
-		padding: 0 calc(var(--viewport-padding) + 1vw);
+		padding: 0 1em;
 
 		&.reverse-layout {
 			padding: var(--scale-lg) calc(var(--viewport-padding-alt) + 1vw);
@@ -176,6 +176,10 @@
 		// max-width: var(--container-mid);
 		clear: both;
 
+		.section {
+			padding: 0 calc(var(--viewport-padding-alt) + 1vw);
+		}
+
 		.section.flex-section {
 			.flex-child {
 				flex: 2 1 66%;
@@ -188,4 +192,11 @@
 	}
 }
 
+@media (min-width: $desktop-breakpoint) {
+	#main-container {
+		.section {
+			padding: 0 calc(var(--viewport-padding) + 1vw);
+		}
+	}
+}
 @import './articles.scss';

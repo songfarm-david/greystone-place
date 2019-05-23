@@ -12,7 +12,8 @@ export default (props) => (
     {/*<SEO title="Page two" />*/}
     <section className="section">
        <h2>Suites at Greystone Place</h2>
-       <p>Lush landscaping and natural settings grace the exterior while soft, soothing music emanates throughout the lobby and hallways.</p>
+       <p>Clean, bright, spacious 1 and 2 bedroom suites are finished in our “designer” color schemes and have generous closet space. All suites include large balconies - some with panoramic views of the Toronto skyline and the Escarpment.</p>
+       <p>Parking for 1 vehicle is included as is heat and hot water. The resident manager lives on site and the clean, modern laundry facility is well equipped with new Maytag washers and dryers.</p>
        <ImageBox align="right" carousel="true">
         <Img fluid={props.data.suiteThree.childImageSharp.fluid} />
         <Img fluid={props.data.suiteOne.childImageSharp.fluid} />
@@ -26,8 +27,6 @@ export default (props) => (
         <Img fluid={props.data.laundryOne.childImageSharp.fluid} title="Greystone Place Laundry Room"/>
         <Img fluid={props.data.skyline.childImageSharp.fluid} />
        </ImageBox>
-       <p>Clean, bright, spacious 1 and 2 bedroom suites are finished in our “designer” color schemes and have generous closet space. All suites include large balconies - some with panoramic views of the Toronto skyline and the Escarpment.</p>
-       <p>Parking for 1 vehicle is included as is heat and hot water. The resident manager lives on site and the clean, modern laundry facility is well equipped with new Maytag washers and dryers.</p>
        <p><i>Jr. 1-Bedroom starting @ $895. Includes heat, water, and one parking spot. Hydro and cable/WIFI extra. Sorry, no dogs allowed.</i></p>
        <div className="list floating-list left">
         <h3>Apartment Suites Include:</h3>

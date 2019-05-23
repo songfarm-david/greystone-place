@@ -33,13 +33,11 @@ a {
 }
 
 blockquote {
-	font-size: var(--scale-md);
+	font-size: var(--scale-lg);
 	font-family: var(--secondary-font);
 	font-style: italic;
 	border-top: 4px solid var(--khaki-pale);
-	margin: 0;
-	margin-left: var(--vertical-rhythm);
-	margin-top: var(--scale-lg) !important;
+	margin: var(--scale-lg) var(--vertical-rhythm) var(--scale-xxl);
 	padding: var(--scale-sm) 0 0 var(--scale-sm);
 	overflow: hidden;
 }

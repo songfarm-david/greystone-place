@@ -8,10 +8,10 @@ import GoogleMap from '../components/google-map'
 export default () => (
   <Layout>
     {/*<SEO title="Page two" />*/}
-    <section className="section flex-section">
+    <section className="section">
        <h2>Contact</h2>
-   	 <p className="flex-child">If you're interested in renting, please complete an <a href="#">Application Form</a> or Call Kim at <a href="tel:+19055742626">905-574-2626</a>.</p>
-       <div className="google-maps-container flex-child">
+   	 <p className="">If you're interested in renting, please complete an <a href="#">Application Form</a> or Call Kim at <a href="tel:+19055742626">905-574-2626</a>.</p>
+       <div className="google-maps-container">
          <Address />
          <GoogleMap />
        </div>

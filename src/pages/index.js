@@ -31,6 +31,7 @@ export default class IndexPage extends React.Component {
    }
 
    render() {
+      console.log(this.props.data);
       return (
          <Layout>
         <SEO title="Home" keywords={[`hamilton mountain`, `apartment rentals`]} />
@@ -53,7 +54,9 @@ export default class IndexPage extends React.Component {
            <ImageBox carousel="true">
               <Img className="image-box-img" fluid={this.props.data.lobby.childImageSharp.fluid} />
               <Img className="image-box-img" fluid={this.props.data.lobbyTwo.childImageSharp.fluid} />
-              <Img className="image-box-img" fluid={this.props.data.exteriorOne.childImageSharp.fluid} />
+              <Img className="image-box-img" fluid={this.props.data.curbside.childImageSharp.fluid} />
+              <Img className="image-box-img" fluid={this.props.data.frontDoor.childImageSharp.fluid} />
+              <Img className="image-box-img" fluid={this.props.data.building.childImageSharp.fluid} />
            </ImageBox>
            <hr />
 
@@ -69,6 +72,8 @@ export default class IndexPage extends React.Component {
           <ImageBox carousel="true">
              <Img className="image-box-img" fluid={this.props.data.roomOne.childImageSharp.fluid} />
              <Img className="image-box-img" fluid={this.props.data.roomTwo.childImageSharp.fluid} />
+             <Img className="image-box-img" fluid={this.props.data.roomKitchen.childImageSharp.fluid} />
+             <Img className="image-box-img" fluid={this.props.data.roomBath.childImageSharp.fluid} />
           </ImageBox>
           <hr />
         </section>
@@ -121,6 +126,12 @@ export const pageQuery = graphql`
       roomTwo: file(relativePath: { eq: "Image-24.jpg" }) {
          ...fluidImage
       }
+      roomKitchen: file(relativePath: { eq: "Image-23.jpg" }) {
+         ...fluidImage
+      }
+      roomBath: file(relativePath: { eq: "Image-27.jpg" }) {
+         ...fluidImage
+      }
       leisureRoomOne: file(relativePath: { eq: "Image-29.jpg" }) {
          ...fluidImage
       }
@@ -128,6 +139,15 @@ export const pageQuery = graphql`
          ...fluidImage
       }
       leisureRoomThree: file(relativePath: { eq: "Image-31.jpg" }) {
+         ...fluidImage
+      }
+      frontDoor: file(relativePath: { eq: "front-door.JPG" }) {
+         ...fluidImage
+      }
+      building: file(relativePath: { eq: "building.JPG" }) {
+         ...fluidImage
+      }
+      curbside: file(relativePath: { eq: "curbside.JPG" }) {
          ...fluidImage
       }
       video: allFile(filter: { extension: {eq: "m3u8"}}) {
