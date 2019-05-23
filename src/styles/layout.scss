@@ -35,7 +35,8 @@
 		padding: 0 1em;
 
 		&.reverse-layout {
-			padding: var(--scale-lg) calc(var(--viewport-padding-alt) + 1vw);
+			padding: var(--scale-lg) var(--scale-md);
+
 			background-color: var(--cosmic-latte);
 			color: var(--dark-color);
 			a { color: inherit; }
@@ -178,6 +179,9 @@
 
 		.section {
 			padding: 0 calc(var(--viewport-padding-alt) + 1vw);
+			&.reverse-layout {
+				padding: var(--scale-lg) calc(var(--viewport-padding-alt) + 1vw);
+			}
 		}
 
 		.section.flex-section {
