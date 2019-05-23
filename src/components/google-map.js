@@ -2,6 +2,8 @@ import React from 'react'
 
 import mapStyles from './google-map.module.css'
 
+// cool tut: https://cuneyt.aliustaoglu.biz/en/using-google-maps-in-react-without-custom-libraries/
+
 export default class GoogleMap extends React.Component {
 
 	initMap = (container) => {
@@ -15,6 +17,7 @@ export default class GoogleMap extends React.Component {
 		// 	return;
 		// }
 		// TODO: put a fallback in place when internet connection is not available, otherwise the website breaks
+		// NOTE: This is where it breaks: TypeError: Cannot read property 'maps' of undefined
 		var map = new this.google.maps.Map(
 			container,
 			{zoom: 16, center: GS}

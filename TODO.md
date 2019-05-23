@@ -5,6 +5,9 @@
 
 * include manifest images
 
+# Domain
+- https://www.netlify.com/docs/custom-domains/
+
 * do SEO of pages
 * accessibility
     * nav is accessible

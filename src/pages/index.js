@@ -26,7 +26,8 @@ import loadVideo from '../functions/videoLoader.js'
 export default class IndexPage extends React.Component {
 
    componentDidMount() {
-      loadVideo(this.props.data.video.edges[0].node.publicURL)
+      // loadVideo(this.props.data.video.edges[0].node.publicURL)
+      loadVideo('http://d2f2gzwlxrc309.cloudfront.net/Greystone+Place+-+512+Mohawk+Rd+E+HamiltonHLS+stream.m3u8')
    }
 
    render() {
@@ -36,7 +37,8 @@ export default class IndexPage extends React.Component {
         <section id="video-section" className="section">
            <p><span className="drop-caps">Greystone Place</span> by Limeridge mall is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
            <video id="greystoneVideo" height="auto" width="100%" poster={posterImg} controls>
-             <source src={''}  type="application/x-mpegurl"></source>{/*type="application/vnd.apple.mpegurl"*/}
+             {/*<source src={''}  type="application/x-mpegurl"></source>*/}
+             {/*type="application/vnd.apple.mpegurl"*/}
              {/*<p>Your browser doesn't support web video. Here is a <a href={props.data.video.edges[0].node.publicURL}>link to the video</a> instead.</p>*/}
            </video>
            <hr />
