@@ -2,6 +2,9 @@
 
 	--base-size: 19;
 
+	// --text-scale-ratio: 1.25;
+	// --second-scale: 1.33;
+
 	/* type scale */
     --scale-xs: calc(1em / var(--text-scale-ratio) / var(--text-scale-ratio));
     --scale-sm: calc(1em / var(--text-scale-ratio));
