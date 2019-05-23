@@ -54,7 +54,7 @@ export default class IndexPage extends React.Component {
         </section>
 
         <section className="section">
-        <h3 className="screen-reader">1 and 2-Bedroom Suites</h3>
+        <h3 className="">1 and 2-Bedroom Suites</h3>
           <div>
              <p><span className="drop-caps">Bright and Spacious</span> 1 and 2-Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. {/*Parking and most utilities are included.*/}
              </p>
