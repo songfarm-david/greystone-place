@@ -33,7 +33,6 @@ export default class ImageBox extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log('componentDidMount called');
 
 		if (this.props.carousel) {
 			this.setState(() => {
@@ -51,7 +50,6 @@ export default class ImageBox extends React.Component {
 	}
 
 	render() {
-		console.log('render called');
 		return (
 			<article
 				ref="imageBox"
@@ -64,7 +62,6 @@ export default class ImageBox extends React.Component {
 				ref={this.overlay}
 				className={this.props.carousel || this.state.isComplete ? 'active' : ''}
 				onClick={this.playSlide}>
-
 					<button title="Click to play slideshow">{this.state.isComplete ? this.replayBtn : this.playBtn}</button>
 				</div>
 			</article>
@@ -77,7 +74,6 @@ export default class ImageBox extends React.Component {
 
 	// define the carousel and its children (images)
 	initCarousel(startIndex = 0) {
-		console.log('initCarousel called.');
 
 		// get the DOM node
 		let carouselInnerEls = Array.from(this.refs.imageBox.children)
@@ -98,12 +94,10 @@ export default class ImageBox extends React.Component {
 
 	// cycles through slides using the currentSlide as an index
 	nextSlide() {
-		console.log('nextSlide called');
 
 		const {slides} = this.state
 
 		if (this.state.currSlide == slides.length-1) {
-			console.log('reached the end!');
 			clearInterval(this.slideInterval)
 			this.setState(() => {
 				return {
@@ -131,14 +125,12 @@ export default class ImageBox extends React.Component {
 	}
 
 	activateOverlay() {
-		console.log('activateOverlay called')
 		if (!this.overlay.current.classList.contains('active')) {
 			this.overlay.current.classList.add('active')
 		}
 	}
 
 	playSlide() {
-		console.log('playSlide called');
 		if (this.state.isComplete) {
 			let endIndex = this.state.slides.length-1
 			this.state.slides[endIndex].classList.remove('current-slide')
