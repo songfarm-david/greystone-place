@@ -28,7 +28,7 @@ exports.sourceNodes = ({
       // console.log(fileNode);
       resolve(fileNode)
    }).then(node => {
-      console.log('then node', node)
+      // console.log('then node', node)
 
       // resolve(fileNode)
       return node

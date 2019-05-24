@@ -1,4 +1,5 @@
 * address 'TypeError: cannot read property 'maps' of undefined' google maps class not instantiated
+* test speed test/figure out why its not working
 * add a sitemap (XML)
 * explore this plugin: https://www.gatsbyjs.org/packages/gatsby-plugin-page-transitions/
 * make site service worker friendly: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline#notes
