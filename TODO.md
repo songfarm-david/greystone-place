@@ -1,8 +1,14 @@
+# First Priority
+* Set up form
+* Make sure domains are all directed properly
 * address 'TypeError: cannot read property 'maps' of undefined' google maps class not instantiated
+* Styles
+
+## Enhancements
 * test speed test/figure out why its not working
 * add a sitemap (XML): https://www.gatsbyjs.org/docs/creating-a-sitemap/
 * make site service worker friendly: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline#notes
-* include manifest images
+* make PWA/include manifest images (Image-39)
 * accessibility
     * nav is accessible
     * make image carousel accessible
