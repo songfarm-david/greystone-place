@@ -14,19 +14,20 @@ export default (props) => (
   <Layout>
     <SEO title="Designer Upgrade Packages" keywords={[`suite upgrades`, `designer suites`, `feather your nest`]} description="Feather Your Nest with select designer upgrades."/>
     <section className="section">
-      <h2>Designer Upgrade Packages</h2>
+      <h1>Designer Upgrade Packages</h1>
       <p>Meticulously maintained and impressively detailed, Greystone Place offers a unique concept of <em><strong>Designer Upgrade Packages</strong></em>:</p>
        <ImageBox carousel="true" align="left">
          <Img fluid={props.data.designOne.childImageSharp.fluid} />
          <Img fluid={props.data.designTwo.childImageSharp.fluid} />
          <Img fluid={props.data.designThree.childImageSharp.fluid} />
-         {/*<Img fluid={props.data.designFour.childImageSharp.fluid} />
+         <Img fluid={props.data.designFour.childImageSharp.fluid} />
          <Img fluid={props.data.designKitchen.childImageSharp.fluid} />
          <Img fluid={props.data.designKitchenTwo.childImageSharp.fluid} />
          <Img fluid={props.data.designBed.childImageSharp.fluid} />
-         <Img fluid={props.data.designBath.childImageSharp.fluid} />*/}
+         <Img fluid={props.data.designBath.childImageSharp.fluid} />
        </ImageBox>
-       <h3>Feather Your Nest</h3>
+       <hr />
+       <h2>Feather Your Nest</h2>
        <p>&ldquo;Feather Your Nest&rdquo; is a unique concept that enables Residents to personalize their Suites exclusively to their tastes and wishes. Create the living environment you've always wanted, limited only by your imagination.</p>
        <p>Quite simply, this principle is achieved by pro-rating the approved upgrade over its useful life. Greystone Place assists in the cost of your enrichment for mutual long term satisfaction.</p>
        <p>Rest easy, we have Professional Interior Decorators and Consultants available to make your dreams come true.</p>

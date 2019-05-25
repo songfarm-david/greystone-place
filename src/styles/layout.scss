@@ -4,7 +4,10 @@
 // @import './globals.scss';
 @import './breakpoints.scss';
 
-
+section + section,
+section * + * {
+	margin-top: var(--vertical-rhythm);
+}
 #main-container {
 
 	// font-size: var(--padding-md);
@@ -14,9 +17,7 @@
 	// padding: var(--padding-md) var(--padding-xs) var(--padding-xxl);
 	overflow: hidden;
 
-	section * + * {
-		margin-top: var(--vertical-rhythm);
-	}
+
 
 	p, ul, ol, span {
 		font-size: var(--scale-sm);
@@ -35,13 +36,21 @@
 		padding: 0 1em;
 
 		&.reverse-layout {
+			font-size: var(--scale-md);
 			padding: var(--scale-lg) var(--scale-md);
-
-			background-color: var(--cosmic-latte);
+			background-color: var(--pale-taupe);
 			color: var(--dark-color);
+			border-top: 2px solid var(--dark-color);
+			border-bottom: 2px solid var(--dark-color);
+			p { font-family: var(--secondary-header-font); }
+			h1, h2, h3 { margin-top: 0; }
 			a { color: inherit; }
 			.cta {
-				color: var(--pale-taupe);
+				color: inherit;
+				text-transform: capitalize;
+			}
+			h1,h2,h3,.cta {
+				font-family: var(--secondary-font);
 			}
 		}
 
@@ -136,6 +145,7 @@
 			&.floating-list {
 
 				width: calc(50% * var(--text-scale-ratio));
+				width: auto;
 				// > h2, h3 {
 				// 	margin-top: 0;
 				// }

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faBars, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
 
 import '../styles/header.scss'
 import Nav from './nav'
@@ -13,7 +13,7 @@ export default class Header extends React.Component {
       super(props)
       this.state = {menuOpen: false}
       this.toggleMenu = this.toggleMenu.bind(this)
-      // this.bars = <FontAwesomeIcon icon={faBars} />
+      this.phone = <FontAwesomeIcon icon={faPhone} />
    }
 
    render() {
@@ -22,7 +22,7 @@ export default class Header extends React.Component {
       return (
          <header id="header">
             <div id="topBar">
-               <p id="headerPhone"><a href="tel:+19055742626" title="Call Greystone Place">905-574-2626</a></p>
+               <p id="headerPhone"><a href="tel:+19055742626" title="Call Greystone Place">905-574-2626</a><span className="phone-icon">{this.phone}</span></p>
                {/*https://jonsuh.com/hamburgers*/}
                <button id="mobMenu" onClick={this.toggleMenu} className="hamburger hamburger--spin" type="button">
                  <span className="hamburger-box">

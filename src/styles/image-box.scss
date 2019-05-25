@@ -14,7 +14,7 @@
 	margin-bottom: var(--vertical-rhythm);
 	clear: both;
 	& * + * {
-		margin-top: 0 !important;
+		margin-top: 0;
 	}
 
 	#overlay {

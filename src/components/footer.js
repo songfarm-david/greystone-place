@@ -9,7 +9,7 @@ import '../styles/footer.scss'
 const Footer = ({ siteTitle }) => (
 	<div id="footer">
 		<div id="footerInner">
-			<article className="bordered footer-module">
+			<article className="footer-module">
 				<h3>Apply for Tenancy</h3>
 				<p>Submit an <a href="#" title="Download an application form to apply for tenancy">application form</a></p>
 			</article>

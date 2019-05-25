@@ -22,8 +22,13 @@ article.sidebar {
 		}
 	}
 	.image-box {
-		float: right;
+		float: left;
 		width: 50%;
+		// margin-right: 1em;
+		border: none;
+		> .image-box-img + .image-box-img {
+			margin-top: 0.5em;
+		}
 	}
 	@media (min-width: $desktop-breakpoint) {
 	}

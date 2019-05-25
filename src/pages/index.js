@@ -31,7 +31,7 @@ export default class IndexPage extends React.Component {
             />
 
             <section id="video-section" className="section">
-               <h2 className="screen-reader">Welcome to Greystone Place</h2>
+               <h2 className="h3" style={{visibility: "hidden"}}>Welcome to Greystone Place</h2>
                <p><span className="drop-caps">Greystone Place</span> by <a href="https://www.cfshops.com/lime-ridge.html" title="Go to Limeridge Mall website" target="_blank">Limeridge mall</a> is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
                <video id="greystoneVideo" height="auto" width="100%" poster={posterImg} controls>
                   <p>Your browser doesn't support web video. Here is a <a href={''}>link to the video</a> instead.</p>
@@ -57,19 +57,24 @@ export default class IndexPage extends React.Component {
             </section>
 
             <section className="section">
-               <h3 className="">1 and 2-Bedroom Suites</h3>
+               <h3 className="header-link"><Link to="/suites">1 and 2-Bedroom Suites</Link></h3>
                <div>
                   <p><span className="drop-caps">Bright and Spacious</span> 1 and 2-Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. {/*Parking and most utilities are included.*/}
                   </p>
                </div>
-               <Link to="/suites" className="cta">See Suites</Link>
+               <Link to="/suites" className="cta right float-right">See Suites</Link>
                <ImageBox carousel="true">
                   <Img className="image-box-img" fluid={this.props.data.roomOne.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.roomTwo.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.roomKitchen.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.roomBath.childImageSharp.fluid} />
                </ImageBox>
-               <hr />
+            </section>
+
+            <section className="section reverse-layout">
+               <h3 className="h2">Design Upgrade Packages</h3>
+               <p>Plan ahead to <Link to="/apartment-upgrade-packages"><em><strong>"Feather Your Nest"</strong></em></Link> and stay "in a personalized and worry-free setting. Explore your options while being close to friends, family, and familiar surroundings. </p>
+               <Link to="/apartment-upgrade-packages" className="cta">Learn more</Link>
             </section>
 
             <section className="section">
@@ -85,11 +90,10 @@ export default class IndexPage extends React.Component {
                </article>
             </section>
 
-            <section className="section reverse-layout">
-               <h3 className="h2">Design Upgrades</h3>
-               <p>Plan ahead to <Link to="/apartment-upgrade-packages"><span className="drop-caps">Feather Your Nest</span></Link> and stay in a personalized and worry-free setting. Explore your options while being close to friends, family, and familiar surroundings. </p>
-               <Link to="/apartment-upgrade-packages" className="cta">Learn more</Link>
-            </section>
+            {/*<section className="section">
+               <blockquote>Rock n' roll Jesus.</blockquote>
+            </section>*/}
+
          </Layout>
       )
    }

@@ -35,6 +35,9 @@ $hamburger-layer-color: var(--pale-taupe);
 		color: inherit;
 		font-family: var(--header-font);
 
+		.phone-icon {
+			font-size: var(--scale-xs);
+		}
 		#headerPhone {
 			margin: 0;
 			margin-left: auto;
@@ -47,10 +50,10 @@ $hamburger-layer-color: var(--pale-taupe);
 				color: var(--pale-taupe);
 				color: inherit;
 				font-style: oblique;
-				+ span {
-					color: var(--fire-brick);
-					vertical-align: top;
-				}
+				// + span {
+				// 	color: var(--fire-brick);
+				// 	vertical-align: top;
+				// }
 			}
 
 		}

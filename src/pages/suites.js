@@ -12,7 +12,7 @@ export default (props) => (
   <Layout>
     <SEO title="Suites" description="Offering 1 and 2-Bedroom suites" keywords={['suite rentals', '1 bedroom', '2 bedroom']}/>
     <section className="section">
-       <h2>Suites at Greystone Place</h2>
+       <h1>Suites at Greystone Place</h1>
        <p>Clean, bright, spacious 1 and 2 bedroom suites are finished in our “designer” color schemes and have generous closet space. All suites include large balconies - some with panoramic views of the Toronto skyline and the Escarpment.</p>
        <p>Parking for 1 vehicle is included as is heat and hot water. The resident manager lives on site and the clean, modern laundry facility is well equipped with new Maytag washers and dryers.</p>
        <ImageBox align="right" carousel="true">
