@@ -1,7 +1,7 @@
 // @import './reset.css';
 // @import './vars.scss';
 
-$hamburger-layer-color: var(--pale-taupe);
+$hamburger-layer-color: var(--dark-color);
 @import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 
 @import './breakpoints.scss';
@@ -25,8 +25,42 @@ $hamburger-layer-color: var(--pale-taupe);
 		color: inherit;
 	}
 
-	#topBar {
+	#mobMenu {
+		border: none;
+		z-index: 1;
+		background-color: inherit;
+		color: inherit;
+		padding: var(--padding-xs);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
+	#marqueeContainer {
+		flex-basis: 100%;
+		color: var(--pale-taupe);
+
+		#headline {
+			font-weight: 400;
+			color: inherit;
+			text-transform: capitalize;
+			font-size: var(--scale-xxxl);
+			line-height: var(--text-scale-ratio);
+		}
+		h1, #byline {
+			margin: 0; }
+		#byline {
+			text-transform: lowercase;
+			font-family: var(--secondary-header-font);
+			font-size: var(--scale-xs);
+			color: inherit;
+			font-weight: lighter;
+			font-style: italic;
+			margin-bottom: var(--scale-sm); /* TODO: use scale here */
+		}
+	}
+
+	#contactBar {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
@@ -41,6 +75,7 @@ $hamburger-layer-color: var(--pale-taupe);
 		#headerPhone {
 			margin: 0;
 			margin-left: auto;
+			margin-right: calc(var(--padding-xs) / 2);
 			font-size: var(--scale-md);
 			margin-bottom: 0;
 			align-self: center;
@@ -59,39 +94,6 @@ $hamburger-layer-color: var(--pale-taupe);
 		}
 	}
 
-	#mobMenu {
-		// margin-left: var(--padding-sm);
-		border: none;
-		z-index: 1;
-		background-color: inherit;
-		color: inherit;
-		padding: var(--padding-xs);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	#marqueeContainer {
-		flex-basis: 100%;
-		margin-top: var(--scale-xs);
-		color: var(--pale-taupe);
-
-		#headline {
-			font-weight: 400;
-			color: inherit;
-			text-transform: capitalize;
-		}
-		h1, #byline {
-			margin: 0; }
-		#byline {
-			// text-transform: capitalize;
-			font-family: var(--secondary-header-font);
-			font-size: var(--scale-xs);
-			color: inherit;
-			margin-bottom: var(--scale-sm); /* TODO: use scale here */
-		}
-	}
-
 	// desktop styles
 	@media (min-width: $tablet-breakpoint) {
 
@@ -100,7 +102,7 @@ $hamburger-layer-color: var(--pale-taupe);
 		// justify-content: center;
 		display: block;
 
-		#topBar {
+		#contactBar {
 			#headerPhone {
 				flex: 1 1 100%;
 				align-self: flex-end;
@@ -142,5 +144,22 @@ $hamburger-layer-color: var(--pale-taupe);
 
 	}
 
+	&.contact-bar-bottom {
+		border-bottom: none;
+		#nav {
+			margin-bottom: var(--scale-md);
+		}
+		#contactBar {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding-right: var(--scale-xs);
+			background: var(--pale-taupe);
+			color: var(--dark-color);
+			border-top: 1px solid var(--khaki-pale);
+			border-bottom: 1px solid var(--dark-color);
+		}
+	}
 
 }
