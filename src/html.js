@@ -28,9 +28,9 @@ export default function HTML(props) {
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
-        {<script async defer
+        {/*<script async defer
           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAspXD0uq-mwbzPGLPfLN-I1Xe34ryUCxY"
-        />}
+        />*/}
         {props.postBodyComponents}
         {/* this was needed to use typography.js
            <TypographyStyle typography={typography} />

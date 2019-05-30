@@ -14,7 +14,7 @@ export default () => (
    	 <p className="">If you're interested in renting, please complete an <a href="#">Application Form</a> or Call Kim at <a href="tel:+19055742626">905-574-2626</a>.</p>
        <div className="google-maps-container">
          <Address />
-         <GoogleMap />
+         <GoogleMap id="contactMap" />
        </div>
     </section>
 

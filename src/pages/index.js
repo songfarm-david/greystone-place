@@ -32,7 +32,7 @@ export default class IndexPage extends React.Component {
 
             <section id="video-section" className="section">
                <h2 className="h3" style={{visibility: "hidden"}}>Welcome to Greystone Place</h2>
-               <p><span className="drop-caps">Greystone Place</span> by <a href="https://www.cfshops.com/lime-ridge.html" title="Go to Limeridge Mall website" target="_blank">Limeridge mall</a> is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
+               <p><span className="emphasized-text">Greystone Place</span> by <a href="https://www.cfshops.com/lime-ridge.html" title="Go to Limeridge Mall website" target="_blank">Limeridge mall</a> is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
                <video id="greystoneVideo" height="auto" width="100%" poster={posterImg} controls>
                   <p>Your browser doesn't support web video. Here is a <a href={''}>link to the video</a> instead.</p>
                </video>
@@ -43,8 +43,8 @@ export default class IndexPage extends React.Component {
             <section id="lobby-section" className="section">
                <h3 className="screen-reader">Lobby and Surroundings</h3>
                <div className="column-parent">
-                  <p><span className="drop-caps">Soft Soothing Music</span> emanates throughout the Lobby and Hallways. Warm earth tone colors lend to the serenity of the interior.</p>
-                  <p><span className="drop-caps"><strong>Lush Landscaping</strong></span> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
+                  <p><span className="emphasized-text">Soft Soothing Music</span> emanates throughout the Lobby and Hallways. Warm earth tone colors lend to the serenity of the interior.</p>
+                  <p><span className="emphasized-text"><strong>Lush Landscaping</strong></span> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
                </div>
                <ImageBox carousel="true">
                   <Img className="image-box-img" fluid={this.props.data.lobby.childImageSharp.fluid} />
@@ -59,7 +59,7 @@ export default class IndexPage extends React.Component {
             <section className="section">
                <h3 className="header-link"><Link to="/suites">1 and 2-Bedroom Suites</Link></h3>
                <div>
-                  <p><span className="drop-caps">Bright and Spacious</span> 1 and 2-Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. {/*Parking and most utilities are included.*/}
+                  <p><span className="emphasized-text">Bright and Spacious</span> 1 and 2-Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. {/*Parking and most utilities are included.*/}
                   </p>
                </div>
                <Link to="/suites" className="cta right float-right">See Suites</Link>
@@ -71,12 +71,6 @@ export default class IndexPage extends React.Component {
                </ImageBox>
             </section>
 
-            <section className="section reverse-layout">
-               <h3 className="h2">Design Upgrade Packages</h3>
-               <p>Plan ahead to <Link to="/apartment-upgrade-packages"><em><strong>"Feather Your Nest"</strong></em></Link> and stay "in a personalized and worry-free setting. Explore your options while being close to friends, family, and familiar surroundings. </p>
-               <Link to="/apartment-upgrade-packages" className="cta">Learn more</Link>
-            </section>
-
             <section className="section">
                <article className="sidebar">
                   <ImageBox>
@@ -84,15 +78,17 @@ export default class IndexPage extends React.Component {
                      <Img className="image-box-img" fluid={this.props.data.leisureRoomTwo.childImageSharp.fluid} />
                      <Img className="image-box-img" fluid={this.props.data.leisureRoomThree.childImageSharp.fluid} />
                   </ImageBox>
-                  <p><span className="drop-caps"><strong>The "Leisure Room”</strong></span> is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax. Enjoy the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
-                  <p><span className="drop-caps"><strong>Enjoy</strong></span> the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
+                  <p><span className="emphasized-text"><strong>The "Leisure Room”</strong></span> is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax.</p>
+                  <p><span className="emphasized-text"><strong>Enjoy</strong></span> the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
                   <p>Viewing or further inquiries may be directed to our courteous on-site staff at <a href="tel:19055742626">905-574-2626</a>.</p>
                </article>
             </section>
 
-            {/*<section className="section">
-               <blockquote>Rock n' roll Jesus.</blockquote>
-            </section>*/}
+            <section className="section reverse-layout">
+               <h3 className="h2">" Feather Your Nest "</h3>
+               <p>Plan ahead to <Link to="/apartment-upgrade-packages"><em><strong>"Feather Your Nest"</strong></em></Link> and stay "in a personalized and worry-free setting. Explore your options while being close to friends, family, and familiar surroundings. </p>
+               <Link to="/apartment-upgrade-packages" className="cta">Learn more</Link>
+            </section>
 
          </Layout>
       )

@@ -25,7 +25,7 @@ const Footer = ({ siteTitle }) => (
 			<article className="google-maps-container footer-module">
 				<h3>Location</h3>
 				<Address />
-				<GoogleMap />
+				<GoogleMap id="footerMap"/>
 			</article>
 
 		</div>

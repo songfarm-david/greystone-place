@@ -163,7 +163,7 @@ section * + * {
 		}
 	}
 
-	.drop-caps {
+	.emphasized-text {
 		font-family: var(--secondary-font);
 		font-size: var(--padding-lg);
 		font-style: italic;
@@ -172,6 +172,7 @@ section * + * {
 		vertical-align: baseline;
 		line-height: 1;
 		color: inherit;
+		padding-right: .1em;
 	}
 
 }

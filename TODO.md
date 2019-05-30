@@ -1,8 +1,11 @@
+# Dad's notes v2
+- on upgrade packages page, correct formatting, style call to action at bottom (see class in section tag!)
+
 # First Priority
 * Set up form
 * Make sure domains are all directed properly
-* address 'TypeError: cannot read property 'maps' of undefined' google maps class not instantiated
 * Styles
+* add Google Analytics
 
 ## Enhancements
 * test speed test/figure out why its not working
