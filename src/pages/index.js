@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import ImageBox from '../components/image-box'
 
-import posterImg from '../images/Image-38.jpg'
+import transparentImg from '../images/transparent.png'
 // eslint-disable-next-line
 import {fluidImage} from '../utils/fluidImage'
 
@@ -31,47 +31,52 @@ export default class IndexPage extends React.Component {
             />
 
             <section id="video-section" className="section">
-               <h2 className="h3" style={{visibility: "hidden"}}>Welcome to Greystone Place</h2>
+               <h2 className="screen-reader">Welcome to Greystone Place</h2>
                <p><span className="emphasized-text">Greystone Place</span> by <a href="https://www.cfshops.com/lime-ridge.html" title="Go to Limeridge Mall website" target="_blank">Limeridge mall</a> is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
-               <video id="greystoneVideo" height="auto" width="100%" poster={posterImg} controls>
+               <video id="greystoneVideo" height="auto" width="100%" poster={transparentImg} controls>
                   <p>Your browser doesn't support web video. Here is a <a href={''}>link to the video</a> instead.</p>
                </video>
                {/* TODO: test fallback link*/}
                <hr />
             </section>
 
-            <section id="lobby-section" className="section">
-               <h3 className="screen-reader">Lobby and Surroundings</h3>
-               <div className="column-parent">
-                  <p><span className="emphasized-text">Soft Soothing Music</span> emanates throughout the Lobby and Hallways. Warm earth tone colors lend to the serenity of the interior.</p>
-                  <p><span className="emphasized-text"><strong>Lush Landscaping</strong></span> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
-               </div>
-               <ImageBox carousel="true">
-                  <Img className="image-box-img" fluid={this.props.data.lobby.childImageSharp.fluid} />
-                  <Img className="image-box-img" fluid={this.props.data.lobbyTwo.childImageSharp.fluid} />
+            <section className="section">
+               <p><span className="emphasized-text"><strong>Lush Landscaping</strong></span> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
+               <ImageBox>
+                  <Img className="image-box-img" fluid={this.props.data.buildingEastWest.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.curbside.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.frontDoor.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.building.childImageSharp.fluid} />
                </ImageBox>
-               <hr />
             </section>
 
-            <section className="section">
-               <h3 className="header-link"><Link to="/suites">1 and 2-Bedroom Suites</Link></h3>
-               <div>
-                  <p><span className="emphasized-text">Bright and Spacious</span> 1 and 2-Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. {/*Parking and most utilities are included.*/}
-                  </p>
+            <section id="lobby-section" className="section">
+               <h3 className="screen-reader">Lobby and Surroundings</h3>
+               <div className="column-parent">
+                  <p><span className="emphasized-text">Soft Soothing Music</span> emanates throughout the Lobby and Hallways. Warm earth tone colors lend to the serenity of the interior.</p>
                </div>
-               <Link to="/suites" className="cta right float-right">See Suites</Link>
+               <ImageBox carousel="true">
+                  <Img className="image-box-img" fluid={this.props.data.lobby.childImageSharp.fluid} />
+                  <Img className="image-box-img" fluid={this.props.data.lobbyTwo.childImageSharp.fluid} />
+               </ImageBox>
+            </section>
+
+            <section className="section section-grey">
+               <h3 className="header-link"><Link to="/suites">1 and 2-Bedroom Suites</Link></h3>
                <ImageBox carousel="true">
                   <Img className="image-box-img" fluid={this.props.data.roomOne.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.roomTwo.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.roomKitchen.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.roomBath.childImageSharp.fluid} />
                </ImageBox>
+               <div>
+                  <p><span className="emphasized-text">Bright and Spacious</span> 1 and 2-Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. {/*Parking and most utilities are included.*/}
+                  </p>
+               </div>
+               <Link to="/suites" className="cta right">See Suites</Link>
             </section>
 
-            <section className="section">
+            <section className="section wide">
                <article className="sidebar">
                   <ImageBox>
                      <Img className="image-box-img" fluid={this.props.data.leisureRoomOne.childImageSharp.fluid} />
@@ -86,7 +91,7 @@ export default class IndexPage extends React.Component {
 
             <section className="section reverse-layout">
                <h3 className="h2">" Feather Your Nest "</h3>
-               <p>Plan ahead to <Link to="/apartment-upgrade-packages"><em><strong>"Feather Your Nest"</strong></em></Link> and stay "in a personalized and worry-free setting. Explore your options while being close to friends, family, and familiar surroundings. </p>
+               <p>Plan ahead to <Link to="/apartment-upgrade-packages"><em><strong>"Feather Your Nest"</strong></em></Link> and stay "in a personalized and worry-free setting. Explore our <em>Designer Upgrades Packages</em> while being close to friends, family, and convenient surroundings.</p>
                <Link to="/apartment-upgrade-packages" className="cta">Learn more</Link>
             </section>
 
@@ -137,6 +142,9 @@ export const pageQuery = graphql`
          ...fluidImage
       }
       building: file(relativePath: { eq: "building.JPG" }) {
+         ...fluidImage
+      }
+      buildingEastWest: file(relativePath: { eq: "building-east-west.JPG" }) {
          ...fluidImage
       }
       curbside: file(relativePath: { eq: "curbside.JPG" }) {

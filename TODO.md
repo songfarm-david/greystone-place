@@ -1,5 +1,11 @@
+# My notes
+- Is there an app that I can use to track time while a project is open/active? I want to know how long I spend on a project and want a brainless way to track it accurately.
+
 # Dad's notes v2
 - on upgrade packages page, correct formatting, style call to action at bottom (see class in section tag!)
+
+# Questions for Dad
+1. Is "Application Form" the right title for a tenancy application form?
 
 # First Priority
 * Set up form

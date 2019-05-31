@@ -32,7 +32,7 @@ export default class Header extends React.Component {
            </div>
            <Nav menuOpen={this.state.menuOpen} />
            <div id="contactBar">
-             <p id="headerPhone"><a href="tel:+19055742626" title="Call Greystone Place">905-574-2626&nbsp;<span className="phone-icon">{this.phone}</span></a></p>
+             <p id="headerPhone"><a href="tel:+19055742626" title="Call Greystone Place"><span className="phone-icon">{this.phone}</span>&nbsp;905-574-2626</a></p>
              {/*https://jonsuh.com/hamburgers*/}
              <button id="mobMenu" onClick={this.toggleMenu} className="hamburger hamburger--spin" type="button">
                 <span className="hamburger-box">

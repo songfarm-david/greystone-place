@@ -1,7 +1,8 @@
 .google-map-container {
 	height: 16em;
 	width: 100%;
-	margin: 0;
+	margin-bottom: 1em;
+	/* margin: 0; */
 }
 
 @media (min-width: 681px) {

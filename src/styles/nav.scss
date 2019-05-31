@@ -10,51 +10,44 @@
 	text-transform: capitalize;
 	color: var(--pale-taupe);
 	transition: color 0.5s ease-in;
+
 	a:hover {
 		color: var(--fire-brick);
 		transition: color 0.25s ease-in;
 	}
 
 	ul {
-
 		list-style: none;
+		white-space: nowrap;
 		padding: 0;
 		margin: 0;
 		position: fixed;
 		top: 0;
 		left: -100%;
 		height: 100%;
-		// width: 80%;
-		// max-width: 30em;
 		background-color: white;
 		border-right: 2px solid #333;
 		z-index: 1001;
 		transition: left 0.5s ease-in-out;
-
 		li {
 			margin: var(--padding-sm) var(--padding-xs);
 		}
-
 	}
-
-	// a#mobMenu {
-	// 	display: block;
-	// }
 
 	@media (max-width: $tablet-breakpoint) {
 
 		ul {
-			// transition: none;
-			width: 70%;
-
+			width: auto;
+			min-width: 71%;
+			max-width: 83%;
+			&.drawer-closed {
+				left: -100%;
+				transition: left 0.5s ease-in-out;
+			}
 			&.drawer-open {
 				left: 0;
 				transition: left 0.5s ease-in-out;
 				min-width: var(--mobile-menu-min);
-			}
-			&.drawer-closed {
-				left: -100%;
-				transition: left 0.5s ease-in-out;
 			}
 		}
 
@@ -75,22 +68,25 @@
 		}
 	}
 
-	&.bullets {
-		ul {
-			list-style: circle;
-			list-style-position: inside;
-			li {
-				white-space: nowrap;
-				padding-right: 1em;
-				a {
-					margin-left: -0.25em;
-				}
+	// adds bullets to nav list items
+	&.bullets ul {
+		list-style: circle;
+		list-style-position: inside;
+		li {
+			padding-right: 1em;
+			a {
+				margin-left: -0.25em;
 			}
-			// &.drawer-open {
-			// 	li a {
-			// 		margin-left: -0.25em;
-			// 	}
-			// }
+		}
+	}
+	&.underlined ul {
+		list-style-type: none;
+		li {
+			padding-right: 0;
+			a {
+				margin-left: 0;
+				text-decoration: underline;
+			}
 		}
 	}
 

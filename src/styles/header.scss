@@ -39,7 +39,6 @@ $hamburger-layer-color: var(--dark-color);
 	#marqueeContainer {
 		flex-basis: 100%;
 		color: var(--pale-taupe);
-
 		#headline {
 			font-weight: 400;
 			color: inherit;
@@ -48,7 +47,8 @@ $hamburger-layer-color: var(--dark-color);
 			line-height: var(--text-scale-ratio);
 		}
 		h1, #byline {
-			margin: 0; }
+			margin: 0;
+		}
 		#byline {
 			text-transform: lowercase;
 			font-family: var(--secondary-header-font);
@@ -62,51 +62,29 @@ $hamburger-layer-color: var(--dark-color);
 
 	#contactBar {
 		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		flex-basis: 100%;
-		font-size: var(--scale-sm);
+		justify-content: center;
 		color: inherit;
 		font-family: var(--header-font);
-
+		font-size: var(--scale-md);
 		.phone-icon {
 			font-size: var(--scale-xs);
 		}
-		#headerPhone {
-			margin: 0;
-			margin-left: auto;
-			margin-right: calc(var(--padding-xs) / 2);
-			font-size: var(--scale-md);
-			margin-bottom: 0;
-			align-self: center;
-			a {
-				// margin: 0;
-				padding: var(--padding-xs) var(--padding-xs);
-				color: var(--pale-taupe);
-				color: inherit;
-				font-style: oblique;
-				// + span {
-				// 	color: var(--fire-brick);
-				// 	vertical-align: top;
-				// }
-			}
-
+		#headerPhone a {
+			padding: var(--padding-xs) var(--padding-xs);
+			color: var(--pale-taupe);
+			color: inherit;
+			font-style: oblique;
 		}
 	}
 
-	// desktop styles
 	@media (min-width: $tablet-breakpoint) {
 
-		//padding: var(--padding-one) 0 0; // NOTE: increase padding on desktop
-		// display: flex;
-		// justify-content: center;
 		display: block;
 
 		#contactBar {
 			#headerPhone {
-				flex: 1 1 100%;
-				align-self: flex-end;
-				text-align: right;
+				// flex: 1 1 100%;
+				// align-self: center;
 			}
 			#mobMenu {
 				display: none;
@@ -117,31 +95,17 @@ $hamburger-layer-color: var(--dark-color);
 			text-align: center;
 		}
 
-		// #marqueeContainer {
-		// 	flex-basis: 100%;
-		// 	#byline {
-		// 		// white-space: nowrap;
-		// 	}
-		// 	&.centered {
-		// 		display: flex;
-		// 		flex-wrap: wrap;
-		// 		justify-content: center;
-		// 	}
-		// }
-
 	}
 
 	@media (min-width: $desktop-breakpoint) {
 		padding-left: var(--padding-xxxl);
 		padding-right: var(--padding-xxxl);
-
 		#marqueeContainer {
 			flex: 1 1 50%;
 			#byline {
 				white-space: normal;
 			}
 		}
-
 	}
 
 	&.contact-bar-bottom {
@@ -154,7 +118,6 @@ $hamburger-layer-color: var(--dark-color);
 			left: 0;
 			right: 0;
 			bottom: 0;
-			padding-right: var(--scale-xs);
 			background: var(--pale-taupe);
 			color: var(--dark-color);
 			border-top: 1px solid var(--khaki-pale);

@@ -9,27 +9,32 @@ article.sidebar {
 	border: var(--hero-border);
 	width: 100%;
 	overflow: hidden;
+
+	color: var(--dark-color);
+	background-color: var(--cosmic-latte);
+	border-color: var(--footer-grey);
+
 	&.left {
 		width: 50%;
 		margin-left: 1em;
 	}
 	a {
-		color: var(--cosmic-latte);
-
+		// color: var(--cosmic-latte);
 		&:hover {
-			color: var(--light-color);
-
+			// color: var(--light-color);
 		}
 	}
 	.image-box {
 		float: left;
 		width: 50%;
-		// margin-right: 1em;
 		border: none;
-		> .image-box-img + .image-box-img {
-			margin-top: 0.5em;
+		.image-box-img {
+			border: var(--hero-border);
+			border-color: var(--footer-grey);
+			& + .image-box-img {
+				margin-top: 0.5em;
+			}
 		}
-	}
-	@media (min-width: $desktop-breakpoint) {
+
 	}
 }
