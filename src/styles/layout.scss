@@ -35,8 +35,12 @@ section * + * {
 		}
 		&.section-grey {
 			background-color: var(--footer-grey);
+			+ .section {
+				margin-top: var(--padding-xl);
+			}
 			.image-box {
 				border-color: var(--footer-grey);
+				margin-bottom: var(--vertical-rhythm);
 			}
 		}
 		&.wide {
@@ -51,12 +55,16 @@ section * + * {
 			border-bottom: 2px solid var(--dark-color);
 			p { font-family: var(--secondary-header-font); }
 			h1, h2, h3 { margin-top: 0; }
-			a { color: inherit; }
+			a {
+				color: inherit;
+				text-decoration: underline;
+			}
 			.cta {
 				color: inherit;
 				text-transform: capitalize;
+				font-size: var(--scale-sm);
 			}
-			h1,h2,h3,.cta {
+			h1,h2,h3 {
 				font-family: var(--secondary-font);
 			}
 		}
@@ -193,8 +201,9 @@ section * + * {
 		clear: both;
 
 		.section {
-			padding: 0 calc(var(--viewport-padding-alt) + 1vw);
-			&.reverse-layout {
+			padding: 0 calc(var(--viewport-padding-alt) + 1vw) var(--scale-md);
+			&.reverse-layout,
+			&.section-grey {
 				padding: var(--scale-lg) calc(var(--viewport-padding-alt) + 1vw);
 			}
 		}
@@ -214,7 +223,11 @@ section * + * {
 @media (min-width: $desktop-breakpoint) {
 	#main-container {
 		.section {
-			padding: 0 calc(var(--viewport-padding) + 1vw);
+			padding: 0 calc(var(--viewport-padding) + 1vw) var(--scale-lg);
+			&.reverse-layout,
+			&.section-grey {
+				padding: var(--scale-lg) calc(var(--viewport-padding) + 1vw) 1em;
+			}
 		}
 	}
 }

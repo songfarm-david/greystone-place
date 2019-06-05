@@ -10,12 +10,32 @@
 	overflow: hidden;
 	border: var(--hero-border);
 	padding: var(--padding-sm);
-	// margin-top: var(--vertical-rhythm);
 	margin-bottom: var(--padding-lg);
 	clear: both;
+
 	& * + * {
 		margin-top: 0;
 	}
+
+	&.flex {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		.image-box-img {
+			width: 100%;
+			flex: 1 1 25%;
+			margin: var(--padding-xs);
+		}
+	}
+
+	// NOTE: must specify width: {X}%; height: auto
+	// &.feature-gallery {
+	// 	.image-box-img { width: 100%; }
+	// 	.image-box-img picture > img {
+	// 		height: auto;
+	// 		width: 25%;
+	// 	}
+	// }
 
 	#overlay {
 		position: absolute;
