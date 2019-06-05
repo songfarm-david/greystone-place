@@ -31,7 +31,7 @@ export default class IndexPage extends React.Component {
             />
 
             <section id="video-section" className="section">
-               <h2 className="screen-reader">Welcome to Greystone Place</h2>
+               <h1 className="screen-reader">Welcome to Greystone Place</h1>
                <p><span className="emphasized-text">Greystone Place</span> by <a href="https://www.cfshops.com/lime-ridge.html" title="Go to Limeridge Mall website" target="_blank">Limeridge mall</a> is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
                <video id="greystoneVideo" height="auto" width="100%" poster={transparentImg} controls>
                   <p>Your browser doesn't support web video. Here is a <a href={''}>link to the video</a> instead.</p>
@@ -42,7 +42,7 @@ export default class IndexPage extends React.Component {
 
             <section className="section">
                <p><span className="emphasized-text"><strong>Lush Landscaping</strong></span> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
-               <ImageBox>
+               <ImageBox flex>
                   <Img className="image-box-img" fluid={this.props.data.buildingEastWest.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.curbside.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.frontDoor.childImageSharp.fluid} />
@@ -51,19 +51,19 @@ export default class IndexPage extends React.Component {
             </section>
 
             <section id="lobby-section" className="section">
-               <h3 className="screen-reader">Lobby and Surroundings</h3>
+               <h2 className="screen-reader">Lobby and Surroundings</h2>
                <div className="column-parent">
-                  <p><span className="emphasized-text">Soft Soothing Music</span> emanates throughout the Lobby and Hallways. Warm earth tone colors lend to the serenity of the interior.</p>
+                  <p><span className="emphasized-text">Soft Soothing Music</span> emanates throughout the Lobby and Hallways. Warm earth tone colors lend to the tranquility of the interior.</p>
                </div>
-               <ImageBox carousel="true">
+               <ImageBox flex>
                   <Img className="image-box-img" fluid={this.props.data.lobby.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.lobbyTwo.childImageSharp.fluid} />
                </ImageBox>
             </section>
 
             <section className="section section-grey">
-               <h3 className="header-link"><Link to="/suites">1 and 2-Bedroom Suites</Link></h3>
-               <ImageBox carousel="true">
+               <h2 className="header-link"><Link to="/suites">1 and 2-Bedroom Suites</Link></h2>
+               <ImageBox carousel>
                   <Img className="image-box-img" fluid={this.props.data.roomOne.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.roomTwo.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.roomKitchen.childImageSharp.fluid} />
@@ -76,14 +76,14 @@ export default class IndexPage extends React.Component {
                <Link to="/suites" className="cta right">See Suites</Link>
             </section>
 
-            <section className="section wide">
-               <article className="sidebar">
-                  <ImageBox>
+            <section className="section">
+               <article> {/*className="sidebar"*/}
+                  <p><span className="emphasized-text"><strong>The "Leisure Room”</strong></span> is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax.</p>
+                  <ImageBox flex>
                      <Img className="image-box-img" fluid={this.props.data.leisureRoomOne.childImageSharp.fluid} />
                      <Img className="image-box-img" fluid={this.props.data.leisureRoomTwo.childImageSharp.fluid} />
                      <Img className="image-box-img" fluid={this.props.data.leisureRoomThree.childImageSharp.fluid} />
                   </ImageBox>
-                  <p><span className="emphasized-text"><strong>The "Leisure Room”</strong></span> is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax.</p>
                   <p><span className="emphasized-text"><strong>Enjoy</strong></span> the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
                   <p>Viewing or further inquiries may be directed to our courteous on-site staff at <a href="tel:19055742626">905-574-2626</a>.</p>
                </article>
@@ -91,7 +91,7 @@ export default class IndexPage extends React.Component {
 
             <section className="section reverse-layout">
                <h3 className="h2">" Feather Your Nest "</h3>
-               <p>Plan ahead to <Link to="/apartment-upgrade-packages"><em><strong>"Feather Your Nest"</strong></em></Link> and stay "in a personalized and worry-free setting. Explore our <em>Designer Upgrades Packages</em> while being close to friends, family, and convenient surroundings.</p>
+               <p>Plan ahead to <em><strong>"Feather Your Nest"</strong></em> and stay "in a personalized and worry-free setting. Explore our <Link to="/apartment-upgrade-packages"><em>Designer Upgrades Packages</em></Link> while being close to friends, family, and convenient surroundings.</p>
                <Link to="/apartment-upgrade-packages" className="cta">Learn more</Link>
             </section>
 
