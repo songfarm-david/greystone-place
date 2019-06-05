@@ -6,6 +6,10 @@ import { faPlay, faRedoAlt } from '@fortawesome/free-solid-svg-icons'
 
 import '../styles/image-box.scss'
 
+/**
+ * @option {Carousel} Make the ImageBox function as a trigger image carousel
+ * @option {Flex} Align images horizontally using flex (up to 25%)
+ */
 export default class ImageBox extends React.Component {
 
 	constructor(props) {
@@ -55,7 +59,8 @@ export default class ImageBox extends React.Component {
 				ref="imageBox"
 				className={
 				"image-box "
-				+ (this.props.align ? this.props.align : "no-align")
+				+ (this.props.align ? this.props.align : "no-align") + " "
+				+ (this.props.flex ? "flex" : "")
 			}>
 				{this.props.children}
 				<div id="overlay"
