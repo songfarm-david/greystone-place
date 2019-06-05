@@ -51,7 +51,7 @@ export default (props) => (
    </section>
 
    <section className="section cta-section">
-      <p><a href="#">Submit an application</a> form or call Kim today at <a href="tel:+19055742626" title="Call Kim at Greystone Place"><em>905-574-2626</em></a>.</p>
+      <p><a href="#">Submit an application</a> form or contact Management today at <a href="tel:+19055742626" title="Call Greystone Place"><em>905-574-2626</em></a>.</p>
    </section>
 
     {/* contact block here */}

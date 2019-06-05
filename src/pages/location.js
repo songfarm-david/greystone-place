@@ -18,7 +18,7 @@ export default () => (
 		<li>GO train is available within minutes at the downtown terminal</li>
 	 </ul>
 	 {/* NOTE: link out to appropriate resources, i.e: Limeridge, Link, GO */}
-	 <p><em>Throw in Contact block/component to Kim here.</em></p>
+	 <p><em>Throw in Contact block/component here.</em></p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
