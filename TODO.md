@@ -11,7 +11,8 @@
 * Set up form
 * Make sure domains are all directed properly
 * Styles
-* add Google Analytics
+* How to add Google Analytics
+* fix sizing blowup of phone icon on load (Font Awesome)
 
 ## Enhancements
 * test speed test/figure out why its not working
