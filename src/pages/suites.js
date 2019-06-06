@@ -40,10 +40,15 @@ export default (props) => (
        </div>
        <p>Greystone Place issues high-security keys and controlled access is video monitored. The lobby entrance monitor can be viewed through your TV.</p>
        <p>This excellent mountain location is within close proximity to churches, hospitals, and shopping. Located in the same block as Limeridge Mall, and just steps to public transit. Also, only a short ride to the GO Train and the Lincoln Alexander Expressway.</p>
-       <p>Viewing or further inquiries may be directed to courteous onsite staff at <a href="tel:+19055742626">(905) 574-2626</a>.</p>
+
        <blockquote className="clear">Enhancing your quality of life in this tranquil, worry-free setting is an unprecedented, limited opportunity.</blockquote>
     </section>
 
+    <section className="section reverse-layout">
+       <h2 className="screen-reader">Inquire</h2>
+       <p>Viewing or further inquiries may be directed to courteous onsite staff at <a href="tel:+19055742626" title="Call Greystone Place">(905) 574-2626</a> or <a href="#">Submit an Application Form</a>.</p>
+       <a className="cta" href="#">Apply Now</a>
+    </section>
 
   </Layout>
 )

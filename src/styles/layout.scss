@@ -27,12 +27,12 @@ section * + * {
 		overflow: hidden;
 		width: 100%;
 		padding: 0 1em;
-		&:first-of-type {
-			padding-top: var(--scale-xl);
-		}
-		&:last-of-type {
-			padding-bottom: var(--scale-xl);
-		}
+		// &:first-of-type {
+		// 	padding-top: var(--scale-xl);
+		// }
+		// &:last-of-type {
+		// 	padding-bottom: var(--scale-xl);
+		// }
 		&.section-grey {
 			background-color: var(--footer-grey);
 			+ .section {
@@ -62,9 +62,10 @@ section * + * {
 			.cta {
 				color: inherit;
 				text-transform: capitalize;
-				font-size: var(--scale-sm);
+				font-size: var(--scale-reg);
+				font-style: normal;
 			}
-			h1,h2,h3 {
+			h1,h2,h3, .cta {
 				font-family: var(--secondary-font);
 			}
 		}
@@ -108,12 +109,10 @@ section * + * {
 			& > .flex-child:last-child {
 				margin-right: 0;
 				flex: 1 1 0px;
-
 			}
 			h1, h2, h3 {
 				flex-basis: 100%;
 			}
-
 		}
 
 		&.overflow-visible {
@@ -123,7 +122,6 @@ section * + * {
 	}
 
 	.section .column-parent {
-		// columns: 2 12em;
 		display: flex;
 		flex-wrap: wrap;
 		@media (min-width: $tablet-breakpoint) {
@@ -140,9 +138,7 @@ section * + * {
 	.list {
 		width: auto;
 		&.floating-list {
-
 			width: 100%;
-
 			&.right {
 				float: none;
 				margin-left: 0;
@@ -151,10 +147,10 @@ section * + * {
 				float: none;
 				margin-right: 0;
 			}
+			> h2, h3 {
+				margin-top: 0;
+			}
 		}
-		// &.no-border {
-		// 	border-top-width: 0px;
-		// }
 
 		@media (min-width: $tablet-breakpoint) {
 			&.floating-list {
@@ -200,13 +196,13 @@ section * + * {
 		padding: 0;
 		clear: both;
 
-		.section {
-			padding: 0 calc(var(--viewport-padding-alt) + 1vw) var(--scale-md);
-			&.reverse-layout,
-			&.section-grey {
-				padding: var(--scale-lg) calc(var(--viewport-padding-alt) + 1vw);
-			}
-		}
+		// .section {
+		// 	padding: 0 calc(var(--viewport-padding-alt) + 1vw) var(--scale-md);
+		// 	&.reverse-layout,
+		// 	&.section-grey {
+		// 		padding: var(--scale-lg) calc(var(--viewport-padding-alt) + 1vw);
+		// 	}
+		// }
 
 		.section.flex-section {
 			.flex-child {
@@ -222,13 +218,13 @@ section * + * {
 
 @media (min-width: $desktop-breakpoint) {
 	#main-container {
-		.section {
-			padding: 0 calc(var(--viewport-padding) + 1vw) var(--scale-lg);
-			&.reverse-layout,
-			&.section-grey {
-				padding: var(--scale-lg) calc(var(--viewport-padding) + 1vw) 1em;
-			}
-		}
+		// .section {
+		// 	padding: 0 calc(var(--viewport-padding) + 1vw) var(--scale-lg);
+		// 	&.reverse-layout,
+		// 	&.section-grey {
+		// 		padding: var(--scale-lg) calc(var(--viewport-padding) + 1vw) 1em;
+		// 	}
+		// }
 	}
 }
 @import './articles.scss';

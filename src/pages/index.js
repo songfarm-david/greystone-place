@@ -31,7 +31,7 @@ export default class IndexPage extends React.Component {
             />
 
             <section id="video-section" className="section">
-               <h1 className="screen-reader">Welcome to Greystone Place</h1>
+               <h1 className="screen-reader" >Welcome to Greystone Place</h1>
                <p><span className="emphasized-text">Greystone Place</span> by <a href="https://www.cfshops.com/lime-ridge.html" title="Go to Limeridge Mall website" target="_blank">Limeridge mall</a> is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
                <video id="greystoneVideo" height="auto" width="100%" preload="auto" poster={transparentImg} controls>
                   <p>Your browser doesn't support web video. Here is a <a href={''}>link to the video</a> instead.</p>
@@ -91,7 +91,7 @@ export default class IndexPage extends React.Component {
 
             <section className="section reverse-layout">
                <h3 className="h2">" Feather Your Nest "</h3>
-               <p>Plan ahead to <em><strong>"Feather Your Nest"</strong></em> and stay "in a personalized and worry-free setting. Explore our <Link to="/designer-upgrade-packages"><em>Designer Upgrades Packages</em></Link> while being close to friends, family, and convenient surroundings.</p>
+               <p>Plan ahead to <em><strong>"Feather Your Nest"</strong></em> and stay in a personalized and worry-free setting. Explore our <Link to="/designer-upgrade-packages">Designer Upgrades Packages</Link> while being close to friends, family, and convenient surroundings.</p>
                <Link to="/designer-upgrade-packages" className="cta">Learn more</Link>
             </section>
 
