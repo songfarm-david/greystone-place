@@ -12,7 +12,7 @@ import '../styles/layout.scss'
 
 export default (props) => (
   <Layout>
-    <SEO title="Designer Upgrade Packages" keywords={[`suite upgrades`, `designer suites`, `feather your nest`]} description="Feather Your Nest with select designer upgrades."/>
+    <SEO title="&#x201c;Feather Your Nest&#x201c;: Designer Upgrade Packages" keywords={[`suite upgrades`, `designer suites`, `feather your nest`]} description="Feather Your Nest with select designer upgrades."/>
     <section className="section">
       <h1>Feather Your Nest</h1>
       <p>Meticulously maintained and impressively detailed, Greystone Place offers a unique concept of <em>Designer Upgrade Packages</em>:</p>

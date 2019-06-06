@@ -69,7 +69,11 @@ $hamburger-layer-color: var(--dark-color);
 		font-size: var(--scale-md);
 		.phone-icon {
 			font-size: var(--scale-xs);
-			max-width: 1.2em;
+			height: 1em;
+			width: 1em;
+			max-width: 1em;
+			max-height: 1em;
+			display: inline-block;
 		}
 		#headerPhone a {
 			padding: var(--padding-xs) var(--padding-xs);
