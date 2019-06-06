@@ -3,27 +3,23 @@
 @import './breakpoints.scss';
 
 .image-box {
-
 	position: relative;
 	height: auto;
 	width: auto;
 	overflow: hidden;
 	border: var(--hero-border);
 	padding: var(--padding-sm);
-	// margin-bottom: var(--padding-lg);
 	clear: both;
-
 	& * + * {
 		margin-top: 0;
 	}
-
 	&.flex {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		.image-box-img {
 			width: 100%;
-			flex: 1 1 25%;
+			flex: 1 1 10em;
 			margin: var(--padding-xs);
 		}
 	}
