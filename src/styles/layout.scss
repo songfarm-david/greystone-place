@@ -28,20 +28,11 @@ section * + * {
 		overflow: hidden;
 		width: 100%;
 		padding: 0 var(--scale-reg);
-		&:first-of-type {
-			// padding-top: var(--scale-xl);
-			// padding-top: var(--vertical-rhythm);
-		}
-
+		&:first-of-type {}
 		> p:first-of-type {
 			margin-top: 0;
 			margin-top: var(--vertical-rhythm);
-
 		}
-
-		// &:last-of-type {
-		// 	padding-bottom: var(--scale-xl);
-		// }
 		&.section-grey {
 			background-color: var(--footer-grey);
 			border-top: 1px solid var(--dark-color);
@@ -61,6 +52,8 @@ section * + * {
 		&.reverse-layout {
 			font-size: var(--scale-md);
 			padding: var(--scale-lg) var(--viewport-padding-alt);
+			padding-left: var(--scale-reg);
+			padding-right: var(--scale-reg);
 			background-color: var(--pale-taupe);
 			color: var(--dark-color);
 			border-top: 2px solid var(--dark-color);
@@ -208,13 +201,13 @@ section * + * {
 		margin: 0 auto;
 		padding: 0;
 		clear: both;
-
 		.section {
 			padding: 0 calc(var(--viewport-padding) + 1vw);
-			// &.reverse-layout,
-			// &.section-grey {
-			// 	padding: var(--scale-lg) calc(var(--viewport-padding-alt) + 1vw);
-			// }
+			&.reverse-layout {
+				// padding: var(--scale-lg) calc(var(--viewport-padding-alt) + 1vw);
+				padding-left: var(--viewport-padding-alt);
+				padding-right: var(--viewport-padding-alt);
+			}
 		}
 
 		.section.flex-section {
