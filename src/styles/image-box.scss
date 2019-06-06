@@ -8,7 +8,7 @@
 	width: auto;
 	overflow: hidden;
 	border: var(--hero-border);
-	padding: var(--padding-sm);
+	padding: var(--padding-xs);
 	clear: both;
 	& * + * {
 		margin-top: 0;
@@ -21,6 +21,9 @@
 			width: 100%;
 			flex: 1 1 10em;
 			margin: var(--padding-xs);
+		}
+		.featured-flex {
+			flex-basis: 100%;
 		}
 	}
 
@@ -44,14 +47,16 @@
 		opacity: 0;
 		// transition: opacity 1.25s linear;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		// transition: opacity .33s linear;
 		&.active {
 			z-index: 10;
 			opacity: 0.5;
-			transition: opacity .77s linear;
+			transition: opacity .33s linear;
 		}
-		button {
+		button, span {
 			color: white;
 			font-size: var(--scale-md);
 			background-color: transparent;
@@ -59,6 +64,9 @@
 			&:hover {
 				cursor: pointer;
 			}
+		}
+		span {
+			font-size: var(--scale-xs);
 		}
 
 	}

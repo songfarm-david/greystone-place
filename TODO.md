@@ -11,8 +11,9 @@
 * Set up form
 * Make sure domains are all directed properly
 * Styles
-* How to add Google Analytics
-* fix sizing blowup of phone icon on load (Font Awesome)
+* Add Google Analytics
+* Add 'Play Slideshow' helper text above ImageBox play buttons
+   - adjust gradient speed of overlay to little to no fade speed
 
 ## Enhancements
 * test speed test/figure out why its not working

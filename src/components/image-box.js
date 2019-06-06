@@ -16,6 +16,7 @@ export default class ImageBox extends React.Component {
 		super(props)
 		this.playBtn = <FontAwesomeIcon icon={faPlay} />
 		this.replayBtn = <FontAwesomeIcon icon={faRedoAlt} />
+		this.slideSpeed = 3000
 		this.state = {
 			currSlide: 0,
 			slideInterval: null,
@@ -60,9 +61,11 @@ export default class ImageBox extends React.Component {
 			}>
 				{this.props.children}
 				<div id="overlay"
-				ref={this.overlay}
-				className={this.props.carousel || this.state.isComplete ? 'active' : ''}
-				onClick={this.playSlide}>
+					ref={this.overlay}
+					className={this.props.carousel || this.state.isComplete ? 'active' : ''}
+					onClick={this.playSlide}
+					>
+					<span>Play Slideshow</span>
 					<button title="Click to play slideshow">{this.playBtn}</button>
 				</div>
 			</article>
@@ -140,7 +143,7 @@ export default class ImageBox extends React.Component {
 			this.state.slides[0].classList.add('current-slide')
 		}
 		this.overlay.current.classList.remove('active')
-		this.slideInterval = setInterval(this.nextSlide, 3500)
+		this.slideInterval = setInterval(this.nextSlide, this.slideSpeed)
 	}
 
 }

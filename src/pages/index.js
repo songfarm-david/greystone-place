@@ -44,10 +44,10 @@ export default class IndexPage extends React.Component {
                <h2 className="screen-reader">Outdoors and Exterior Building</h2>
                <p><span className="emphasized-text"><strong>Lush Landscaping</strong></span> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
                <ImageBox flex>
-                  <Img className="image-box-img" fluid={this.props.data.buildingEastWest.childImageSharp.fluid} />
+                  <Img className="image-box-img featured-flex" fluid={this.props.data.buildingEastWest.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.curbside.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.frontDoor.childImageSharp.fluid} />
-                  <Img className="image-box-img" fluid={this.props.data.building.childImageSharp.fluid} />
+                  {/*<Img className="image-box-img" fluid={this.props.data.building.childImageSharp.fluid} />*/}
                </ImageBox>
                <hr />
             </section>
@@ -74,7 +74,7 @@ export default class IndexPage extends React.Component {
                   <p><span className="emphasized-text">Bright and Spacious</span> 1 and 2-Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. Parking and most utilities are included.
                   </p>
                </div>
-               <Link to="/suites" className="cta right">See Suites</Link>
+               <Link to="/suites" className="cta right">See Full Suites</Link>
             </section>
 
             <section className="section">
