@@ -15,7 +15,7 @@ export default class Nav extends React.Component {
 		return (
 			<nav id="nav" className="underlined">
 				<ul className={this.props.menuOpen ? "drawer-open" : "drawer-closed"}>
-					<li><Link to="/suites" title="Suites">Suites</Link></li><li><Link to="/designer-upgrade-packages" title="Feather Your Nest">Feather Your Nest</Link></li><li><Link to="/contact" contact="Contact" title="Contact">Inquiries</Link></li>
+					<li><Link to="/suites" title="Suites">Suites</Link></li><li><Link to="/designer-upgrade-packages" title="Feather Your Nest">Feather Your Nest</Link></li><li><Link to="/contact" contact="Contact" title="Contact">Inquire</Link></li>
 				</ul>
 			</nav>
 		)

@@ -41,6 +41,7 @@ export default class IndexPage extends React.Component {
             </section>
 
             <section className="section">
+               <h2 className="screen-reader">Outdoors and Exterior Building</h2>
                <p><span className="emphasized-text"><strong>Lush Landscaping</strong></span> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
                <ImageBox flex>
                   <Img className="image-box-img" fluid={this.props.data.buildingEastWest.childImageSharp.fluid} />
@@ -48,29 +49,29 @@ export default class IndexPage extends React.Component {
                   <Img className="image-box-img" fluid={this.props.data.frontDoor.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.building.childImageSharp.fluid} />
                </ImageBox>
+               <hr />
             </section>
 
             <section id="lobby-section" className="section">
                <h2 className="screen-reader">Lobby and Surroundings</h2>
-               <div className="column-parent">
-                  <p><span className="emphasized-text">Soft Soothing Music</span> emanates throughout the Lobby and Hallways. Warm earth tone colors lend to the tranquility of the interior.</p>
-               </div>
+               <p><span className="emphasized-text">Soft Soothing Music</span> emanates throughout the Lobby and Hallways. Warm earth tone colors lend to the tranquility of the interior.</p>
                <ImageBox flex>
                   <Img className="image-box-img" fluid={this.props.data.lobby.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.lobbyTwo.childImageSharp.fluid} />
                </ImageBox>
+               <span>&nbsp;</span>
             </section>
 
             <section className="section section-grey">
-               <h2 className="header-link"><Link to="/suites">1 and 2-Bedroom Suites</Link></h2>
+               <h1 className="header-link"><Link to="/suites">1 and 2-Bedroom Suites</Link></h1>
                <ImageBox carousel>
-                  <Img className="image-box-img" fluid={this.props.data.roomOne.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.roomTwo.childImageSharp.fluid} />
+                  <Img className="image-box-img" fluid={this.props.data.roomOne.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.roomKitchen.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.roomBath.childImageSharp.fluid} />
                </ImageBox>
                <div>
-                  <p><span className="emphasized-text">Bright and Spacious</span> 1 and 2-Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. {/*Parking and most utilities are included.*/}
+                  <p><span className="emphasized-text">Bright and Spacious</span> 1 and 2-Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. Parking and most utilities are included.
                   </p>
                </div>
                <Link to="/suites" className="cta right">See Suites</Link>
@@ -86,6 +87,7 @@ export default class IndexPage extends React.Component {
                   </ImageBox>
                   <p><span className="emphasized-text"><strong>Enjoy</strong></span> the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
                   <p>Viewing or further inquiries may be directed to our courteous on-site staff at <a href="tel:19055742626">905-574-2626</a>.</p>
+                  <span>&nbsp;</span>
                </article>
             </section>
 

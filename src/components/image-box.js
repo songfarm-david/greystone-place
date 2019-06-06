@@ -14,26 +14,20 @@ export default class ImageBox extends React.Component {
 
 	constructor(props) {
 		super(props)
-
 		this.playBtn = <FontAwesomeIcon icon={faPlay} />
 		this.replayBtn = <FontAwesomeIcon icon={faRedoAlt} />
-
 		this.state = {
 			currSlide: 0,
 			slideInterval: null,
 			slides: [],
 			isComplete: false
 		}
-
 		// refs
 		this.overlay = React.createRef();
-
 		// functions
 		this.nextSlide = this.nextSlide.bind(this)
 		this.playSlide = this.playSlide.bind(this)
 		this.stopSlide = this.stopSlide.bind(this)
-		// this.resetSlides = this.resetSlides.bind(this)
-
 	}
 
 	componentDidMount() {
@@ -42,7 +36,9 @@ export default class ImageBox extends React.Component {
 			this.setState(() => {
 				const children = ReactDOM.findDOMNode(this).children
 				var slides = Array.from(children).filter(this.filterChildren)
-				return {slides:slides}
+				return {
+					slides: slides
+				}
 			})
 			this.initCarousel()
 		}
@@ -67,7 +63,7 @@ export default class ImageBox extends React.Component {
 				ref={this.overlay}
 				className={this.props.carousel || this.state.isComplete ? 'active' : ''}
 				onClick={this.playSlide}>
-					<button title="Click to play slideshow">{this.state.isComplete ? this.replayBtn : this.playBtn}</button>
+					<button title="Click to play slideshow">{this.playBtn}</button>
 				</div>
 			</article>
 		)
@@ -79,7 +75,6 @@ export default class ImageBox extends React.Component {
 
 	// define the carousel and its children (images)
 	initCarousel(startIndex = 0) {
-
 		// get the DOM node
 		let carouselInnerEls = Array.from(this.refs.imageBox.children)
 
@@ -102,8 +97,10 @@ export default class ImageBox extends React.Component {
 
 		const {slides} = this.state
 
+		// if end of slide
 		if (this.state.currSlide == slides.length-1) {
 			clearInterval(this.slideInterval)
+			slides[this.state.currSlide].classList.remove('current-slide')
 			this.setState(() => {
 				return {
 					currSlide: 0,
@@ -111,6 +108,7 @@ export default class ImageBox extends React.Component {
 				}
 			})
 			this.activateOverlay()
+			slides[this.state.currSlide].classList.add('current-slide')
 			return
 		}
 		slides[this.state.currSlide].classList.remove('current-slide')

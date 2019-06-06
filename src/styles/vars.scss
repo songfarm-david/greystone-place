@@ -17,7 +17,7 @@
 
 	--padding-xs: calc(1em /  var(--second-scale) / var(--second-scale)  );
 	--padding-sm: calc(1em / var(--second-scale));
-	// --padding-reg: 1em;
+	--padding-reg: var(--scale-reg);
 	--padding-md: calc(1em * var(--second-scale));
 	--padding-lg: calc(1em * var(--second-scale) * var(--second-scale));
 	--padding-xl: calc(1em * var(--second-scale) * var(--second-scale) * var(--second-scale));

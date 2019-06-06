@@ -15,7 +15,8 @@ export default (props) => (
     <SEO title="&#x201c;Feather Your Nest&#x201c;: Designer Upgrade Packages" keywords={[`suite upgrades`, `designer suites`, `feather your nest`]} description="Feather Your Nest with select designer upgrades."/>
     <section className="section">
       <h1>Feather Your Nest</h1>
-      <p>Meticulously maintained and impressively detailed, Greystone Place offers a unique concept of <em>Designer Upgrade Packages</em>:</p>
+      <p><span className="emphasized-text">&ldquo;Feather Your Nest&rdquo;</span> is a unique concept that enables Residents to personalize their Suites exclusively to their tastes and wishes. Create the living environment you've always wanted, limited only by your imagination.</p>
+      <p>Quite simply, this principle is achieved by pro-rating the approved upgrade over its useful life. Greystone Place assists in the cost of your enrichment for mutual long term satisfaction.</p>
        <ImageBox carousel="true" align="left">
          <Img fluid={props.data.designOne.childImageSharp.fluid} />
          <Img fluid={props.data.designTwo.childImageSharp.fluid} />
@@ -27,12 +28,11 @@ export default (props) => (
          <Img fluid={props.data.designBath.childImageSharp.fluid} />
        </ImageBox>
        <hr />
-       <h2 className="screen-reader">Feather Your Nest</h2>
-       <p><span className="emphasized-text">&ldquo;Feather Your Nest&rdquo;</span> is a unique concept that enables Residents to personalize their Suites exclusively to their tastes and wishes. Create the living environment you've always wanted, limited only by your imagination.</p>
-       <p>Quite simply, this principle is achieved by pro-rating the approved upgrade over its useful life. Greystone Place assists in the cost of your enrichment for mutual long term satisfaction.</p>
-       <p>Rest easy, we have Professional Interior Decorators and Consultants available to make your dreams come true.</p>
+       {/*<h2 className="screen-reader">Feather Your Nest</h2>*/}
+       <p>Meticulously maintained and impressively detailed, Greystone Place offers a unique concept of <em>Designer Upgrade Packages</em>:</p>
        <div className="list">
-          <h3>Designer Upgrade Packages may include:</h3>
+
+         <h3>Designer Upgrade Packages may include:</h3>
           <ul className="list no-border">
              <li>Euro-style kitchen cabinets with upgraded fixtures and appliances</li>
              <li>Quality wall-to-wall broadloom enhanced by beautiful ceramic flooring</li>
@@ -41,6 +41,7 @@ export default (props) => (
              <li>Elegant light fixtures and custom window treatments</li>
           </ul>
        </div>
+       <p>Rest easy, we have Professional Interior Decorators and Consultants available to make your dreams come true.</p>
        <blockquote className="clear">Personalize your new Apartment Home to create the environment of your dreams with this exclusive concept, appropriately named <b>"Feather Your Nest"</b>.</blockquote>
     </section>
 

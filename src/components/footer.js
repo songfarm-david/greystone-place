@@ -19,7 +19,7 @@ const Footer = ({ siteTitle }) => (
 					<li><Link to="/" title="Home">Home</Link></li>
 					<li><Link to="/suites" title="Suites">Suites</Link></li>
 					<li><Link to="/designer-upgrade-packages" title="Apartment Upgrade Packages">Feather Your Nest</Link></li>
-					<li><Link to="/contact" title="Contact">Inquiries</Link></li>
+					<li><Link to="/contact" title="Contact Management at Greystone Place">Inquire</Link></li>
 				</ul>
 			</div>
 			<article className="google-maps-container footer-module">

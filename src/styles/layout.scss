@@ -4,6 +4,7 @@
 // @import './globals.scss';
 @import './breakpoints.scss';
 
+section,
 section + section,
 section * + * {
 	margin-top: var(--vertical-rhythm);
@@ -26,21 +27,32 @@ section * + * {
 	.section {
 		overflow: hidden;
 		width: 100%;
-		padding: 0 1em;
-		// &:first-of-type {
-		// 	padding-top: var(--scale-xl);
-		// }
+		padding: 0 var(--scale-reg);
+		&:first-of-type {
+			// padding-top: var(--scale-xl);
+			// padding-top: var(--vertical-rhythm);
+		}
+
+		> p:first-of-type {
+			margin-top: 0;
+			margin-top: var(--vertical-rhythm);
+
+		}
+
 		// &:last-of-type {
 		// 	padding-bottom: var(--scale-xl);
 		// }
 		&.section-grey {
 			background-color: var(--footer-grey);
+			border-top: 1px solid var(--dark-color);
+			border-bottom: 1px solid var(--dark-color);
 			+ .section {
 				margin-top: var(--padding-xl);
 			}
 			.image-box {
-				border-color: var(--footer-grey);
+				border-color: var(--khaki-pale);
 				margin-bottom: var(--vertical-rhythm);
+				background-color: var(--light-color);
 			}
 		}
 		&.wide {
@@ -48,7 +60,7 @@ section * + * {
 		}
 		&.reverse-layout {
 			font-size: var(--scale-md);
-			padding: var(--scale-lg) var(--scale-md);
+			padding: var(--scale-lg) var(--viewport-padding-alt);
 			background-color: var(--pale-taupe);
 			color: var(--dark-color);
 			border-top: 2px solid var(--dark-color);
@@ -83,7 +95,7 @@ section * + * {
 			font-weight: bold;
 			font-style: italic;
 			color: var(--pale-taupe);
-			margin-bottom: var(--vertical-rhythm);
+			margin-bottom: var(--scale-lg);
 			text-decoration: underline;
 			&:hover {
 				color: var(--fire-brick)
@@ -137,6 +149,9 @@ section * + * {
 
 	.list {
 		width: auto;
+		> h2, h3 {
+			margin-top: 0;
+		}
 		&.floating-list {
 			width: 100%;
 			&.right {
@@ -147,9 +162,7 @@ section * + * {
 				float: none;
 				margin-right: 0;
 			}
-			> h2, h3 {
-				margin-top: 0;
-			}
+
 		}
 
 		@media (min-width: $tablet-breakpoint) {
@@ -196,13 +209,13 @@ section * + * {
 		padding: 0;
 		clear: both;
 
-		// .section {
-		// 	padding: 0 calc(var(--viewport-padding-alt) + 1vw) var(--scale-md);
-		// 	&.reverse-layout,
-		// 	&.section-grey {
-		// 		padding: var(--scale-lg) calc(var(--viewport-padding-alt) + 1vw);
-		// 	}
-		// }
+		.section {
+			padding: 0 calc(var(--viewport-padding) + 1vw);
+			// &.reverse-layout,
+			// &.section-grey {
+			// 	padding: var(--scale-lg) calc(var(--viewport-padding-alt) + 1vw);
+			// }
+		}
 
 		.section.flex-section {
 			.flex-child {

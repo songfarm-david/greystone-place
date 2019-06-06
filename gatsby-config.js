@@ -34,20 +34,20 @@ module.exports = {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Cinzel`,
-            variants: ['400','800']
-          },
-          {
-             family: 'Quicksand',
-             variants: ['300', '400', '400i']
-          },
+          // {
+          //   family: `Cinzel`,
+          //   variants: ['400','800']
+          // },
+          // {
+          //    family: 'Quicksand',
+          //    variants: ['300', '400', '400i']
+          // },
           {
              family: 'Alegreya SC'
           },
-          {
-             family: 'Aleo'
-          },
+          // {
+          //    family: 'Aleo'
+          // },
           {
              family: 'Andada' // good body font
           }
