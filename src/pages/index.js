@@ -19,7 +19,8 @@ export default class IndexPage extends React.Component {
    componentDidMount() {
       // loadVideo(this.props.data.video.edges[0].node.publicURL)
       // loadVideo('https://d2f2gzwlxrc309.cloudfront.net/Greystone+Place+-+512+Mohawk+Rd+E+HamiltonHLS+stream.m3u8')
-      loadVideo('https://d3v7kaihbstepl.cloudfront.net/new/512+Mohawk+Rd+(V2)HLS-Output-custom.m3u8')
+      // loadVideo('https://d3v7kaihbstepl.cloudfront.net/new/512+Mohawk+Rd+(V2)HLS-Output-custom.m3u8')
+      loadVideo('https://d2f2gzwlxrc309.cloudfront.net/new/512+Mohawk+Rd+(V2)HLS-Output-custom.m3u8')
    }
 
    render() {
