@@ -34,26 +34,23 @@ module.exports = {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
-          // {
-          //   family: `Cinzel`,
-          //   variants: ['400','800']
-          // },
-          // {
-          //    family: 'Quicksand',
-          //    variants: ['300', '400', '400i']
-          // },
           {
              family: 'Alegreya SC'
           },
-          // {
-          //    family: 'Aleo'
-          // },
           {
              family: 'Andada' // good body font
           }
         ],
       },
    },
+   {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+         trackingId: process.env.GA_Tracking_Id,
+         head: false,
+         respectDNT: true,
+      }
+   }
    // `gatsby-plugin-sitemap`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
