@@ -6,6 +6,8 @@
 # First Priority
 * Set up form
 * Add Google Analytics
+    - Cool article for more accurate GA: https://chaseonsoftware.com/netlify-gatsby-analytics/
+* Figure out how to track calls with Google Analytics
 
 ## Accessibility
 * nav is accessible

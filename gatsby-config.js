@@ -48,7 +48,7 @@ module.exports = {
       options: {
          trackingId: process.env.GA_Tracking_Id,
          head: false,
-         respectDNT: true,
+         respectDNT: true
       }
    }
    // `gatsby-plugin-sitemap`
