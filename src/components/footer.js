@@ -3,15 +3,19 @@ import { Link } from 'gatsby'
 
 import GoogleMap from './google-map'
 import Address from './address'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 
 import '../styles/footer.scss'
+
+import applicationform from "../downloads/Tenancy Application - Greystone Place.pdf"
 
 const Footer = ({ siteTitle }) => (
 	<div id="footer">
 		<div id="footerInner">
 			<article className="footer-module">
 				<h3>Apply for Tenancy</h3>
-				<p>Submit an <a href="#" title="Download an application form to apply for tenancy">application form</a></p>
+				<p><a href={applicationform} download="Tenancy Application - Greystone Place" title="Download an application form to apply for tenancy">Download an application form&nbsp;<FontAwesomeIcon icon={faFilePdf} /></a></p>
 			</article>
 			<div id="siteLinks" className="footer-module">
 				<h3>Site Navigation</h3>
