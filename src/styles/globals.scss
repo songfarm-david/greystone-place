@@ -99,3 +99,22 @@ ul {
 .header-link a {
 	color: inherit;
 }
+
+/**
+ * Google Maps Container styles
+ */
+.google-maps-container {
+	margin-bottom: var(--padding-xl);
+	height: 100%;
+	@media (min-width: $tablet-breakpoint) {
+		&.right {
+			float: right;
+			width: 44%;
+		}
+		&.left {
+			float: left;
+			width: auto;
+		}
+	}
+
+}

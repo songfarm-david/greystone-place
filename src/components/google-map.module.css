@@ -1,15 +1,17 @@
+@import '../styles/breakpoints.scss';
 
 
 .google-map-container {
 	height: 16em;
-	width: 100%;
+	width: auto;
 	margin-bottom: 1em;
+	/* border: 1px solid black; */
 	/* margin: 0; */
 }
 
-@media (min-width: 681px) {
+@media (min-width: $tablet-breakpoint) {
 	.google-map-container {
-		width: 70%;
+		width: auto;
 		height: 10em;
 	}
 }

@@ -1,0 +1,46 @@
+@import '../styles/breakpoints.scss';
+
+
+#form {
+	display: flex;
+	flex-wrap: wrap;
+	border: 2px solid var(--footer-grey);
+	border-radius: 6px;
+	// background-color: var(--footer-grey);
+	margin-bottom: var(--padding-xl);
+	padding: var(--padding-reg);
+	font-size: var(--padding-sm);
+	font-family: var(--primary-font);
+	> label, input, textarea {
+		flex: 1 1 100%;
+		display: block;
+		width: 100%;
+		font-family: inherit;
+		font-size: inherit;
+	}
+	input,
+	textarea,
+	input[type="submit"] {
+		padding: var(--padding-xs);
+	}
+	input[type="submit"] {
+		background-color: var(--pale-taupe);
+		max-width: 56%;
+		font-size: inherit;
+		font-family: inherit;
+		color: var(--light-color);
+		padding: var(--padding-reg) var(--padding-md);
+		border-radius: 6px;
+	}
+	@media (min-width: $tablet-breakpoint) {
+		float: left;
+		width: 80%;
+		margin-right: var(--scale-reg);
+		clear: none;
+		margin-bottom: var(--vertical-rhythm);
+	}
+	@media (min-width: $desktop-breakpoint) {
+		width: 56%;
+	}
+
+}
