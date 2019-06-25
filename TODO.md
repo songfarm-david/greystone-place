@@ -6,6 +6,7 @@
 # First Priority
 * Set up form
 * Figure out how to track calls with Google Analytics
+* Resolve build 'Warnings' via gatsby develop
 
 ## Accessibility
 * nav is accessible
