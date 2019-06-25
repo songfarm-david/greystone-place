@@ -1,12 +1,9 @@
-
-// import posterImg from '../images/Image-38.jpg'
-
+/* hack for video element background image */
 #greystoneVideo {
 	background: transparent url('../images/Image-38.jpg') no-repeat 0 0;
    -webkit-background-size:cover;
    -moz-background-size:cover;
    -o-background-size:cover;
-   // background-size: contain;
 	height: 100%;
 	width: 100%;
 }

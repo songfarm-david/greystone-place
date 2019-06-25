@@ -2,17 +2,18 @@ import React from 'react'
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
-import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Layout from '../components/layout'
 import ImageBox from '../components/image-box'
 
+import loadVideo from '../functions/videoLoader.js'
 import transparentImg from '../images/transparent.png'
 // eslint-disable-next-line
 import {fluidImage} from '../utils/fluidImage'
 
 import '../styles/layout.scss'
+import '../styles/indexPage.scss'
 
-import loadVideo from '../functions/videoLoader.js'
 
 export default class IndexPage extends React.Component {
 
