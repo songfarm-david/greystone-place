@@ -1,6 +1,6 @@
 import React from 'react'
 
-import mapStyles from './google-map.module.css'
+import mapStyles from './google-map.module.scss'
 
 export default class GoogleMap extends React.Component {
 
