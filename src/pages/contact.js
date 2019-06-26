@@ -17,7 +17,7 @@ export default () => (
     <section className="section">
        <h1>Contact</h1>
    	 <p>If interested in renting, please <a href={applicationform} download="Tenancy Application - Greystone Place" title="Download an application form to apply for tenancy">download an application form&nbsp;<FontAwesomeIcon icon={faFilePdf} /></a>. Send the completed form to <a href="mailto:apply@greystoneplace.ca">apply@greystoneplace.ca</a>.</p>
-       <p>For all other inquiries, please use the contact form or contact Management by phone at <a href="tel:+19055742626" title="Click to call">905-574-2626</a>.</p>
+       <p>For all other inquiries, please use the contact form or contact management by phone at <a href="tel:+19055742626" title="Click to call">905-574-2626</a>.</p>
        <ContactForm />
        <div className="google-maps-container left">
          <Address />
