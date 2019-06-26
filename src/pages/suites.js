@@ -8,6 +8,8 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import ImageBox from '../components/image-box'
 
+import applicationform from "../downloads/Tenancy Application - Greystone Place.pdf"
+
 export default (props) => (
   <Layout>
     <SEO title="Suites" description="Offering 1 and 2-Bedroom suites" keywords={['suite rentals', '1 bedroom', '2 bedroom']}/>
@@ -46,7 +48,7 @@ export default (props) => (
 
     <section className="section reverse-layout">
        <h2 className="screen-reader">Inquire</h2>
-       <p>Viewing or further inquiries may be directed to courteous onsite staff at <a href="tel:+19055742626" title="Call Greystone Place">(905) 574-2626</a> or <a href="#">Submit an Application Form</a>.</p>
+       <p>Viewing or further inquiries may be directed to courteous onsite staff at <a href="tel:+19055742626" title="Call Greystone Place">(905) 574-2626</a> or <a href={applicationform} download="Rental Application - Greystone Place" title="Download an application form to apply for tenancy">submit a rental application</a>.</p>
        <a className="cta" href="#">Apply Now</a>
     </section>
 

@@ -14,8 +14,8 @@ const Footer = ({ siteTitle }) => (
 	<div id="footer">
 		<div id="footerInner">
 			<article className="footer-module">
-				<h3>Apply for Tenancy</h3>
-				<p><a href={applicationform} download="Tenancy Application - Greystone Place" title="Download an application form to apply for tenancy">Download an application form&nbsp;<FontAwesomeIcon icon={faFilePdf} /></a></p>
+				<h3>Apply for Rental</h3>
+				<p><a href={applicationform} download="Rental Application - Greystone Place" title="Download an application form to apply for tenancy">Download a Rental Application&nbsp;<FontAwesomeIcon icon={faFilePdf} /></a></p>
 			</article>
 			<div id="siteLinks" className="footer-module">
 				<h3>Site Navigation</h3>

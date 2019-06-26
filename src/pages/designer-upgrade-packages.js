@@ -8,6 +8,8 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import ImageBox from '../components/image-box'
 
+import applicationform from "../downloads/Tenancy Application - Greystone Place.pdf"
+
 import '../styles/layout.scss'
 
 export default (props) => (
@@ -47,7 +49,7 @@ export default (props) => (
 
    <section className="section reverse-layout">
       <h2 className="screen-reader">Inquire</h2>
-      <p><a href="#">Submit an application</a> form or contact Management today at <a href="tel:+19055742626" title="Call Greystone Place"><em>905-574-2626</em></a>.</p>
+      <p><a href={applicationform} download="Tenancy Application - Greystone Place" title="Download an application form to apply for tenancy">Submit a Rental Application Form</a> or contact management today at <a href="tel:+19055742626" title="Call Greystone Place"><em>905-574-2626</em></a>.</p>
       <a className="cta" href="#">Apply Now</a>
    </section>
 
