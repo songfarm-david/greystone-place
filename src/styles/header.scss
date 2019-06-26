@@ -64,7 +64,7 @@ $hamburger-layer-color: var(--pale-taupe);
 
 	#contactBar {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 		color: inherit;
 		font-family: var(--header-font);

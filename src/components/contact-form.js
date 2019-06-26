@@ -29,7 +29,7 @@ export default class ContactForm extends React.Component {
 
 	render() {
 		return (
-			<form id={contactStyles.form} name="contact-form" action="/" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+			<form id={contactStyles.form} name="contact-form" action="/?thank_you" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
 				<h2>Contact Form:</h2>
 				<input type="hidden" name="bot-field" />
 				<input type="hidden" name="form-name" value="contact-form" />
