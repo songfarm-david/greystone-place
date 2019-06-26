@@ -57,7 +57,7 @@ export default class ContactForm extends React.Component {
 				</label>
 				<label>
 					Question/Comment:
-					<textarea placeholder="Please write your question or comment..." />
+					<textarea name="comment" placeholder="Please write your question or comment..." />
 				</label>
 				<input type="submit" value="Submit" />
 			</form>

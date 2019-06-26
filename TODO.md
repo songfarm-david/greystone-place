@@ -8,6 +8,9 @@
 * Figure out how to track calls with Google Analytics
 * Resolve build 'Warnings' via gatsby develop
 
+## Email Forwarding
+* https://support.google.com/domains/answer/3251241?hl=en#wildcard
+
 ## Accessibility
 * nav is accessible
 * make image carousel accessible
