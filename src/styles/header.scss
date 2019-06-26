@@ -1,7 +1,7 @@
 // @import './reset.css';
 // @import './vars.scss';
 
-$hamburger-layer-color: var(--dark-color);
+$hamburger-layer-color: var(--pale-taupe);
 @import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 
 @import './breakpoints.scss';
@@ -46,7 +46,7 @@ $hamburger-layer-color: var(--dark-color);
 			color: inherit;
 			text-transform: capitalize;
 			font-size: var(--scale-xxxl);
-			line-height: var(--text-scale-ratio);
+			line-height: 1;
 		}
 		h1, #byline {
 			margin: 0;
@@ -58,7 +58,7 @@ $hamburger-layer-color: var(--dark-color);
 			color: inherit;
 			font-weight: lighter;
 			font-style: italic;
-			margin-bottom: var(--scale-sm); /* TODO: use scale here */
+			margin-bottom: var(--padding-lg);
 		}
 	}
 
@@ -112,11 +112,17 @@ $hamburger-layer-color: var(--dark-color);
 			flex: 1 1 50%;
 			#byline {
 				white-space: normal;
+				margin-bottom: var(--padding-xs);
 			}
 		}
 	}
 
 	&.contact-bar-bottom {
+		#mobMenu .hamburger-inner,
+		#mobMenu .hamburger-inner:before,
+		#mobMenu .hamburger-inner:after {
+			background-color: var(--dark-color);
+		}
 		border-bottom: none;
 		#nav {
 			margin-bottom: var(--scale-md);
