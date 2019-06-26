@@ -3,7 +3,6 @@
 # Todo
 * Figure out how to track calls with Google Analytics
 * Resolve build 'Warnings' via Gatsby develop
-* thank you confirmation pop-down
 
 ## Questions for Dad
 1. Is "Application Form" the right title for a tenancy application form?

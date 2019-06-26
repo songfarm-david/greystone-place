@@ -7,6 +7,7 @@ import { StaticQuery, graphql } from 'gatsby'
 // Components
 import Header from './header'
 import Footer from './footer'
+import Modal from './modal'
 
 // Styles
 // import '../styles/layout.scss'
@@ -26,6 +27,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <div id="scrim"></div>
+        <Modal />
         <Header siteTitle={data.site.siteMetadata.title} description={data.site.siteMetadata.description}/>
         <main role="main" id="main-container">
           {children}

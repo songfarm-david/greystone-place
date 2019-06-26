@@ -16,8 +16,8 @@ export default () => (
     <SEO title="Contact" description="Contact management to apply for tenancy or for any questions you have about suite rentals."/>
     <section className="section">
        <h1>Contact</h1>
-   	 <p>If interested in renting, please <a href={applicationform} download="Tenancy Application - Greystone Place" title="Download an application form to apply for tenancy">download an application form&nbsp;<FontAwesomeIcon icon={faFilePdf} /></a>. Send the completed form to <a href="mailto:apply@greystoneplace.ca">apply@greystoneplace.ca</a>.</p>
-       <p>For all other inquiries, please use the contact form or contact management by phone at <a href="tel:+19055742626" title="Click to call">905-574-2626</a>.</p>
+   	 <p>If interested in renting, please send a completed <a href={applicationform} download="Tenancy Application - Greystone Place" title="Download an application form to apply for tenancy">Tenancy Application Form&nbsp;<FontAwesomeIcon icon={faFilePdf} /></a> to <a href="mailto:apply@greystoneplace.ca">apply@greystoneplace.ca</a>.</p>
+       <p>For all other inquiries, please call <a href="tel:+19055742626" title="Click to call">905-574-2626</a> or use the contact form below.</p>
        <ContactForm />
        <div className="google-maps-container left">
          <Address />

@@ -15,7 +15,6 @@ import {fluidImage} from '../utils/fluidImage'
 import '../styles/layout.scss'
 import '../styles/indexPage.scss'
 
-
 export default class IndexPage extends React.Component {
 
    componentDidMount() {
@@ -36,7 +35,7 @@ export default class IndexPage extends React.Component {
 
             <section id="video-section" className="section">
                <h1 className="screen-reader" >Welcome to Greystone Place</h1>
-               <p><span className="emphasized-text">Greystone Place</span> by <a href="https://www.cfshops.com/lime-ridge.html" title="Go to Limeridge Mall website" target="_blank">Limeridge mall</a> is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
+               <p><span className="emphasized-text">Greystone Place</span> is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
                <video id="greystoneVideo" height="auto" width="100%" preload="auto" poster={transparentImg} controls>
                   <p>Your browser doesn't support web video. Here is a <a href={''}>link to the video</a> instead.</p>
                </video>

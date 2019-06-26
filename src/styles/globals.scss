@@ -118,3 +118,13 @@ ul {
 	}
 
 }
+
+.theme-button {
+	background-color: var(--dark-color) !important;
+	color: var(--pale-taupe) !important;
+	border: 3px solid var(--pale-taupe) !important;
+	font-weight: bold !important;
+	font-size: var(--scale-reg) !important;
+	display: inline-block;
+	padding: 0.33em var(--scale-xs);
+}
