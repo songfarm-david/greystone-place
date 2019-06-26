@@ -4,9 +4,9 @@
 1. Is "Application Form" the right title for a tenancy application form?
 
 # First Priority
-* Set up form
 * Figure out how to track calls with Google Analytics
-* Resolve build 'Warnings' via gatsby develop
+* Resolve build 'Warnings' via Gatsby develop
+* thank you confirmation pop-down
 
 ## Email Forwarding
 * https://support.google.com/domains/answer/3251241?hl=en#wildcard

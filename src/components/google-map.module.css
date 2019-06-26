@@ -3,10 +3,9 @@
 
 .google-map-container {
 	height: 16em;
+	max-height: 10em;
 	width: auto;
-	margin-bottom: 1em;
-	/* border: 1px solid black; */
-	/* margin: 0; */
+	margin: var(--vertical-rhythm) auto;
 }
 
 @media (min-width: $tablet-breakpoint) {

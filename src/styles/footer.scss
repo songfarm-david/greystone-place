@@ -28,8 +28,11 @@
 		.footer-module {
 			// font-size: var(--scale-xs);
 			margin-bottom: var(--vertical-rhythm);
-			* + * {
+			> p, ul {
 				margin-top: var(--vertical-rhythm);
+			}
+			* + * {
+				// margin-top: var(--vertical-rhythm);
 			}
 			p {
 				font-size: inherit;

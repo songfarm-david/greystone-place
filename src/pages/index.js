@@ -7,6 +7,7 @@ import Layout from '../components/layout'
 import ImageBox from '../components/image-box'
 
 import loadVideo from '../functions/videoLoader.js'
+import '../functions/thankYou_confirmation.js'
 import transparentImg from '../images/transparent.png'
 // eslint-disable-next-line
 import {fluidImage} from '../utils/fluidImage'
