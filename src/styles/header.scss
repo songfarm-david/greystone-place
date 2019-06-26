@@ -89,6 +89,10 @@ $hamburger-layer-color: var(--pale-taupe);
 
 		display: block;
 
+		#marqueeContainer #byline {
+			margin: var(--padding-xs) 0;
+		}
+
 		#contactBar {
 			#headerPhone {
 				// flex: 1 1 100%;
