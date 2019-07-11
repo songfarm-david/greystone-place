@@ -1,9 +1,6 @@
 {
-  "name": "greystone-place",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Dave gaskin <david@peakwebsites.ca>",
+  "author": "Dave Gaskin <david@peakwebsites.ca>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
