@@ -20,7 +20,7 @@ $hamburger-layer-color: var(--pale-taupe);
 	flex-wrap: wrap;
 	justify-content: space-between;
 	position: relative;
-	padding: var(--padding-md) var(--padding-sm);
+	padding: var(--padding-sm);
 	border-bottom: var(--hero-border);
 
 	a {
@@ -45,7 +45,7 @@ $hamburger-layer-color: var(--pale-taupe);
 			font-weight: 400;
 			color: inherit;
 			text-transform: capitalize;
-			font-size: var(--scale-xxxl);
+			font-size: var(--scale-xxl);
 			line-height: 1;
 		}
 		h1, #byline {
@@ -58,7 +58,7 @@ $hamburger-layer-color: var(--pale-taupe);
 			color: inherit;
 			font-weight: lighter;
 			font-style: italic;
-			margin-bottom: var(--padding-lg);
+			margin-bottom: var(--padding-sm);
 		}
 	}
 
@@ -78,11 +78,12 @@ $hamburger-layer-color: var(--pale-taupe);
 			display: inline-block;
 		}
 		#headerPhone a {
-			padding: var(--padding-xs) var(--padding-xs);
+			padding: var(--padding-xxs);
 			color: var(--pale-taupe);
 			color: inherit;
 			font-style: oblique;
 		}
+
 	}
 
 	@media (min-width: $tablet-breakpoint) {
@@ -95,19 +96,35 @@ $hamburger-layer-color: var(--pale-taupe);
 
 		#contactBar {
 			justify-content: center;
-			#headerPhone {
-				// flex: 1 1 100%;
-				// align-self: center;
-			}
-			#mobMenu {
+			width: 100%;
+
+			/* removes the phone number */
+			&.hide-lg-screens {
 				display: none;
 			}
+		}
+
+		#mobMenu {
+			display: none;
 		}
 
 		#nav, #marqueeContainer {
 			text-align: center;
 		}
 
+		/* absolute positioned phone number */
+		&.position-number {
+			position: relative;
+			#contactBar {
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				text-align: right;
+				font-size: var(--scale-reg);
+				margin-right: var(--padding-xxxl);
+			}
+		}
 	}
 
 	@media (min-width: $desktop-breakpoint) {
@@ -122,6 +139,7 @@ $hamburger-layer-color: var(--pale-taupe);
 		}
 	}
 
+	/* places phone number in a gold-colored bottom bar below the header */
 	&.contact-bar-bottom {
 		#mobMenu .hamburger-inner,
 		#mobMenu .hamburger-inner:before,

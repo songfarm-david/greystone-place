@@ -18,9 +18,6 @@ import '../styles/indexPage.scss'
 export default class IndexPage extends React.Component {
 
    componentDidMount() {
-      // loadVideo(this.props.data.video.edges[0].node.publicURL)
-      // loadVideo('https://d2f2gzwlxrc309.cloudfront.net/Greystone+Place+-+512+Mohawk+Rd+E+HamiltonHLS+stream.m3u8')
-      // loadVideo('https://d3v7kaihbstepl.cloudfront.net/new/512+Mohawk+Rd+(V2)HLS-Output-custom.m3u8')
       loadVideo('https://d2f2gzwlxrc309.cloudfront.net/new/512+Mohawk+Rd+(V2)HLS-Output-custom.m3u8')
    }
 
@@ -35,29 +32,26 @@ export default class IndexPage extends React.Component {
 
             <section id="video-section" className="section">
                <h1 className="screen-reader" >Welcome to Greystone Place</h1>
-               <p><span className="emphasized-text">Greystone Place</span> is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
                <video id="greystoneVideo" height="auto" width="100%" preload="auto" poster={transparentImg} controls>
                   <p>Your browser doesn't support web video. Here is a <a href={''}>link to the video</a> instead.</p>
                </video>
+               <p>Greystone Place is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
                {/* TODO: test fallback link*/}
-               <hr />
+               {/*<hr />*/}
             </section>
 
             <section className="section">
-               <h2 className="screen-reader">Outdoors and Exterior Building</h2>
-               <p><span className="emphasized-text"><strong>Lush Landscaping</strong></span> and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
+               {/*<h2 className="screen-reader">Outdoors and Exterior Building</h2>*/}
+               <h2 className="emphasized-text">Lobby and Surroundings</h2>
+               <p>Lush landscaping and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
                <ImageBox flex>
                   <Img className="image-box-img featured-flex" fluid={this.props.data.buildingEastWest.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.curbside.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.frontDoor.childImageSharp.fluid} />
                   {/*<Img className="image-box-img" fluid={this.props.data.building.childImageSharp.fluid} />*/}
                </ImageBox>
-               <hr />
-            </section>
-
-            <section id="lobby-section" className="section">
-               <h2 className="screen-reader">Lobby and Surroundings</h2>
-               <p><span className="emphasized-text">Soft Soothing Music</span> emanates throughout the Lobby and Hallways. Warm earth tone colors lend to the tranquility of the interior.</p>
+               {/*<hr />*/}
+               <p>Soft soothing music emanates throughout the lobby and hallways. Warm earth tone colors lend to the tranquility of the interior.</p>
                <ImageBox flex>
                   <Img className="image-box-img" fluid={this.props.data.lobby.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.lobbyTwo.childImageSharp.fluid} />
@@ -65,8 +59,18 @@ export default class IndexPage extends React.Component {
                <span>&nbsp;</span>
             </section>
 
+            {/*<section id="lobby-section" className="section">
+               <h2 className="screen-reader">Lobby and Surroundings</h2>
+               <p><span className="emphasized-text">Soft Soothing Music</span> emanates throughout the Lobby and Hallways. Warm earth tone colors lend to the tranquility of the interior.</p>
+               <ImageBox flex>
+                  <Img className="image-box-img" fluid={this.props.data.lobby.childImageSharp.fluid} />
+                  <Img className="image-box-img" fluid={this.props.data.lobbyTwo.childImageSharp.fluid} />
+               </ImageBox>
+               <span>&nbsp;</span>
+            </section>*/}
+
             <section className="section section-grey">
-               <h1 className="header-link"><Link to="/suites">1 and 2-Bedroom Suites</Link></h1>
+               <h1 className="header-link emphasized-text"><Link to="/suites">1 and 2-Bedroom Suites</Link></h1>
                <ImageBox carousel>
                   <Img className="image-box-img" fluid={this.props.data.roomTwo.childImageSharp.fluid} />
                   <Img className="image-box-img" fluid={this.props.data.roomOne.childImageSharp.fluid} />
@@ -74,7 +78,7 @@ export default class IndexPage extends React.Component {
                   <Img className="image-box-img" fluid={this.props.data.roomBath.childImageSharp.fluid} />
                </ImageBox>
                <div>
-                  <p><span className="emphasized-text">Bright and Spacious</span> 1 and 2-Bedroom Suites have generous closet space and include large balconies - some with panoramic views of the Toronto Skyline and the Escarpment. Parking and most utilities are included.
+                  <p>Bright and spacious 1 and 2-Bedroom suites have generous closet space and include large balconies - some with panoramic views of the Toronto skyline and the escarpment. Parking and most utilities are included.
                   </p>
                </div>
                <Link to="/suites" className="cta right">See Full Suites</Link>
@@ -82,13 +86,14 @@ export default class IndexPage extends React.Component {
 
             <section className="section">
                <article> {/*className="sidebar"*/}
-                  <p><span className="emphasized-text"><strong>The "Leisure Room”</strong></span> is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax.</p>
+                  <h1 className="emphasized-text">The Leisure Room</h1>
+                  <p>The Leisure Room is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax.</p>
                   <ImageBox flex>
                      <Img className="image-box-img" fluid={this.props.data.leisureRoomOne.childImageSharp.fluid} />
                      <Img className="image-box-img" fluid={this.props.data.leisureRoomTwo.childImageSharp.fluid} />
                      <Img className="image-box-img" fluid={this.props.data.leisureRoomThree.childImageSharp.fluid} />
                   </ImageBox>
-                  <p><span className="emphasized-text"><strong>Enjoy</strong></span> the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
+                  <p>Enjoy the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
                   <p>Viewing or further inquiries may be directed to our courteous on-site staff at <a href="tel:19055742626">905-574-2626</a>.</p>
                   <span>&nbsp;</span>
                </article>
@@ -96,7 +101,7 @@ export default class IndexPage extends React.Component {
 
             <section className="section reverse-layout">
                <h3 className="h2">" Feather Your Nest "</h3>
-               <p>Plan ahead to <em><strong>"Feather Your Nest"</strong></em> and stay in a personalized and worry-free setting. Explore our <Link to="/designer-upgrade-packages">Designer Upgrades Packages</Link> while being close to friends, family, and convenient surroundings.</p>
+               <p>Plan ahead to <em>"Feather Your Nest"</em> and stay in a personalized and worry-free setting. Explore our <Link to="/designer-upgrade-packages">Designer Upgrades Packages</Link> while being close to friends, family, and convenient surroundings.</p>
                <Link to="/designer-upgrade-packages" className="cta">Learn more</Link>
             </section>
 
