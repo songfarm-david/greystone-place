@@ -24,6 +24,7 @@ section * + * {
 		overflow: hidden;
 		width: 100%;
 		padding: 0 var(--scale-reg);
+		// margin-bottom: var(--scale-xxl);
 		&:first-of-type {}
 		> p:first-of-type {
 			margin-top: 0;
@@ -33,9 +34,9 @@ section * + * {
 			background-color: var(--footer-grey);
 			border-top: 1px solid var(--dark-color);
 			border-bottom: 1px solid var(--dark-color);
-			+ .section {
-				margin-top: var(--padding-xl);
-			}
+			// + .section {
+			// 	margin-top: var(--padding-xl);
+			// }
 			.image-box {
 				border-color: var(--khaki-pale);
 				margin-bottom: var(--vertical-rhythm);
