@@ -1,5 +1,9 @@
 # Greystone Place Website Build 2019 - TODO and Notes:
 
+## Project Notes
+This is a [Gatsby site](https://www.gatsbyjs.org/).  To run a gatsby site, run `gatsby-develop` in the command line for local development at [localhost:8000](http://localhost:8000/).
+Committing and pushing changes to Github will start a fresh build at [https://greystoneplace.ca](https://greystoneplace.ca)
+
 ## Todo
 * Figure out how to track calls with Google Analytics
 * Resolve build 'Warnings' via Gatsby develop
