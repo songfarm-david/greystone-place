@@ -31,6 +31,8 @@
 		color: var(--light-color);
 		padding: var(--padding-reg) var(--padding-md);
 		border-radius: 6px;
+		-webkit-appearance: none;
+		appearance: none;
 	}
 	@media (min-width: $tablet-breakpoint) {
 		float: left;
