@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 import navStyles from './nav.module.scss'
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 export default class Nav extends React.Component {
 
 	constructor(props) {
@@ -35,6 +36,8 @@ export default class Nav extends React.Component {
 
 }
 =======
+=======
+>>>>>>> Stashed changes
 const Nav = (props) => (
 	<nav id="nav" className="underlined">
 		<ul className={props.menuOpen ? "drawer-open" : "drawer-closed"}>
@@ -44,4 +47,7 @@ const Nav = (props) => (
 )
 
 export default Nav
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

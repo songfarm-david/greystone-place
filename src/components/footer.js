@@ -40,6 +40,9 @@ const Footer = ({ siteTitle }) => (
 				<Address />
 				<GoogleMap id="footerMap"/>
 			</article>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 		</div>
 		<div className={footerStyles.legalFooter}>

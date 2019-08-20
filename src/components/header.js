@@ -78,4 +78,7 @@ export default class Header extends React.Component {
    }
 
 }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
