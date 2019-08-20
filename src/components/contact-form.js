@@ -13,7 +13,6 @@ export default class ContactForm extends React.Component {
 		this.state = {
 			value: ''
 		}
-
 		this.handleChange = this.handleChange.bind(this)
 		this.handleSubmit = this.handleSubmit.bind(this)
 	}
@@ -63,5 +62,5 @@ export default class ContactForm extends React.Component {
 			</form>
 		)
 	}
-	
+
 }

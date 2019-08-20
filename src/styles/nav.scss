@@ -53,7 +53,7 @@
 	@media (max-width: $tablet-breakpoint) {
 		ul {
 			width: auto;
-			min-width: 71%;
+			// min-width: 71%;
 			max-width: 83%;
 			&.drawer-closed {
 				left: -100%;

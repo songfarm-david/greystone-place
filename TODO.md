@@ -5,7 +5,11 @@ This is a [Gatsby site](https://www.gatsbyjs.org/).  To run a gatsby site, run `
 Committing and pushing changes to Github will start a fresh build at [https://greystoneplace.ca](https://greystoneplace.ca)
 
 ## Todo
+* Practice making modal accessible, add to portfolio skillset/example: https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex#modals_and_keyboard_traps
 * Update 404 page
+* Figure out how to make main video accessible
+* Figure out how to make slideshows more accessible
+* Implement a form CAPTCHA that's accessible: https://webaim.org/blog/spam_free_accessible_forms/
 * Figure out how to track calls with Google Analytics
 * Resolve build 'Warnings' via Gatsby develop
 * Speed test site, how?
