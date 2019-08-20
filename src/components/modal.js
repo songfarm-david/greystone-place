@@ -13,7 +13,6 @@ export default class Modal extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log(this.props);
 		if (window.location.search === '?thank_you') {
 			this.setState({active: true})
 		}
@@ -27,14 +26,14 @@ export default class Modal extends React.Component {
 				onClick={this.closeModal} >
 
 				<div className={modalClasses}>
-					<div class="modal-header">
-						<span class="close" onClick={this.closeModal}>&times;</span>
+					<div className="modal-header">
+						<span className="close" onClick={this.closeModal}>&times;</span>
 						<h2 id="modalHeader">Thank You</h2>
 					</div>
-					<div class="modal-body">
+					<div className="modal-body">
 						<p>We will respond to you shortly.</p>
 					</div>
-					<div class="modal-footer">
+					<div className="modal-footer">
 						<h3 onClick={this.closeModal} className="theme-button">Return to Homepage</h3>
 					</div>
 				</div>

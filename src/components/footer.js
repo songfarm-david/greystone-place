@@ -30,7 +30,6 @@ const Footer = ({ siteTitle }) => (
 				<Address />
 				<GoogleMap id="footerMap"/>
 			</article>
-
 		</div>
 		<div id="legalFooter">
 			<p>© {new Date().getFullYear()}, {siteTitle}</p>
