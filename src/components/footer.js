@@ -6,6 +6,7 @@ import footerStyles from './footer.module.scss'
 import { rhythm } from '../utils/typography'
 
 const Footer = ({ siteTitle }) => (
+<<<<<<< Updated upstream
 	<div className={footerStyles.footerContainer} style={{ padding: rhythm(1) }}>
 		<div className={footerStyles.googleMapsContainer}>
 			<h3>Location</h3>
@@ -19,6 +20,27 @@ const Footer = ({ siteTitle }) => (
 				<li><Link to="/location" title="Design Upgrade Packages">Location</Link></li>
 				<li><Link to="/contact" contact="Contact">Contact</Link></li>
 			</ul>
+=======
+	<div id="footer">
+		<div id="footerInner">
+			<article className="footer-module">
+				<h3>Apply for Rental</h3>
+				<p><a href={applicationform} download="Rental Application - Greystone Place" title="Download an application form to apply for tenancy">Download a Rental Application&nbsp;<FontAwesomeIcon icon={faFilePdf} /></a></p>
+			</article>
+			<div id="siteLinks" className="footer-module">
+				<h3>Site Navigation</h3>
+				<ul>
+					<li><Link to="/" title="Home">Home</Link></li>
+					<li><Link to="/suites" title="Suites">Suites</Link></li>
+					<li><Link to="/designer-upgrade-packages" title="Apartment Upgrade Packages">Feather Your Nest</Link></li>
+					<li><Link to="/contact" title="Contact Management at Greystone Place">Inquire</Link></li>
+				</ul>
+			</div>
+			<article className="google-maps-container footer-module">
+				<Address />
+				<GoogleMap id="footerMap"/>
+			</article>
+>>>>>>> Stashed changes
 		</div>
 		<div className={footerStyles.legalFooter}>
 			<p>© {new Date().getFullYear()}, {siteTitle}</p>

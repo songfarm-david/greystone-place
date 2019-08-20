@@ -37,8 +37,18 @@ export default class GoogleMap extends React.Component {
 	}
 
 	render() {
+<<<<<<< Updated upstream
 		return <div
 			className={"map " + mapStyles.googleMapContainer + " " + mapStyles[this.props.align]}></div>
+=======
+		return (
+			<div
+			 id={this.props.id}
+			 className={"map " + mapStyles.googleMapContainer + " " + mapStyles[this.props.align]}
+			 >
+			 </div>
+		)
+>>>>>>> Stashed changes
 	}
 
 }

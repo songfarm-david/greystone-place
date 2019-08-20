@@ -1,2 +1,43 @@
+<<<<<<< Updated upstream
 * add a sitemap (XML)
 * explore this plugin: https://www.gatsbyjs.org/packages/gatsby-plugin-page-transitions/
+=======
+# Greystone Place Website Build 2019 - TODO and Notes:
+
+## Project Notes
+This is a [Gatsby site](https://www.gatsbyjs.org/).  To run a gatsby site, run `gatsby-develop` in the command line for local development at [localhost:8000](http://localhost:8000/).
+Committing and pushing changes to Github will start a fresh build at [https://greystoneplace.ca](https://greystoneplace.ca)
+
+## Todo
+* Practice making modal accessible, add to portfolio skillset/example: https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex#modals_and_keyboard_traps
+* Update 404 page
+* Figure out how to make main video accessible
+* Figure out how to make slideshows more accessible
+* Implement a form CAPTCHA that's accessible: https://webaim.org/blog/spam_free_accessible_forms/
+* Figure out how to track calls with Google Analytics
+* Resolve build 'Warnings' via Gatsby develop
+* Speed test site, how?
+* add a sitemap (XML): https://www.gatsbyjs.org/docs/creating-a-sitemap/
+* make site service worker friendly: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline#notes
+* make PWA/include manifest images (Image-39)
+* Figure out why Google Maps does not work in duplicate very well (e.g: the Map pin only shows up one at a time)
+
+## Tests
+1. Action: Sent comment form website contact form including all information. Result: the comment form was instantly received in the Greystone Place Gmail account.
+2. Action: Sent an email from my personal gmail account to apply@greystoneplace.ca. Result: the email was received in the Greystone Place Gmail account.
+3. Action: Downloaded and filled out application form. Send new email with attached form. Result: Email was received with included attachment in the greystone gmail account.
+
+## Accessibility
+* nav is accessible
+* make image carousel accessible
+* make site accessible: https://www.gatsbyjs.org/docs/making-your-site-accessible/
+
+## Highlights
+- custom fonts
+- streaming video
+
+## Abstract
+- form editor hints: https://medium.com/productivity-freak/my-atom-editor-setup-for-js-react-9726cd69ad20
+- Is there an app that I can use to track time while a project is open/active? I want to know how long I spend on a project and want a brainless way to track it accurately.
+- Cool article for more accurate GA: https://chaseonsoftware.com/netlify-gatsby-analytics/
+>>>>>>> Stashed changes
