@@ -128,14 +128,12 @@ export default class ImageBox extends React.Component {
 
 	render() {
 		return (
-			<article ref="imageBox"
-				className={
-				"image-box "
-				+ (this.props.align ? this.props.align : "no-align") + " "
-				+ (this.props.flex ? "flex" : "")
-			}>
+			<article ref="imageBox" className={"image-box " +
+			(this.props.align ? this.props.align : "no-align") +
+			" " + (this.props.flex ? "flex" : "")}>
 				{this.props.children}
-				<div id="overlay" ref={this.overlay} className={this.props.carousel || this.state.isSlideComplete ? 'active' : ''} onClick={this.playSlide}>
+				<div id="overlay" ref={this.overlay}
+					className={this.props.carousel || this.state.isSlideComplete ? 'active' : ''} onClick={this.playSlide}>
 					<span>Play Slideshow</span>
 					<button title="Click to play slideshow"><FontAwesomeIcon icon={faPlay} /></button>
 				</div>
