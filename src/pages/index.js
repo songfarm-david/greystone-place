@@ -44,30 +44,31 @@ export default class IndexPage extends React.Component {
                {/*<h2 className="screen-reader">Outdoors and Exterior Building</h2>*/}
                <h2 className="emphasized-text">Lobby and Surroundings</h2>
                <p>Lush landscaping and natural settings enhance the exterior while video surveillance, high-security controlled access and television monitoring intercom add serenity and peace of mind for all Residents.</p>
-               <ImageBox flex>
-                  <Img className="image-box-img featured-flex" fluid={this.props.data.buildingEastWest.childImageSharp.fluid} />
-                  <Img className="image-box-img" fluid={this.props.data.curbside.childImageSharp.fluid} />
-                  <Img className="image-box-img" fluid={this.props.data.frontDoor.childImageSharp.fluid} />
-                  {/*<Img className="image-box-img" fluid={this.props.data.building.childImageSharp.fluid} />*/}
+               <ImageBox flex ariaLabel="exterior-surroundings">
+                  <h3 id="exterior-surroundings" className="screen-reader">Images of outdoors and exterior building</h3>
+                  <Img
+                     className="image-box-img featured-flex"
+                     alt="Image of building from front east to west" fluid={this.props.data.buildingEastWest.childImageSharp.fluid} />
+                  <Img
+                     className="image-box-img"
+                     alt="Image of Greystone Place front lawn placard" fluid={this.props.data.curbside.childImageSharp.fluid} />
+                  <Img
+                     className="image-box-img"
+                     alt="Image of exterior front entrance"
+                     fluid={this.props.data.frontDoor.childImageSharp.fluid} />
                </ImageBox>
-               {/*<hr />*/}
                <p>Soft soothing music emanates throughout the lobby and hallways. Warm earth tone colors lend to the tranquility of the interior.</p>
-               <ImageBox flex>
-                  <Img className="image-box-img" fluid={this.props.data.lobby.childImageSharp.fluid} />
-                  <Img className="image-box-img" fluid={this.props.data.lobbyTwo.childImageSharp.fluid} />
+               <ImageBox flex ariaLabel="indoor-lobby">
+                  <h3 id="indoor-lobby" className="screen-reader">Images of interior lobby</h3>
+                  <Img className="image-box-img"
+                     alt="Image of front lobby"
+                     fluid={this.props.data.lobby.childImageSharp.fluid} />
+                  <Img className="image-box-img"
+                     alt="Image of front elevators"
+                     fluid={this.props.data.lobbyTwo.childImageSharp.fluid} />
                </ImageBox>
                <span>&nbsp;</span>
             </section>
-
-            {/*<section id="lobby-section" className="section">
-               <h2 className="screen-reader">Lobby and Surroundings</h2>
-               <p><span className="emphasized-text">Soft Soothing Music</span> emanates throughout the Lobby and Hallways. Warm earth tone colors lend to the tranquility of the interior.</p>
-               <ImageBox flex>
-                  <Img className="image-box-img" fluid={this.props.data.lobby.childImageSharp.fluid} />
-                  <Img className="image-box-img" fluid={this.props.data.lobbyTwo.childImageSharp.fluid} />
-               </ImageBox>
-               <span>&nbsp;</span>
-            </section>*/}
 
             <section className="section section-grey">
                <h1 className="header-link emphasized-text"><Link to="/suites">1 and 2-Bedroom Suites</Link></h1>
@@ -86,12 +87,18 @@ export default class IndexPage extends React.Component {
 
             <section className="section">
                <article> {/*className="sidebar"*/}
-                  <h1 className="emphasized-text">The Leisure Room</h1>
+                  <h1 className="emphasized-text" id="leisure-room">The Leisure Room</h1>
                   <p>The Leisure Room is a shared facility designed for comfort, entertainment, and recreation. Bingo, bridge or movie night, a great place to meet friends or simply relax.</p>
-                  <ImageBox flex>
-                     <Img className="image-box-img" fluid={this.props.data.leisureRoomOne.childImageSharp.fluid} />
-                     <Img className="image-box-img" fluid={this.props.data.leisureRoomTwo.childImageSharp.fluid} />
-                     <Img className="image-box-img" fluid={this.props.data.leisureRoomThree.childImageSharp.fluid} />
+                  <ImageBox flex ariaLabel="leisure-room">
+                     <Img className="image-box-img"
+                        alt="Image one of leisure room"
+                        fluid={this.props.data.leisureRoomOne.childImageSharp.fluid} />
+                     <Img className="image-box-img"
+                        alt="Image two of leisure room"
+                        fluid={this.props.data.leisureRoomTwo.childImageSharp.fluid} />
+                     <Img className="image-box-img"
+                        alt="Image three of leisure room"
+                        fluid={this.props.data.leisureRoomThree.childImageSharp.fluid} />
                   </ImageBox>
                   <p>Enjoy the scheduled leisure room functions or create your own. Equipped with a small efficiency kitchen for catering, this unique facility can be reserved for family functions or small private parties.</p>
                   <p>Viewing or further inquiries may be directed to our courteous on-site staff at <a href="tel:19055742626">905-574-2626</a>.</p>
