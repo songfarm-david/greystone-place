@@ -14,8 +14,6 @@ export default class ImageBox extends React.Component {
 
 	constructor(props) {
 		super(props)
-		// this.playBtn = <FontAwesomeIcon icon={faPlay} />
-		// this.replayBtn = <FontAwesomeIcon icon={faRedoAlt} />
 		this.slideSpeed = 3000
 		this.state = {
 			currSlide: 0,
@@ -63,9 +61,7 @@ export default class ImageBox extends React.Component {
 	}
 
 	playSlide() {
-		console.log('play slide called');
 		if (this.state.isSlideComplete) {
-			console.log('in the condition');
 			let endIndex = this.state.slides.length-1
 			this.state.slides[endIndex].classList.remove('current-slide')
 			this.state.slides[0].classList.add('current-slide')
@@ -110,12 +106,13 @@ export default class ImageBox extends React.Component {
 
    }
 
+	// theoretically stops the slide (inactive)
 	stopSlide() {
 		console.log('stopSlide called');
 	}
 
 	activateOverlay() {
-		alert('activateOverlay called');
+		// alert('activateOverlay called');
 		if (!this.overlay.current.classList.contains('active')) {
 			this.overlay.current.classList.add('active')
 		}

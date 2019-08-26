@@ -18,6 +18,9 @@ Committing and pushing changes to Github will start a fresh build at [https://gr
 * make PWA/include manifest images (Image-39)
 * Figure out why Google Maps does not work in duplicate very well (e.g: the Map pin only shows up one at a time)
 
+### SEO
+* add microdata to site
+
 ## Tests
 1. Action: Sent comment form website contact form including all information. Result: the comment form was instantly received in the Greystone Place Gmail account.
 2. Action: Sent an email from my personal gmail account to apply@greystoneplace.ca. Result: the email was received in the Greystone Place Gmail account.
