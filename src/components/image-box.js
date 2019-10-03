@@ -10,9 +10,6 @@ const ImageBox = ({ children }) => (
 		</article>
 )
 
-<<<<<<< Updated upstream
-export default ImageBox
-=======
 /**
  * @option {Carousel} Make the ImageBox function as a trigger image carousel
  * @option {Flex} Align images horizontally using flex (up to 25%)

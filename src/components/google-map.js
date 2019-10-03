@@ -37,13 +37,6 @@ export default class GoogleMap extends React.Component {
 	}
 
 	render() {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-		return <div
-			className={"map " + mapStyles.googleMapContainer + " " + mapStyles[this.props.align]}></div>
-=======
-=======
->>>>>>> Stashed changes
 		return (
 			<div
 			 id={this.props.id}
@@ -51,10 +44,6 @@ export default class GoogleMap extends React.Component {
 			 >
 			 </div>
 		)
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 	}
 
 }
