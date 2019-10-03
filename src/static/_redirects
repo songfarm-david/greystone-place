@@ -1,0 +1,7 @@
+# These rules will change if you change your site’s custom domains or HTTPS settings
+
+https://greystoneplacehamilton.ca/* https://greystoneplace.ca/:splat 301!
+https://greystoneplacehamilton.com/* https://greystoneplace.ca/:splat 301!
+
+# Redirect default Netlify subdomain to primary domain
+https://elastic-brahmagupta-93ebf7.netlify.com/* https://greystoneplace.ca/:splat 301!

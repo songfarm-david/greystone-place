@@ -1,0 +1,1 @@
+/* Create modal confirmation component here */

@@ -1,0 +1,165 @@
+// @import './reset.css';
+// @import './vars.scss';
+
+$hamburger-layer-color: var(--pale-taupe);
+@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+
+@import './breakpoints.scss';
+
+@import './styles.scss';
+
+// mobile styles
+#header {
+
+	font-family: var(--secondary-font);
+	font-size: var(--padding-md);
+	text-transform: lowercase;
+	background-color: var(--dark-color);
+	color: var(--pale-taupe);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: relative;
+	padding: var(--padding-sm);
+	border-bottom: var(--hero-border);
+
+	a {
+		color: inherit;
+	}
+
+	#mobMenu {
+		border: none;
+		z-index: 1;
+		background-color: inherit;
+		color: inherit;
+		padding: var(--padding-xs);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#marqueeContainer {
+		flex-basis: 100%;
+		color: var(--pale-taupe);
+		#headline {
+			font-weight: 400;
+			color: inherit;
+			text-transform: capitalize;
+			font-size: var(--scale-xxl);
+			line-height: 1;
+		}
+		h1, #byline {
+			margin: 0;
+		}
+		#byline {
+			text-transform: lowercase;
+			font-family: var(--secondary-header-font);
+			font-size: var(--scale-xs);
+			color: inherit;
+			font-weight: lighter;
+			font-style: italic;
+			margin-bottom: var(--padding-sm);
+		}
+	}
+
+	#contactBar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: inherit;
+		font-family: var(--header-font);
+		font-size: var(--scale-md);
+		.phone-icon {
+			font-size: var(--scale-xs);
+			height: 1em;
+			width: 1em;
+			max-width: 1em;
+			max-height: 1em;
+			display: inline-block;
+		}
+		#headerPhone a {
+			padding: var(--padding-xxs);
+			color: var(--pale-taupe);
+			color: inherit;
+			font-style: oblique;
+		}
+
+	}
+
+	@media (min-width: $tablet-breakpoint) {
+
+		display: block;
+
+		#marqueeContainer #byline {
+			margin: var(--padding-xs) 0;
+		}
+
+		#contactBar {
+			justify-content: center;
+			width: 100%;
+
+			/* removes the phone number */
+			&.hide-lg-screens {
+				display: none;
+			}
+		}
+
+		#mobMenu {
+			display: none;
+		}
+
+		#nav, #marqueeContainer {
+			text-align: center;
+		}
+
+		/* absolute positioned phone number */
+		&.position-number {
+			position: relative;
+			#contactBar {
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				text-align: right;
+				font-size: var(--scale-reg);
+				margin-right: var(--padding-xxxl);
+			}
+		}
+	}
+
+	@media (min-width: $desktop-breakpoint) {
+		padding-left: var(--padding-xxxl);
+		padding-right: var(--padding-xxxl);
+		#marqueeContainer {
+			flex: 1 1 50%;
+			#byline {
+				white-space: normal;
+				margin-bottom: var(--padding-xs);
+			}
+		}
+	}
+
+	/* places phone number in a gold-colored bottom bar below the header */
+	&.contact-bar-bottom {
+		#mobMenu .hamburger-inner,
+		#mobMenu .hamburger-inner:before,
+		#mobMenu .hamburger-inner:after {
+			background-color: var(--dark-color);
+		}
+		border-bottom: none;
+		#nav {
+			margin-bottom: var(--scale-md);
+		}
+		#contactBar {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: var(--pale-taupe);
+			color: var(--dark-color);
+			border-top: 1px solid var(--khaki-pale);
+			border-bottom: 1px solid var(--dark-color);
+		}
+	}
+
+}

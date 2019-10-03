@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Greystone Place`,
-    description: `Setting new standards of luxury in gracious apartment living`,
+    titleTemplate: '%s - Greystone Place',
+    description: `Setting new standards in gracious apartment living`,
+    url: `greystoneplace.ca`,
     author: `@peakwebsite`,
   },
   plugins: [
@@ -29,11 +31,27 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-         pathToConfigModule: `src/utils/typography`,
+        fonts: [
+          {
+             family: 'Alegreya SC'
+          },
+          {
+             family: 'Andada' // good body font
+          }
+        ],
+      },
+   },
+   {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+         trackingId: process.env.GA_TRACKING_CODE,
+         head: true,
+         respectDNT: true
       }
-    }
+   }
+   // `gatsby-plugin-sitemap`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

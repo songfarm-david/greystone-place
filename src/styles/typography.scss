@@ -1,34 +1,71 @@
-$background-color-why: #333;
+@font-face {
+    font-family: 'shelley_andante_scriptregular';
+    src: url('../fonts/shan-webfont.woff2') format('woff2'),
+         url('../fonts/shan-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 160%;
+}
 
-// define base-size font here
-$root-font-size: 100% !default;
+:root {
+	--primary-font: 'Andada', sans-serif; //body
+	--secondary-font: 'shelley_andante_scriptregular', serif; //headers
+   --secondary-header-font: 'Alegreya SC', 'Times New Roman', serif;
 
-// turns the root-font-size into a multiply-friendly number
-$root-font-multiplier:  ($root-font-size / ($root-font-size * 0 + 1))/100;
+	--text-scale-ratio: 1.25;
+	--second-scale: 1.33;
 
-// mixin for modular scale
-@mixin modScale($value, $increment, $ratio, $props){
+	--text-base-size: 18px; // NOTE: Is this proper?
 
-	@if $ratio == unison {
-		$ratio: 1;
-	}
-	@else {
-		$ratio: $ratio;
-	}
+	--line-height: var(--second-scale);
+	--vertical-rhythm: calc(var(--text-base-size) * var(--text-scale-ratio));
+	--alt-vertical-rhythm: calc(var(--text-base-size) * var(--second-scale));
+}
 
-	@if $increment > 0 {
-		@for $i from 1 through $increment {
-			$value: ($value * $ratio);
-		}
-	}
-	@if $increment < 0 {
-		$increment: abs($increment);
-		@for $i from 1 through $increment {
-			$value: ($value / $ratio);
-		}
-	}
+body {
+	font-family: var(--primary-font);
+	font-weight: 400;
+	line-height: var(--line-height);
+}
 
-  $prop: $value * $root-font-multiplier * 16px;
-  $prop: $value * 1rem;
+h1,
+.h1 {
+	font-size: var(--scale-xl);
+}
 
+h2,
+.h2 {
+	font-size: var(--scale-lg);
+}
+
+h3,
+.h3 {
+	font-size: var(--scale-md);
+}
+
+h1, h2, h3 {
+	line-height: var(--line-height);
+}
+
+p {
+	font-size: var(--scale-sm);
+}
+
+h1, h2, h3 {
+	font-family: var(--secondary-font);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	margin-bottom: 0;
+}
+
+h4, .h4 {
+	font-family: var(--primary-font);
+	font-weight: 800;
+	margin-bottom: var(--scale-xs);
+	font-size: var(--scale-md);
+}
+
+ul, ol {
+	font-weight: lighter;
 }

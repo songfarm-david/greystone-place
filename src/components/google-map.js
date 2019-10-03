@@ -1,39 +1,52 @@
 import React from 'react'
 
-import mapStyles from './google-map.module.css'
+import mapStyles from './google-map.module.scss'
 
 export default class GoogleMap extends React.Component {
 
-	initMap = (container) => {
-		const google = window.google
-		var GS = {
-			lat: 43.2214553,
-			lng: -79.8559704
-		};
-		var map = new window.google.maps.Map(
-			container,
-			{zoom: 16, center: GS}
-		);
-		var marker = new google.maps.Marker({position: GS, map: map});
+	constructor(props) {
+		super(props)
+		this.onScriptLoad = this.onScriptLoad.bind(this)
+	}
+
+	onScriptLoad() {
+		const options = {
+			center: {
+				lat: 43.2214553,
+				lng: -79.8559704
+			},
+			zoom: 16
+		}
+		const map = new window.google.maps.Map(
+			document.getElementById(this.props.id),
+			options)
+		this.initMap(map, options.center)
+	}
+
+	initMap = (map, coords) => {
+		var marker = new window.google.maps.Marker({
+			position: coords,
+			map: map
+		})
 	}
 
 	componentDidMount() {
-		let that = this
-		let containers = document.querySelectorAll('.map');
-		const google = window.google
+		// Source: https://cuneyt.aliustaoglu.biz/en/using-google-maps-in-react-without-custom-libraries/
+		if (!window.google) {
+			var s = document.createElement('script')
+      	s.type = 'text/javascript'
+      	s.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAspXD0uq-mwbzPGLPfLN-I1Xe34ryUCxY'
+      	var x = document.getElementsByTagName('script')[0];
+      	x.parentNode.insertBefore(s, x);
+      	// Below is important.
+      	//We cannot access google.maps until it's finished loading
+	      s.addEventListener('load', e => {
+	        this.onScriptLoad()
+	      })
+		} else {
+			this.onScriptLoad()
+		}
 
-		// custom forEach function (link?)
-		var forEach = function (array, callback, scope) {
-			for (var i = 0; i < array.length; i++) {
-				callback.call(scope, i, array[i]); // passes back stuff we need
-			}
-		};
-
-		// for multiple maps on a page
-		forEach(containers, function (index, value) {
-			// console.log(index, value); // passes index + value back!
-			that.initMap(value)
-		});
 	}
 
 	render() {

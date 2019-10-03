@@ -1,0 +1,130 @@
+/* global styles -- site-wide */
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: calc(var(--text-base-size) + 1vw);
+	// font-size: var(--text-base-size);
+}
+
+body {
+	background-color: var(--background-color);
+	background-color: var(--light-color);
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+	margin-bottom: var(--vertical-rhythm);
+}
+
+a {
+	text-decoration: none;
+	color: var(--pale-taupe);
+	transition: var(--link-transition);
+	&:hover {
+		color: var(--fire-brick);
+		transition: var(--link-transition);
+	}
+}
+
+blockquote {
+	font-size: var(--scale-lg);
+	font-family: var(--secondary-font);
+	font-style: italic;
+	border-top: 4px solid var(--khaki-pale);
+	// margin: var(--scale-lg) var(--vertical-rhythm) var(--scale-xxl);
+	padding: var(--scale-sm) 0 0 var(--scale-sm);
+	overflow: hidden;
+}
+
+/* https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/ */
+.screen-reader {
+	border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+hr {
+	color: var(--khaki-pale);
+	// margin: var(--vertical-rhythm) 0;
+}
+/* scrim for nav */
+#scrim {
+	opacity: 0;
+	background: black;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: -1;
+	transition: opacity 0.5s ease-in;
+	&.active-scrim {
+		background-color: black;
+		opacity: 0.5;
+		z-index: 1;
+	}
+}
+
+.clear {
+	clear: both;
+}
+
+.sidebar-dark {
+	padding: var(--scale-lg);
+	border: 2px solid var(--dark-color);
+	color: var(--light-color);
+}
+
+ul {
+	list-style-type: circle;
+	padding: 0;
+	// margin: var(--vertical-rhythm) 0;
+	margin-left: var(--padding-md);
+	li {
+		// margin-bottom: var(--padding-xs);
+	}
+}
+
+.header-link a {
+	color: inherit;
+}
+
+/**
+ * Google Maps Container styles
+ */
+.google-maps-container {
+	margin-bottom: var(--padding-xl);
+	height: 100%;
+	@media (min-width: $tablet-breakpoint) {
+		&.right {
+			float: right;
+			width: 44%;
+		}
+		&.left {
+			float: left;
+			width: auto;
+		}
+	}
+
+}
+
+.theme-button {
+	background-color: var(--dark-color) !important;
+	color: var(--pale-taupe) !important;
+	border: 3px solid var(--pale-taupe) !important;
+	font-weight: bold !important;
+	font-size: var(--scale-reg) !important;
+	display: inline-block;
+	padding: 0.33em var(--scale-xs);
+}

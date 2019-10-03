@@ -1,0 +1,40 @@
+@import './breakpoints.scss';
+
+
+article.sidebar {
+	background-color: var(--dark-color);
+	margin: var(--vertical-rhythm) 0 var(--padding-lg);
+	color: var(--pale-taupe);
+	padding: var(--scale-reg);
+	border: var(--hero-border);
+	width: 100%;
+	overflow: hidden;
+
+	color: var(--dark-color);
+	background-color: var(--cosmic-latte);
+	border-color: var(--footer-grey);
+
+	&.left {
+		width: 50%;
+		margin-left: 1em;
+	}
+	a {
+		// color: var(--cosmic-latte);
+		&:hover {
+			// color: var(--light-color);
+		}
+	}
+	.image-box {
+		float: left;
+		width: 50%;
+		border: none;
+		.image-box-img {
+			border: var(--hero-border);
+			border-color: var(--footer-grey);
+			& + .image-box-img {
+				margin-top: 0.5em;
+			}
+		}
+
+	}
+}

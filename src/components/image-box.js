@@ -1,14 +1,10 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 
-import imageBoxStyles from './image-box.module.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay, faRedoAlt } from '@fortawesome/free-solid-svg-icons'
 
-const ImageBox = ({ children }) => (
-	<article className={
-		"image-box " + imageBoxStyles.imageBox
-	}>
-		{children}
-		</article>
-)
+import '../styles/image-box.scss'
 
 /**
  * @option {Carousel} Make the ImageBox function as a trigger image carousel
@@ -18,8 +14,6 @@ export default class ImageBox extends React.Component {
 
 	constructor(props) {
 		super(props)
-		// this.playBtn = <FontAwesomeIcon icon={faPlay} />
-		// this.replayBtn = <FontAwesomeIcon icon={faRedoAlt} />
 		this.slideSpeed = 3000
 		this.state = {
 			currSlide: 0,
@@ -67,9 +61,7 @@ export default class ImageBox extends React.Component {
 	}
 
 	playSlide() {
-		console.log('play slide called');
 		if (this.state.isSlideComplete) {
-			console.log('in the condition');
 			let endIndex = this.state.slides.length-1
 			this.state.slides[endIndex].classList.remove('current-slide')
 			this.state.slides[0].classList.add('current-slide')
@@ -114,12 +106,13 @@ export default class ImageBox extends React.Component {
 
    }
 
+	// theoretically stops the slide (inactive)
 	stopSlide() {
 		console.log('stopSlide called');
 	}
 
 	activateOverlay() {
-		alert('activateOverlay called');
+		// alert('activateOverlay called');
 		if (!this.overlay.current.classList.contains('active')) {
 			this.overlay.current.classList.add('active')
 		}
@@ -134,15 +127,15 @@ export default class ImageBox extends React.Component {
 	}
 
 	render() {
+		console.log(this.props.aria);
 		return (
-			<article ref="imageBox"
-				className={
-				"image-box "
-				+ (this.props.align ? this.props.align : "no-align") + " "
-				+ (this.props.flex ? "flex" : "")
-			}>
+			<article ref="imageBox" className={"image-box " +
+			(this.props.align ? this.props.align : "no-align") +
+			" " + (this.props.flex ? "flex" : "")}
+			aria-labelledby={this.props.ariaLabel ? this.props.ariaLabel : null}>
 				{this.props.children}
-				<div id="overlay" ref={this.overlay} className={this.props.carousel || this.state.isSlideComplete ? 'active' : ''} onClick={this.playSlide}>
+				<div id="overlay" ref={this.overlay}
+					className={this.props.carousel || this.state.isSlideComplete ? 'active' : ''} onClick={this.playSlide}>
 					<span>Play Slideshow</span>
 					<button title="Click to play slideshow"><FontAwesomeIcon icon={faPlay} /></button>
 				</div>
@@ -150,4 +143,3 @@ export default class ImageBox extends React.Component {
 		)
 	}
 }
->>>>>>> Stashed changes

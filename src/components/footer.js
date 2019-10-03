@@ -1,8 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import GoogleMap from './google-map'
 
-import footerStyles from './footer.module.scss'
+import GoogleMap from './google-map'
+import Address from './address'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
+
+import '../styles/footer.scss'
+
+import applicationform from "../downloads/Tenancy Application - Greystone Place.pdf"
 
 const Footer = ({ siteTitle }) => (
 	<div id="footer">
@@ -25,9 +31,9 @@ const Footer = ({ siteTitle }) => (
 				<GoogleMap id="footerMap"/>
 			</article>
 		</div>
-		<div className={footerStyles.legalFooter}>
+		<div id="legalFooter">
 			<p>© {new Date().getFullYear()}, {siteTitle}</p>
-			<p>Website by <a href="https://peakwebsites.ca" target="_blank">Peak Websites</a></p>
+			<p>Website by <a href="https://peakwebsites.ca" target="_blank" title="Peak Websites">Peak Websites</a></p>
 		</div>
 	</div>
 )

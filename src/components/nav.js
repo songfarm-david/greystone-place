@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import '../styles/nav.scss'
+// https://jonsuh.com/hamburgers/
+
 const Nav = (props) => (
 	<nav id="nav" className="underlined">
 		<ul className={props.menuOpen ? "drawer-open" : "drawer-closed"}>

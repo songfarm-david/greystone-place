@@ -1,0 +1,23 @@
+@import '../styles/typography.scss';
+
+#address {
+	.header {
+		margin-bottom: var(--vertical-rhythm);
+	}
+	span {
+		display: block;
+		margin: 0 !important;
+		font-weight: lighter;
+		// font-style: italic;
+		// font-size: var(--padding-xs);
+		// line-height: var(--second-scale);
+		&.name {
+			font-weight: normal;
+		}
+		&.address, &.cityPostal {
+		}
+		&:last-child {
+			margin-bottom: var(--scale-sm);
+		}
+	}
+}

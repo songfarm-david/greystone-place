@@ -1,9 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Nav from './nav'
-
 // import { trackCall } from '../functions/googleTracking.js'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone } from '@fortawesome/free-solid-svg-icons'
+
+import '../styles/header.scss'
+import Nav from './nav'
 
 export default class Header extends React.Component {
 
@@ -13,6 +17,7 @@ export default class Header extends React.Component {
          menuOpen: false
       }
       this.toggleMenu = this.toggleMenu.bind(this)
+
    }
 
    toggleMenu() {
@@ -30,6 +35,22 @@ export default class Header extends React.Component {
       }
    }
 
+   // TODO: Implement custom GA events for certain events, see Google doc for detail
+   trackCall = () => {
+      console.log('trackCall called');
+      // if (typeof ga == 'undefined') {
+      //    return;
+      // }
+      // ga('send', 'event', 'Call Us', 'call', 'Call Us')
+      // window.dataLayer = window.dataLayer || [];
+      // console.log('what is window.dataLayer', window.dataLayer);
+      // function gtag() {
+      //    window.dataLayer.push(arguments);
+      // }
+      // gtag('js', new Date());
+      // gtag('config', 'UA-86141289-3');
+   }
+
    render() {
       const { siteTitle, description } = this.props
       return (
@@ -44,7 +65,7 @@ export default class Header extends React.Component {
            </div>
            <Nav menuOpen={this.state.menuOpen} />
            <div id="contactBar" className="">
-             <p id="headerPhone"><a href="tel:+19055742626" title="Call Greystone Place"><span className="phone-icon"><FontAwesomeIcon icon={faPhone} /></span>&nbsp;905-574-2626</a></p>
+             <p id="headerPhone"><a onClick={this.trackCall} href="tel:+19055742626" title="Call Greystone Place"><span className="phone-icon"><FontAwesomeIcon icon={faPhone} /></span>&nbsp;905-574-2626</a></p>
            </div>
 
            <button id="mobMenu" onClick={this.toggleMenu} className="hamburger hamburger--spin" type="button">

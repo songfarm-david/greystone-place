@@ -331,26 +331,26 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
+  margin-left: 0;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   list-style-position: outside;
   list-style-image: none;
 }
 ol {
-  margin-left: 1.45rem;
+  margin-left: 0;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -362,7 +362,7 @@ dl {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 dd {
   margin-left: 0;
@@ -372,7 +372,7 @@ dd {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 p {
   margin-left: 0;
@@ -382,7 +382,7 @@ p {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 figure {
   margin-left: 0;
@@ -479,7 +479,8 @@ hr {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: calc(1.45rem - 1px);
+  /* margin-bottom: calc(1.45rem - 1px); */
+  margin-bottom: 0;
   background: hsla(0, 0%, 0%, 0.2);
   border: none;
   height: 1px;
@@ -506,16 +507,16 @@ dt {
 th {
   font-weight: bold;
 }
-li {
+/* li {
   margin-bottom: calc(1.45rem / 2);
-}
-ol li {
+} */
+/* ol li {
   padding-left: 0;
 }
 ul li {
   padding-left: 0;
-}
-li > ol {
+} */
+/* li > ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
@@ -527,7 +528,7 @@ li > ul {
 }
 blockquote *:last-child {
   margin-bottom: 0;
-}
+} */
 li *:last-child {
   margin-bottom: 0;
 }

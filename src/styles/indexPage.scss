@@ -1,0 +1,10 @@
+/* hack for video element background image */
+#greystoneVideo {
+	background: transparent url('../images/Image-38.jpg') no-repeat 0 0;
+   -webkit-background-size:cover;
+   -moz-background-size:cover;
+   -o-background-size:cover;
+	height: 100%;
+	width: 100%;
+	border: var(--hero-border);
+}
