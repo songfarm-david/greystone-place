@@ -5,9 +5,6 @@ This is a [Gatsby site](https://www.gatsbyjs.org/).  To run a gatsby site, run `
 Committing and pushing changes to Github will start a fresh build at [https://greystoneplace.ca](https://greystoneplace.ca)
 
 ## Todo
-* Practice making modal accessible, add to portfolio skillset/example: https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex#modals_and_keyboard_traps
-* resources for accessibility: https://www.gatsbyjs.org/docs/making-your-site-accessible/
-* access linting plugin: https://github.com/evcohen/eslint-plugin-jsx-a11y
 * Update 404 page
 * Figure out how to make main video accessible
 * Figure out how to make slideshows more accessible
@@ -19,6 +16,7 @@ Committing and pushing changes to Github will start a fresh build at [https://gr
 * make site service worker friendly: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline#notes
 * make PWA/include manifest images (Image-39)
 * Figure out why Google Maps does not work in duplicate very well (e.g: the Map pin only shows up one at a time)
+* Update design of website!
 
 ### SEO
 * add microdata to site
@@ -32,6 +30,10 @@ Committing and pushing changes to Github will start a fresh build at [https://gr
 * nav is accessible
 * make image carousel accessible
 * make site accessible: https://www.gatsbyjs.org/docs/making-your-site-accessible/
+* accessible carousels: https://www.w3.org/WAI/tutorials/carousels/
+* Practice making modal accessible, add to portfolio skillset/example: https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex#modals_and_keyboard_traps
+* resources for accessibility: https://www.gatsbyjs.org/docs/making-your-site-accessible/
+* access linting plugin: https://github.com/evcohen/eslint-plugin-jsx-a11y
 
 ## Highlights
 - custom fonts
