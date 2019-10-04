@@ -1,3 +1,4 @@
+
 # Greystone Place Website Build 2019 - TODO and Notes:
 
 ## Project Notes
@@ -5,11 +6,12 @@ This is a [Gatsby site](https://www.gatsbyjs.org/).  To run a gatsby site, run `
 Committing and pushing changes to Github will start a fresh build at [https://greystoneplace.ca](https://greystoneplace.ca)
 
 ## Todo
+1. Test Event tracking for Google Analytics
+2. Place fallback link in for video (see index.js page)
 * Update 404 page
 * Figure out how to make main video accessible
 * Figure out how to make slideshows more accessible
 * Implement a form CAPTCHA that's accessible: https://webaim.org/blog/spam_free_accessible_forms/
-* Figure out how to track calls with Google Analytics
 * Resolve build 'Warnings' via Gatsby develop
 * Speed test site, how?
 * add a sitemap (XML): https://www.gatsbyjs.org/docs/creating-a-sitemap/
@@ -17,6 +19,7 @@ Committing and pushing changes to Github will start a fresh build at [https://gr
 * make PWA/include manifest images (Image-39)
 * Figure out why Google Maps does not work in duplicate very well (e.g: the Map pin only shows up one at a time)
 * Update design of website!
+* explore this plugin: https://www.gatsbyjs.org/packages/gatsby-plugin-page-transitions/
 
 ### SEO
 * add microdata to site

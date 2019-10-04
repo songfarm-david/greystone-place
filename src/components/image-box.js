@@ -127,7 +127,7 @@ export default class ImageBox extends React.Component {
 	}
 
 	render() {
-		console.log(this.props.aria);
+		// console.log(this.props.aria);
 		return (
 			<article ref="imageBox" className={"image-box " +
 			(this.props.align ? this.props.align : "no-align") +

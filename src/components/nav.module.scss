@@ -1,0 +1,50 @@
+#nav {
+
+	p.phone-number {
+		margin: 0;
+		text-align: right;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+
+		li {
+			margin: 0.5em 1em 1em;
+			flex-basis: 0px;
+			display: inline;
+		}
+	}
+
+	ul.drawer-open {
+		display: block;
+		height: 100%;
+		width: 80%;
+		position: fixed;
+		z-index: 10;
+	}
+
+	#mobMenu {
+		display: block;
+	}
+
+	@media (max-width: 680px) {
+		ul {
+			flex-wrap: wrap;
+			display: none;
+		}
+
+	}
+
+	@media (min-width: 681px) {
+		ul {
+			display: flex;
+		}
+		#mobMenu {
+			display: none;
+		}
+	}
+
+}
