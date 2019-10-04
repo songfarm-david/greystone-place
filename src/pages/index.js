@@ -7,7 +7,10 @@ import Layout from '../components/layout'
 import ImageBox from '../components/image-box'
 
 import loadVideo from '../functions/videoLoader.js'
+import trackGoogle from '../functions/googleTracking.js'
+
 import '../functions/thankYou_confirmation.js'
+
 import transparentImg from '../images/transparent.png'
 // eslint-disable-next-line
 import {fluidImage} from '../utils/fluidImage'
@@ -32,7 +35,7 @@ export default class IndexPage extends React.Component {
 
             <section id="video-section" className="section">
                <h1 className="screen-reader" >Welcome to Greystone Place</h1>
-               <video id="greystoneVideo" height="auto" width="100%" preload="auto" poster={transparentImg} controls>
+               <video id="greystoneVideo" height="auto" width="100%" preload="auto" poster={transparentImg} onPlay={trackGoogle} data-type="Video" controls>
                   <p>Your browser doesn't support web video. Here is a <a href={''}>link to the video</a> instead.</p>
                </video>
                <p>Greystone Place is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>

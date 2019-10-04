@@ -8,6 +8,7 @@ import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 
 import '../styles/footer.scss'
 
+import trackGoogle from '../functions/googleTracking.js'
 import applicationform from "../downloads/Tenancy Application - Greystone Place.pdf"
 
 const Footer = ({ siteTitle }) => (
@@ -15,7 +16,7 @@ const Footer = ({ siteTitle }) => (
 		<div id="footerInner">
 			<article className="footer-module">
 				<h3>Apply for Rental</h3>
-				<p><a href={applicationform} download="Rental Application - Greystone Place" title="Download an application form to apply for tenancy">Download a Rental Application&nbsp;<FontAwesomeIcon icon={faFilePdf} /></a></p>
+				<p><a href={applicationform} download="Rental Application - Greystone Place" title="Download an application form to apply for tenancy" onClick={trackGoogle} data-type="Apply">Download a Rental Application&nbsp;<FontAwesomeIcon icon={faFilePdf} /></a></p>
 			</article>
 			<div id="siteLinks" className="footer-module">
 				<h3>Site Navigation</h3>

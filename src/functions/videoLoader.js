@@ -8,7 +8,7 @@ export default function loadVideo(src) {
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
 		 video.addEventListener('ended', function() {
-			 console.log('video ended');
+			 // console.log('video ended');
 			 var hls = new Hls();
 			 hls.loadSource(src)
 			 hls.attachMedia(video);
@@ -21,7 +21,7 @@ export default function loadVideo(src) {
       // video.play();
 		// video.pause()
 		video.addEventListener('ended', function() {
-			console.log('video ended');
+			// console.log('video ended');
 			video.load()
 		})
 

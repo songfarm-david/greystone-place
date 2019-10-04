@@ -11,6 +11,7 @@ import Modal from './modal'
 
 // Styles
 // import '../styles/layout.scss'
+import trackGoogle from '../functions/googleTracking.js'
 
 const Layout = ({ children }) => (
   <StaticQuery
