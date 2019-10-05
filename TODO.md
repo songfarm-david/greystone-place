@@ -6,7 +6,6 @@ This is a [Gatsby site](https://www.gatsbyjs.org/).  To run a gatsby site, run `
 Committing and pushing changes to Github will start a fresh build at [https://greystoneplace.ca](https://greystoneplace.ca)
 
 ## Todo
-1. Test Event tracking for Google Analytics
 2. Test Fallback link in for video (see index.js page)
 4. Figure out how to make main video accessible
     1. Here is a link to how to build your own controls to make video media accessible

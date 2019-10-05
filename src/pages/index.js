@@ -36,7 +36,7 @@ export default class IndexPage extends React.Component {
             <section id="video-section" className="section">
                <h1 className="screen-reader" >Welcome to Greystone Place</h1>
                <video id="greystoneVideo" height="auto" width="100%" preload="auto" poster={transparentImg} onPlay={trackGoogle} data-type="Video" controls>
-                  <p>Your browser doesn't support web video. Here is a <a href={videoLink}>link to the video</a> instead.</p>
+                  <p>Your browser doesn't support web video. Here is a <a href="https://peak-websites-greystone-place.s3.ca-central-1.amazonaws.com/new/512+Mohawk+Rd+(V2).mp4">link to the video</a> instead.</p>
                </video>
                <p>Greystone Place is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
                {/* TODO: test fallback link*/}
