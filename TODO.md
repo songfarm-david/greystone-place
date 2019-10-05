@@ -6,18 +6,16 @@ This is a [Gatsby site](https://www.gatsbyjs.org/).  To run a gatsby site, run `
 Committing and pushing changes to Github will start a fresh build at [https://greystoneplace.ca](https://greystoneplace.ca)
 
 ## Todo
-* Test Fallback link in for video (see index.js page)
 * Add 'Home' link to mobile menu
+* Speed test site, how?
+* add a sitemap (XML): https://www.gatsbyjs.org/docs/creating-a-sitemap/
+* make PWA/include manifest images (Image-39)
+* make site service worker friendly: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline#notes
+* Make sure google maps script only loads once (there is an error in the console that messes with the display when there are two forms on the same page)
 * Figure out how to make main video accessible
     - Here is a link to how to build your own controls to make video media accessible
 * Figure out how to make slideshows more accessible
 * Implement a form CAPTCHA that's accessible: https://webaim.org/blog/spam_free_accessible_forms/
-* Resolve build 'Warnings' via Gatsby develop
-* Speed test site, how?
-* add a sitemap (XML): https://www.gatsbyjs.org/docs/creating-a-sitemap/
-* make site service worker friendly: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline#notes
-* make PWA/include manifest images (Image-39)
-* Figure out why Google Maps does not work in duplicate very well (e.g: the Map pin only shows up one at a time)
 * Update design of website!
 * explore this plugin: https://www.gatsbyjs.org/packages/gatsby-plugin-page-transitions/
 
