@@ -8,8 +8,6 @@ Committing and pushing changes to Github will start a fresh build at [https://gr
 ## Todo
 1. Test Event tracking for Google Analytics
 2. Test Fallback link in for video (see index.js page)
-3. Update 404 page
-    1. test style in development (there is a button to preview custom 404 page)
 4. Figure out how to make main video accessible
     1. Here is a link to how to build your own controls to make video media accessible
 * Figure out how to make slideshows more accessible
