@@ -7,7 +7,6 @@ Committing and pushing changes to Github will start a fresh build at [https://gr
 
 ## Todo
 * Speed test site, how?
-* compress images
 * add a sitemap (XML): https://www.gatsbyjs.org/docs/creating-a-sitemap/
 * make PWA/include manifest images (Image-39)
 * make site service worker friendly: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline#notes

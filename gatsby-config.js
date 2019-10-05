@@ -3,7 +3,7 @@ module.exports = {
     title: `Greystone Place`,
     titleTemplate: '%s - Greystone Place',
     description: `Setting new standards in gracious apartment living`,
-    url: `greystoneplace.ca`,
+    siteUrl: `https://greystoneplace.ca`,
     author: `@peakwebsite`,
   },
   plugins: [
@@ -50,7 +50,8 @@ module.exports = {
          head: true,
          respectDNT: true
       }
-   }
+   },
+   `gatsby-plugin-sitemap`
    // `gatsby-plugin-sitemap`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
