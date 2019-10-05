@@ -1,8 +1,9 @@
 import React from 'react'
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import fluidImage from '../utils/fluidImage'
+import trackGoogle from '../functions/googleTracking.js'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
@@ -49,8 +50,8 @@ export default (props) => (
 
    <section className="section reverse-layout">
       <h2 className="screen-reader">Inquire</h2>
-      <p><a href={applicationform} download="Tenancy Application - Greystone Place" title="Download an application form to apply for tenancy">Submit a Rental Application Form</a> or contact management today at <a href="tel:+19055742626" title="Call Greystone Place"><em>905-574-2626</em></a>.</p>
-      <a className="cta" href="#">Apply Now</a>
+      <p><a href={applicationform} download="Tenancy Application - Greystone Place" title="Download an application form to apply for tenancy" onClick={trackGoogle} data-type="Apply">Submit a Rental Application Form</a> or contact management today at <a href="tel:+19055742626" title="Call Greystone Place" onClick={trackGoogle} data-type="Call">905-574-2626</a>.</p>
+      <Link to="/contact" className="cta" >Apply Now</Link>
    </section>
 
     {/* contact block here */}

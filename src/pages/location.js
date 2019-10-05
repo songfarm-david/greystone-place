@@ -1,3 +1,5 @@
+// NOTE: This page isn't in use
+
 import React from 'react'
 import { Link } from 'gatsby'
 

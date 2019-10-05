@@ -49,7 +49,7 @@ export default class Header extends React.Component {
            </div>
            <Nav menuOpen={this.state.menuOpen} />
            <div id="contactBar" className="">
-             <p id="headerPhone"><a href="tel:+19055742626" title="Call Greystone Place" onClick={trackGoogle} data-type="Call"><span className="phone-icon"><FontAwesomeIcon icon={faPhone} /></span>&nbsp;905-574-2626</a></p>
+             <p id="headerPhone"><a href="tel:+19055742626" title="Call Greystone Place" onClick={trackGoogle} data-type="Call" data-location="header"><span className="phone-icon"><FontAwesomeIcon icon={faPhone} /></span>&nbsp;905-574-2626</a></p>
            </div>
 
            <button id="mobMenu" onClick={this.toggleMenu} className="hamburger hamburger--spin" type="button">
