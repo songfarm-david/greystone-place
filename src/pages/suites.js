@@ -1,6 +1,8 @@
 import React from 'react'
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
+
+import trackGoogle from '../functions/googleTracking.js'
 
 // eslint-disable-next-line
 import fluidImage from '../utils/fluidImage'
@@ -48,8 +50,8 @@ export default (props) => (
 
     <section className="section reverse-layout">
        <h2 className="screen-reader">Inquire</h2>
-       <p>Viewing or further inquiries may be directed to courteous onsite staff at <a href="tel:+19055742626" title="Call Greystone Place">(905) 574-2626</a> or <a href={applicationform} download="Rental Application - Greystone Place" title="Download an application form to apply for tenancy">submit a rental application</a>.</p>
-       <a className="cta" href="#">Apply Now</a>
+       <p>Viewing or further inquiries may be directed to courteous onsite staff at <a href="tel:+19055742626" title="Call Greystone Place" onClick={trackGoogle} data-type="Call">(905) 574-2626</a> or <a href={applicationform} download="Rental Application - Greystone Place" title="Download an application form to apply for tenancy" onClick={trackGoogle} data-type="Apply">submit a rental application</a>.</p>
+       <Link to="/contact" className="cta" >Apply Now</Link>
     </section>
 
   </Layout>
