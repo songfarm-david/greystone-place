@@ -16,7 +16,7 @@ const Footer = ({ siteTitle }) => (
 		<div id="footerInner">
 			<article className="footer-module">
 				<h3>Apply for Rental</h3>
-				<p><a href={applicationform} download="Rental Application - Greystone Place" title="Download an application form to apply for tenancy" onClick={trackGoogle} data-type="Apply">Download a Rental Application&nbsp;<FontAwesomeIcon icon={faFilePdf} /></a></p>
+				<p><a href={applicationform} download="Rental Application - Greystone Place" title="Download an application form to apply for tenancy" onClick={trackGoogle} data-type="Apply" data-location="footer">Download a Rental Application&nbsp;<FontAwesomeIcon icon={faFilePdf} /></a></p>
 			</article>
 			<div id="siteLinks" className="footer-module">
 				<h3>Site Navigation</h3>
@@ -34,7 +34,7 @@ const Footer = ({ siteTitle }) => (
 		</div>
 		<div id="legalFooter">
 			<p>© {new Date().getFullYear()}, {siteTitle}</p>
-			<p>Website by <a href="https://peakwebsites.ca" target="_blank" title="Peak Websites">Peak Websites</a></p>
+			<p>Website by <a href="https://peakwebsites.ca" target="_blank" title="Peak Websites" style={{fontFamily: 'Arial'}}>Peak Websites</a></p>
 		</div>
 	</div>
 )

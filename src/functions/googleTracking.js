@@ -9,13 +9,23 @@
 
 const trackGoogle = (e) => {
 
-	let isContactPage = false,
-	eventType = e.target.getAttribute('data-type');
+	let eventType = e.target.getAttribute('data-type'),
+   isContactPage = false, isHeader = false, isFooter = false;
 
-	if (e.target.hasAttribute('data-location')
-   && e.target.getAttribute('data-location') == 'contact') {
-		isContactPage = true
-	}
+   switch (e.target.hasAttribute('data-location')
+   && e.target.getAttribute('data-location')) {
+      case 'contact':
+         isContactPage = true
+         break;
+      case 'header':
+         isHeader = true
+         break;
+      case 'footer':
+         isFooter = true
+         break;
+      default:
+         console.log('The Lion King rules');
+   }
 
 	// check for existence of ga script, if not, add it
 	if (typeof ga === 'undefined') {
@@ -27,21 +37,26 @@ const trackGoogle = (e) => {
 
 		// TODO: get tracking code from env var
 		ga('create', process.env.GA_TRACKING_ID, 'auto');
+
 	}
 
 	if (eventType == 'Call' && isContactPage) {
 		ga('send', 'event', 'Call', 'Call Greystone Place', 'Contact page')
-	} else if (eventType == 'Call') {
+	} else if (eventType == 'Call' && isHeader) {
 		ga('send', 'event', 'Call', 'Call Greystone Place', 'Header')
-		return;
-	}
+	} else {
+      ga('send', 'event', 'Call', 'Call Greystone Place', '')
+      return;
+   }
 
 	if (eventType == 'Apply' && isContactPage) {
 		ga('send', 'event', 'Apply', 'Download Form', 'Contact page')
-	} else if (eventType == 'Apply') {
+	} else if (eventType == 'Apply' && isFooter) {
 		ga('send', 'event', 'Apply', 'Download Form', 'Footer')
-		return;
-	}
+	} else {
+      ga('send', 'event', 'Apply', 'Download Form', '')
+      return;
+   }
 
 	if (eventType == 'Video') {
 		ga('send', 'event', 'Video', 'Play Video', 'Play the video')
