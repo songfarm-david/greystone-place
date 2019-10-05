@@ -6,8 +6,8 @@ This is a [Gatsby site](https://www.gatsbyjs.org/).  To run a gatsby site, run `
 Committing and pushing changes to Github will start a fresh build at [https://greystoneplace.ca](https://greystoneplace.ca)
 
 ## Todo
-* Add 'Home' link to mobile menu
 * Speed test site, how?
+* compress images
 * add a sitemap (XML): https://www.gatsbyjs.org/docs/creating-a-sitemap/
 * make PWA/include manifest images (Image-39)
 * make site service worker friendly: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline#notes
