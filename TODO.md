@@ -6,8 +6,7 @@ This is a [Gatsby site](https://www.gatsbyjs.org/).  To run a gatsby site, run `
 Committing and pushing changes to Github will start a fresh build at [https://greystoneplace.ca](https://greystoneplace.ca)
 
 ## Todo
-* Speed test site, how?
-* add a sitemap (XML): https://www.gatsbyjs.org/docs/creating-a-sitemap/
+* Convert images to webp (Image-38) then run speed test
 * make PWA/include manifest images (Image-39)
 * make site service worker friendly: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline#notes
 * Make sure google maps script only loads once (there is an error in the console that messes with the display when there are two forms on the same page)

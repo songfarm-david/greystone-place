@@ -32,7 +32,7 @@ export default (props) => (
         <Img fluid={props.data.laundryOne.childImageSharp.fluid} title="Greystone Place Laundry Room"/>
         <Img fluid={props.data.skyline.childImageSharp.fluid} />
        </ImageBox>
-       <p><i>Jr. 1-Bedroom starting @ $895. Includes heat, water, and one parking spot. Hydro and cable/WIFI extra. Sorry, no dogs allowed.</i></p>
+       <p><i>Jr. 1-Bedroom starting @ $995. Includes heat, water, and one parking spot. Hydro and cable/WIFI extra. Sorry, no dogs allowed.</i></p>
        <div className="list floating-list left">
         <h3>Apartment Suites Include:</h3>
          <ul>

@@ -39,8 +39,6 @@ export default class IndexPage extends React.Component {
                   <p>Your browser doesn't support web video. Here is a <a href={videoLink}>link to the video</a> instead.</p>
                </video>
                <p>Greystone Place is a prestigious, upscale address offering safety, security and quiet enjoyment. Meticulously maintained and ideal for mature adults.</p>
-               {/* TODO: test fallback link*/}
-               {/*<hr />*/}
             </section>
 
             <section className="section">
