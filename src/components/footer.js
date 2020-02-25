@@ -16,6 +16,7 @@ const Footer = ({ siteTitle }) => (
 		<div id="footerInner">
 			<article className="footer-module">
 				<h3>Apply for Rental</h3>
+				<p>Call <a href="tel:+19055742626" title="Click to call" onClick={trackGoogle} data-type="Call" data-location="contact">905-574-2626</a> to set up a viewing.</p>
 				<p><a href={applicationform} download="Rental Application - Greystone Place" title="Download an application form to apply for tenancy" onClick={trackGoogle} data-type="Apply" data-location="footer">Download a Rental Application&nbsp;<FontAwesomeIcon icon={faFilePdf} /></a></p>
 			</article>
 			<div id="siteLinks" className="footer-module">
@@ -23,7 +24,7 @@ const Footer = ({ siteTitle }) => (
 				<ul>
 					<li><Link to="/" title="Home">Home</Link></li>
 					<li><Link to="/suites" title="Suites">Suites</Link></li>
-					<li><Link to="/designer-upgrade-packages" title="Apartment Upgrade Packages">Feather Your Nest</Link></li>
+					{/*<li><Link to="/designer-upgrade-packages" title="Apartment Upgrade Packages">Feather Your Nest</Link></li>*/}
 					<li><Link to="/contact" title="Contact Management at Greystone Place">Inquire</Link></li>
 				</ul>
 			</div>

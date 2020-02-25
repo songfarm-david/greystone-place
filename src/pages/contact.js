@@ -17,9 +17,10 @@ export default () => (
     <SEO title="Contact" description="Contact management to apply for tenancy or for any questions you have about suite rentals."/>
     <section className="section">
        <h1>Contact</h1>
-   	 <p>If interested in renting, please send a completed <a href={applicationform} download="Tenancy Application - Greystone Place" title="Download an application form to apply for tenancy" onClick={trackGoogle} data-type="Apply" data-location="contact">Rental Application Form&nbsp;<FontAwesomeIcon icon={faFilePdf} /></a> to <a href="mailto:apply@greystoneplace.ca">apply@greystoneplace.ca</a>.</p>
-       <p>For all other inquiries, please call <a href="tel:+19055742626" title="Click to call" onClick={trackGoogle} data-type="Call" data-location="contact">905-574-2626</a> or use the contact form below.</p>
-       <ContactForm />
+       <p>Please call Kim at <a href="tel:+19055742626" title="Click to call" onClick={trackGoogle} data-type="Call" data-location="contact">905-574-2626</a> to inquire about availability or to set up a viewing.</p>
+   	 <p>To speed things up, you may download and complete a <a href={applicationform} download="Tenancy Application - Greystone Place" title="Download an application form to apply for tenancy" onClick={trackGoogle} data-type="Apply" data-location="contact">Rental Application Form&nbsp;<FontAwesomeIcon icon={faFilePdf} /></a> to bring with you to the viewing or send by email to <a href="mailto:apply@greystoneplace.ca">apply@greystoneplace.ca</a>.</p>
+       {/*<p>For all other inquiries, please call <a href="tel:+19055742626" title="Click to call" onClick={trackGoogle} data-type="Call" data-location="contact">905-574-2626</a> or use the contact form below.</p>*/}
+       {/* <ContactForm /> */}
        <div className="google-maps-container left">
          <Address />
          <GoogleMap id="contactMap"/>

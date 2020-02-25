@@ -128,3 +128,10 @@ ul {
 	display: inline-block;
 	padding: 0.33em var(--scale-xs);
 }
+
+/* text for disclaimer styles */
+.disclaimer {
+	font-size: small !important;
+	padding: 0.75em;
+	background-color: var(--cosmic-latte);
+}

@@ -19,6 +19,7 @@ export default (props) => (
        <h1>Suites at Greystone Place</h1>
        <p>Clean, bright, spacious 1 and 2 bedroom suites are finished in our “designer” color schemes and have generous closet space. All suites include large balconies - some with panoramic views of the Toronto skyline and the Escarpment.</p>
        <p>Parking for 1 vehicle is included as is heat and hot water. The resident manager lives on site and the clean, modern laundry facility is well equipped with new Maytag washers and dryers.</p>
+       <p class="disclaimer"><i>Below is a typical suite. Not all suites may appear as shown depending on availablity.</i></p>
        <ImageBox align="right" carousel="true">
         <Img fluid={props.data.suiteThree.childImageSharp.fluid} />
         <Img fluid={props.data.suiteOne.childImageSharp.fluid} />
@@ -32,7 +33,7 @@ export default (props) => (
         <Img fluid={props.data.laundryOne.childImageSharp.fluid} title="Greystone Place Laundry Room"/>
         <Img fluid={props.data.skyline.childImageSharp.fluid} />
        </ImageBox>
-       <p><i>Jr. 1-Bedroom starting @ $995. Includes heat, water, and one parking spot. Hydro and cable/WIFI extra. Sorry, no dogs allowed.</i></p>
+       <p><i>Jr. 1-Bedroom starting @ $995. Includes heat, water, and one parking spot. Hydro and cable/WIFI extra. Suites are unfurnished. Sorry, no dogs allowed.</i></p>
        <div className="list floating-list left">
         <h3>Apartment Suites Include:</h3>
          <ul>
